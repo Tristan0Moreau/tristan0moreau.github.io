@@ -1,0 +1,65 @@
+body {
+    background-color: seagreen;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.title-box {
+    background-color: white;
+    position: absolute;
+    z-index: 999;
+    padding: 80px;
+}
+
+div.title-box h1, p {
+    font-family: "Kenia", sans-serif;
+}
+
+header h1 {
+    font-size: 80px;
+}
+
+header p {
+    font-size: 25px;
+}
+
+div.slides {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: calc(500px*3);
+    animation: glisse 15s infinite ease;
+    height: 720px;
+}
+
+@keyframes glisse {
+    0% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(-100px);
+    }
+    33% {
+         transform: translateX(-500px);
+    }
+    66% {
+        transform: translateX(-200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.slider {
+    overflow: hidden;
+}
+
+.slide {
+    opacity: 0.8;
+}
