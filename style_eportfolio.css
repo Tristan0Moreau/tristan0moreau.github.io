@@ -1,0 +1,63 @@
+.photo_profil {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 10000rem;
+}
+
+fieldset {
+    border-radius: 10000rem;
+    border-color: rgb(61, 169, 108);
+    border: 3px solid rgb(61, 169, 108);
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 50rem;
+    font-size: 1.3rem;
+    font-family: "Calibri", sans-serif;
+
+}
+
+input[type=radio] {
+    display: none;
+}
+
+label {
+    padding : 0.25rem 0.5rem;
+    font-weight: normal;
+    color: rgb(61, 169, 108);
+}
+
+header {
+    background-color: rgb(61, 169, 108);
+    margin: 0rem;
+    padding: 1rem;
+    color: rgb(198, 241, 198);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Calibri", sans-serif;
+}
+
+body {
+    margin: 0rem;
+    padding: 0rem;
+    background-color: white;
+}
+
+h1 {
+    margin: 0rem;
+}
+
+section.menu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.corps_about_me {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    align-items: center;
+}
