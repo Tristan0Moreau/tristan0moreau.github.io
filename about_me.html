@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style_eportfolio.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Calibri&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Tristan Moreau</h1>
+        </header>
+        <div class="page_about_me">
+            <section class="menu_home">
+                <fieldset>
+                    <input checked id="1" name="menu" type="radio" onclick="function_home()"></input>
+                    <label for="1">Home</label>
+                    <input checked id="2" name="menu" type="radio" onclick="function_about_me()"></input>
+                    <label for="2">About Me</label>
+                    <input checked id="3" name="menu" type="radio" onclick="function_skills()"></input>
+                    <label for="3">Skills</label>
+                    <input checked id="4" name="menu" type="radio" onclick="function_mobility()"></input>
+                    <label for="4">Mobility</label>
+                    <input checked id="5" name="menu" type="radio" onclick="function_experience()"></input>
+                    <label for="5">Experiences</label>
+                    <input checked id="6" name="menu" type="radio" onclick="function_contacts()"></input>
+                    <label for="6">Contacts</label>
+                    <script>
+                        function function_about_me() {
+                            window.location = "about_me.html";
+                        }
+                        function function_home() {
+                            window.location = "eportfolio.html";
+                        }
+                        function function_contacts() {
+                            window.location = "contacts.html";
+                        }
+                        function function_experience() {
+                            window.location = "experience.html";
+                        }
+                        function function_mobility() {
+                            window.location = "mobility.html";
+                        }
+                        function function_skills() {
+                            window.location = "skills.html"
+                        }
+                    </script>
+                </fieldset>
+            </section>
+
+            <div class="texte_about_me">
+                <h1>About me</h1>
+                <p>I like to</p>
+            </div>
+        </div>
+    </body>
+</html>
