@@ -34,14 +34,19 @@
 
 fieldset {
     border-radius: 10000rem;
+    padding: 0;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    height: 3.5rem;
     border-color: cadetblue;
     border: 3px solid cadetblue;
     display: flex;
-    justify-content: space-around;
-    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
     width: 50rem;
     font-size: 1.3rem;
     font-family: "Calibri", sans-serif;
+
 }
 
 input[type=radio] {
@@ -50,6 +55,7 @@ input[type=radio] {
 
 label {
     padding : 0.25rem 0.5rem;
+    display: flex;
     font-weight: normal;
     color: cadetblue;
     border-radius: 10000rem;
@@ -85,6 +91,11 @@ section.menu_home {
     align-items: center;
     flex-direction: column;
     margin: 2rem;
+}
+
+.fieldplease {
+    display: flex;
+    justify-content: center;
 }
 
 .corps_home {
@@ -127,6 +138,8 @@ label:not(:hover) {
     margin: 0rem;
     font-family: "Calibri", sans-serif;
     padding-top: 1.6rem;
+    margin-bottom: 2rem;
+
 }
 
 @keyframes backgroundFade {
@@ -171,4 +184,20 @@ div.texte_about_me {
 
 .texte_about_me p {
     margin-top: 0;
+}
+
+.contact_me_home {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.icone_contact {
+    width: 8rem;
+    padding: 2rem;
 }
