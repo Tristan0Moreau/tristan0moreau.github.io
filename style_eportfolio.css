@@ -143,7 +143,7 @@ label:not(:hover) {
 }
 
 @keyframes backgroundFade {
-    0% {background-color: white;}
+    0% {background-color: rgba(0, 0, 0, 0);}
     0% {color: cadetblue;}
     0% {font-size: 1.3rem;}
     100% {background-color: cadetblue;}
@@ -155,17 +155,16 @@ label:not(:hover) {
     0% {background-color: cadetblue;}
     0% {color: white;}
     0% {font-size: 1.5rem;}
-    100% {background-color: white;}
+    100% {background-color: rgba(0, 0, 0, 0);}
     100% {color: cadetblue;}
     100% {font-size: 1.3rem;}
 }
 
-div.page_about_me {
-    background-image: url("images/1.jpg");
+.page_about_me {
+    background-image: url("Images_e_portfolio/pexels-luis-gomes-166706-546819.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
-    padding-top: 2rem;
 }
 
 div.texte_about_me {
@@ -195,9 +194,35 @@ div.texte_about_me {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    height: 13.5rem;
 }
 
 .icone_contact {
     width: 8rem;
     padding: 2rem;
+    height: 8rem;
+}
+
+.icone_contact:hover {
+    animation: zooming 0.5s ease;
+    scale: 1.2;
+}
+
+.icone_contact:not(:hover) {
+    animation: zoomingout 0.5s ease;
+    scale: 1;
+}
+
+.corps_mobility {
+    display: flex;
+    justify-content: center;
+    font-family: "Calibri", sans-serif;
+    font-size: 2rem;
+}
+
+.corps_contact_me {
+    display: flex;
+    justify-content: center;
+    font-family: "Calibri", sans-serif;
+    font-size: 2rem;
 }
