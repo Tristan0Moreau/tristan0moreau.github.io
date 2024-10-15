@@ -112,6 +112,7 @@ section.menu_home {
     padding-left: 2rem;
     padding-bottom: 2rem;
     padding-right: 2rem;
+    font-family: "Calibri", sans-serif;
 }
 
 label:hover {
@@ -161,14 +162,14 @@ label:not(:hover) {
 }
 
 .page_about_me {
-    background-image: url("Images_e_portfolio/pexels-luis-gomes-166706-546819.jpg");
+    background-image: url("Images_e_portfolio/nature.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
 }
 
 div.texte_about_me {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.4);
     font-size: 1rem;
     font-family: "Calibri", sans-serif;
     color: white;
@@ -183,6 +184,7 @@ div.texte_about_me {
 
 .texte_about_me p {
     margin-top: 0;
+    margin-bottom: 0rem;
 }
 
 .contact_me_home {
@@ -225,4 +227,30 @@ div.texte_about_me {
     justify-content: center;
     font-family: "Calibri", sans-serif;
     font-size: 2rem;
+}
+
+.activities_about_me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.activities_photo_text {
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+    font-size: 1.3rem;
+    margin-bottom: 0rem;
+}
+
+.photo_badminton {
+    width: 13rem;
+    margin-right: 3rem;
+    border-radius: 2rem;
+    border: 2px solid black;
+}
+
+.text_activities_badminton {
+    display: flex;
+    flex-direction: column;
 }
