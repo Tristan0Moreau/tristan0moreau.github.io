@@ -133,8 +133,7 @@ label:not(:hover) {
 }
 
 .contact_me_home {
-    background-color: black;
-    color: white;
+    color: black;
     margin: 0;
     display: flex;
     align-items: center;
