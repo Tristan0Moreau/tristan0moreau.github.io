@@ -400,3 +400,10 @@ div.texte_about_me {
     margin-bottom: 1rem;
     margin-top: 1rem;
 }
+
+.texte_civic {
+    display: flex;
+    justify-content: center;
+    font-family: "Calibri", sans-serif;
+}
+
