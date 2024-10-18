@@ -118,7 +118,7 @@ section.menu_home {
     width: 30rem;
 }
 
-label:hover {
+.fieldplease label:hover {
     padding: 0.2rem;
     border-radius: 1000rem;
     animation: backgroundFade .3s;
@@ -127,7 +127,7 @@ label:hover {
     font-size: 1.5rem;
 }
 
-label:not(:hover) {
+.fieldplease label:not(:hover) {
     border-radius: 1000rem;
     animation: backgroundFadenot .3s;
 }
@@ -353,13 +353,27 @@ div.texte_about_me {
     align-items: center;
 }
 
-label .bis_fieldset {
-    padding : 0.25rem 0.5rem;
-    display: flex;
-    font-weight: normal;
-    color: cadetblue;
-    border-radius: 10000rem;
+
+.bis_fieldset label:hover {
+    animation: bis_field 0.3s ease;
+    font-size: 1.5rem;
 }
+
+.bis_fieldset label:not(:hover) {
+    animation: bis_fieldnot 0.3s ease;
+    font-size: 1.3rem;
+}
+
+@keyframes bis_field {
+    0% {font-size: 1.3rem;}
+    100% {font-size: 1.5rem;}
+}
+
+@keyframes bis_fieldnot {
+    0% {font-size: 1.5rem;}
+    100% {font-size: 1.3rem;}
+}
+
 
 .link_to_contact {
     background-color: black;
