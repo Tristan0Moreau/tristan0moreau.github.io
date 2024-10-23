@@ -208,6 +208,7 @@ div.texte_about_me {
     width: 8rem;
     padding: 2rem;
     height: 8rem;
+    border-radius: 3rem;
 }
 
 .icone_contact:hover {
@@ -415,4 +416,10 @@ div.texte_about_me {
 
 .contact_me_home input {
     display: none;
+}
+
+.icone_contact_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
