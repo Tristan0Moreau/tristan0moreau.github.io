@@ -423,3 +423,22 @@ div.texte_about_me {
     align-items: center;
     justify-content: center;
 }
+
+.text_skills {
+    font-family: "Calibri", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skills_skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+.skills_skills h2 {
+    margin: 0;
+    margin-top: 2rem;
+}
