@@ -43,14 +43,11 @@
                     function function_skills() {
                         window.location = "skills.html"
                     }
-
                     function myFunction() {
                         var copyText = document.getElementById("myInput");
-                        copyText.select();
-                        copyText.setSelectionRange(0, 99999);
                         navigator.clipboard.writeText(copyText.value);
                         alert("Copied the text: " + copyText.value);
-                        }
+                    }
                 </script>
             </fieldset>
         </div>
@@ -60,15 +57,12 @@
         <div class="contact_me_home">
             <h1>Contact Me</h1>
             <div class="contact_container">
-                <a href="contacts.html"><img src="Images_e_portfolio/image_telephone.png" class="icone_contact"/></a>
-                <a href="contacts.html"><img src="Images_e_portfolio/icone_mail.png" class="icone_contact"/></a>
+                <input type="text" value="tristanmoreau2019@gmail.com" id="myInput">
+                <a href="https://www.instagram.com/tristanmreau/"><img src="Images_e_portfolio/image_telephone.png" class="icone_contact"/></a>
+                <button onclick="myFunction()"><img src="Images_e_portfolio/icone_mail.png" class="icone_contact"/></button>
                 <a href="contacts.html"><img src="Images_e_portfolio/icone_facebook.png" class="icone_contact"/></a>
                 <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/"><img src="Images_e_portfolio/icone_linkedin.png" class="icone_contact"/></a>
             </div>
-        </div>
-        <div class="tests">
-            <input type="text" value="Hello World" id="myInput">
-            <button onclick="myFunction()">Copy text</button>
         </div>
     </body>
 </html>
