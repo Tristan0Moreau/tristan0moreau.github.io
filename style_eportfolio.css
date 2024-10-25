@@ -47,7 +47,6 @@
     font-size: 1.3rem;
     color: cadetblue;
     font-family: "Calibri", sans-serif;
-
 }
 
 input[type=radio] {
@@ -78,6 +77,15 @@ body {
     margin: 0rem;
     padding: 0rem;
     background-color: rgb(248, 255, 255);
+    scrollbar-width: 0;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+  }
+
+html {
+    scroll-behavior: smooth;
 }
 
 header h1 {
@@ -437,6 +445,11 @@ div.texte_about_me {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
+}
+
+.skills_skills ul {
+    text-align: left;
 }
 
 .skills_skills {
@@ -444,6 +457,7 @@ div.texte_about_me {
     flex-direction: column;
     align-items: center;
     margin: 0;
+    font-size: 1.3rem;
 }
 
 .skills_skills h2 {
@@ -459,7 +473,7 @@ div.texte_about_me {
     width: 100%;
     height: 100%;
     background-color: white;
-    animation: showright 3s linear forwards;
+    animation: showright 2s linear forwards;
 }
 
 @keyframes showright {
@@ -470,10 +484,60 @@ div.texte_about_me {
     content: '';
     position: absolute;
     bottom: 0;
-    top: 50%;
+    top: 21rem;
     right: 0;
     width: 100%;
-    height: 20rem;
+    height: 10rem;
     background-color: white;
-    animation: showright 3s linear forwards;
+    animation-delay: 10s;
+    animation: showright 2s linear forwards;
+}
+
+.text_civic_engagement {
+    font-family: "Calibri", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+.cornerbutton {
+    position: fixed;
+    height: 4rem;
+    z-index: 10;
+    bottom: 1rem;
+    right: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+    border-radius: 1000rem;
+}
+
+.cornerbutton img {
+    margin-right: 0;
+    margin-bottom: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;
+    background-color: cadetblue;
+    border-radius: 10000rem;   
+}
+
+.text_career_management {
+    font-family: "Calibri", sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text_eportfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0;
+    width: 29rem;
+    font-size: 1.3rem;
+}
+
+.text_eportfolio h2 {
+    margin-bottom: 0;
 }
