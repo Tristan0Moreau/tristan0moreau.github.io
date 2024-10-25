@@ -233,6 +233,9 @@ div.texte_about_me {
     justify-content: center;
     font-family: "Calibri", sans-serif;
     font-size: 2rem;
+    overflow: hidden;
+    object-fit: fill;
+    position: relative;
 }
 
 .activities_about_me {
@@ -408,6 +411,11 @@ div.texte_about_me {
     font-family: "Calibri", sans-serif;
 }
 
+.contact_me_home h1 {
+    overflow: hidden;
+    object-fit: fill;
+}
+
 .contact_me_home button {
     border: 0px;
     background-color: white;
@@ -441,4 +449,31 @@ div.texte_about_me {
 .skills_skills h2 {
     margin: 0;
     margin-top: 2rem;
+}
+
+.corps_contact_me h2::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    animation: showright 3s linear forwards;
+}
+
+@keyframes showright {
+    100% {width: 0;}
+}
+
+.contact_me_home h1::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    height: 20rem;
+    background-color: white;
+    animation: showright 3s linear forwards;
 }
