@@ -1,20 +1,20 @@
-<!DOCTYPE html>
 <html>
     <head>
+        <title>E-portfolio de Tristan</title>
         <link rel="stylesheet" href="style_eportfolio.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Calibri&display=swap" rel="stylesheet">
     </head>
     <body>
-        <header>
+        <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
         <div class="fieldplease">
             <fieldset class="first_fieldset">
                 <input checked id="1" name="menu" type="radio" onclick="function_home()"></input>
                 <label for="1">About</label>
-                <input checked id="2" name="menu" type="radio" onclick="function_about_me()"></input>
+                <input checked id="2" name="menu" type="radio" onclick="function_career_management()"></input>
                 <label for="2">Career Management</label>
                 <input checked id="3" name="menu" type="radio" onclick="function_skills()"></input>
                 <label for="3">Skills</label>
@@ -25,7 +25,7 @@
                 <input checked id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
                 <script>
-                    function function_about_me() {
+                    function function_career_management() {
                         window.location = "about_me.html";
                     }
                     function function_home() {
@@ -46,26 +46,23 @@
                 </script>
             </fieldset>
         </div>
-        <div class="corps_mobility">
-            <h2>
-                Mobility
-            </h2>
-            <p>Learn about my mobility soon !</p>
-        </div>
-        <div class="mobility_container">
-            <div class="experience_abroad">
-                <h2>Experience abroad</h2>
-                <h3>School exchange</h3>
-                <p>
-                    In middle school, I was lucky enough to be part of a student exchange program and 
-                    went to London for a week. I spent 1 week in London which allowed me to practice 
-                    with natives and discover the english culture.
-                </p>
-                <h3>Summer camp</h3>
-                <p>
-                    In high school, I went two years in a row to an english summer camp in Belgium for a week.
-                    It helped me a lot to increase my speaking skill as well as my comprehension skill.
-                </p>
+        <div class="activities_suite">
+            <h1>
+                My activities
+            </h1>
+            <div class="conteneur_activities">
+                <div class="tennis">
+                    <h3>Tennis</h3>
+                    <p>
+                        I played tennis for 13 years and developed a passion for raquet sports.
+                    </p>
+                </div>
+                <div class="tennis">
+                    <h3>Tennis de Table</h3>
+                </div>
+                <div class="tennis">
+                    <h3>Judo</h3>
+                </div>
             </div>
         </div>
     </body>

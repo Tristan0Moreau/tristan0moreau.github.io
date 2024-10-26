@@ -4,6 +4,10 @@
     border-radius: 10000rem;
 }
 
+* {
+    font-family: "Calibri", sans-serif;
+}
+
 .photo_profil:hover {
     animation: zooming 0.5s ease;
     scale: 1.2;
@@ -195,6 +199,7 @@ section.menu_home {
 .texte_about_me h2 {
     font-size: 3rem;
     margin-bottom: 1rem;
+    margin-top: 1.5rem;
 }
 
 .intro_about_me p {
@@ -244,9 +249,20 @@ section.menu_home {
 
 .corps_mobility {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     font-family: "Calibri", sans-serif;
     font-size: 2rem;
+}
+
+.corps_mobility h2 {
+    margin-bottom: 0;
+    margin-top: 1rem;
+}
+
+.corps_mobility p {
+    margin-top: 1rem;
+    margin-bottom: 0;
 }
 
 .corps_contact_me {
@@ -549,6 +565,7 @@ section.menu_home {
     font-family: "Calibri", sans-serif;
     display: flex;
     justify-content: center;
+    font-size: 1.3rem;
 }
 
 .cornerbutton {
@@ -605,3 +622,40 @@ section.menu_home {
     height: 12rem;
     background-color: green;
 } */
+
+.more_activities {
+    background-color: rgba(0, 0, 0, 0);
+    font-family: "Calibri", sans-serif;
+    color: cadetblue;
+    font-size: 1.3rem;
+    border-radius: 10000rem;
+    border: 3px solid cadetblue;
+    height: 3rem;
+}
+
+.more_activities:hover {
+    animation: bis_field 0.5s ease;
+    font-size: 1.5rem;
+}
+
+.more_activities:not(:hover) {
+    animation: bis_fieldnot 0.5s ease;
+    font-size: 1.3rem;
+}
+
+.activities_suite {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteneur_activities {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.tennis {
+    background-color: lightgray;
+    margin: 3rem;
+}
