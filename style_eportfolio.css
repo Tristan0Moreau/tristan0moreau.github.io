@@ -181,7 +181,7 @@ section.menu_home {
     margin: 0;
 }
 
-div.texte_about_me {
+.texte_about_me {
     background-color: rgba(0, 0, 0, 0.4);
     font-size: 1rem;
     font-family: "Calibri", sans-serif;
@@ -191,8 +191,20 @@ div.texte_about_me {
     align-items: center;
 }
 
+.texte_about_me h2 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.intro_about_me p {
+    font-size: 1.7rem;
+}
+
 .texte_about_me h1 {
     margin: 1rem;
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
 }
 
 .texte_about_me p {
@@ -253,12 +265,25 @@ div.texte_about_me {
     margin-bottom: 2rem;
 }
 
+.activities_about_me h2 {
+    text-align: center;
+}
+
+
 .activities_photo_text {
     display: flex;
     align-items: center;
     object-fit: cover;
     font-size: 1.3rem;
     margin-bottom: 0rem;
+}
+
+.activities_photo_text p {
+    font-size: 1.8rem;
+}
+
+.text_activities_escalade p {
+    font-size: 1.8rem;
 }
 
 .photo_badminton {
@@ -330,7 +355,7 @@ div.texte_about_me {
 }
 
 .text_club {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     width: 40rem;
     margin-bottom: 2rem;
 }
@@ -345,11 +370,29 @@ div.texte_about_me {
 
 .hobbies_about_me {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.club_about_me {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hobbies {
+    width: 50rem;
+}
+
+.net7 {
+    width: 50rem;
 }
 
 .text_hobbies {
     font-family: "Calibri", sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     width: 40rem;
     margin-bottom: 2rem;
 }
@@ -397,6 +440,7 @@ div.texte_about_me {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 1rem;
 }
 
 .link_to_contact h1 {
@@ -465,6 +509,10 @@ div.texte_about_me {
     margin-top: 2rem;
 }
 
+.skills_skills p {
+    width: 30rem;
+}
+
 .corps_contact_me h2::before {
     content: '';
     position: absolute;
@@ -473,10 +521,15 @@ div.texte_about_me {
     width: 100%;
     height: 100%;
     background-color: white;
-    animation: showright 2s linear forwards;
+    animation: showright 1s linear forwards;
 }
 
 @keyframes showright {
+    100% {width: 0;}
+}
+
+@keyframes showright_delayed {
+    30% {width: 100%;}
     100% {width: 0;}
 }
 
@@ -489,8 +542,7 @@ div.texte_about_me {
     width: 100%;
     height: 10rem;
     background-color: white;
-    animation-delay: 10s;
-    animation: showright 2s linear forwards;
+    animation: showright_delayed 2s linear forwards;
 }
 
 .text_civic_engagement {
@@ -541,3 +593,15 @@ div.texte_about_me {
 .text_eportfolio h2 {
     margin-bottom: 0;
 }
+
+/* .home_about_me::before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    top: 19rem;
+    left: 4rem;
+    right: 4rem;
+    height: 12rem;
+    z-index: 0;
+    background-color: green;
+} */
