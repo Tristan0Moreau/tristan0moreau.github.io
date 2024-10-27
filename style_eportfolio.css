@@ -683,6 +683,7 @@ section.menu_home {
     text-align: center;
     border-radius: 2rem;
     width: 20rem;
+    border: 2px solid black;
 }
 
 .tennis h2 {
@@ -713,12 +714,19 @@ section.menu_home {
     text-align: center;
     border-radius: 2rem;
     width: 20rem;
+    position: relative;
 }
 
 .ping_bis {
     background-color: rgba(0, 0, 0, 0.4);
     color: white;
     border-radius: 2rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    left: 0;
+    border: 2px solid black;
 }
 
 .ping_bis h2 {
