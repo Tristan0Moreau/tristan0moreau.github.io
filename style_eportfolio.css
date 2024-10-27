@@ -129,6 +129,7 @@ section.menu_home {
     font-size: 1.6rem;
     width: 30rem;
     overflow: hidden;
+    position: relative;
 }
 
 .fieldplease label:hover {
@@ -612,16 +613,35 @@ section.menu_home {
     margin-bottom: 0;
 }
 
-/* .home_about_me::before {
+.home_about_me h2 {
+    position: relative;
+}
+
+.home_about_me p {
+    position: relative;
+}
+
+.home_about_me h2::before {
     content: '';
     position: absolute;
-    width: 60%;
-    top: 19rem;
-    left: 12%;
-    right: 4rem;
-    height: 12rem;
-    background-color: green;
-} */
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgb(237, 237, 237);
+    animation: showright 1s ease forwards;
+}
+
+.home_about_me p::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: rgb(237, 237, 237);
+    animation: showright 1s forwards 1s;
+}
 
 .more_activities {
     background-color: rgba(0, 0, 0, 0);
@@ -656,6 +676,52 @@ section.menu_home {
 }
 
 .tennis {
-    background-color: lightgray;
+    background-image: url(Images_e_portfolio/pexels-pixabay-209977.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     margin: 3rem;
+    text-align: center;
+    border-radius: 2rem;
+    width: 20rem;
+}
+
+.tennis h2 {
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+.photo_tennis {
+    width: 15rem;
+}
+
+.tennis_bis {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 2rem;
+}
+
+.tennis_bis p {
+    margin-bottom: 0;
+    padding-bottom: 1rem;
+}
+
+.ping {
+    background-image: url(Images_e_portfolio/pexels-shvetsa-3846048.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 3rem;
+    text-align: center;
+    border-radius: 2rem;
+    width: 20rem;
+}
+
+.ping_bis {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    border-radius: 2rem;
+}
+
+.ping_bis h2 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
 }
