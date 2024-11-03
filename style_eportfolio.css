@@ -236,6 +236,8 @@ section.menu_home {
     padding: 2rem;
     height: 8rem;
     border-radius: 3rem;
+    border: 0;
+    cursor: pointer;
 }
 
 .icone_contact:hover {
@@ -493,7 +495,7 @@ section.menu_home {
     object-fit: fill;
 }
 
-.contact_me_home button {
+.mail_photo button {
     border: 0px;
     background-color: white;
     padding: 0;
@@ -751,11 +753,30 @@ section.menu_home {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    margin: 2rem;
+    height: 8rem;
 }
 
 .testss {
     width: fit-content;
-    background-color: blue;
-    border: 2px solid black;
+    height: 2rem;
+    font-size: 1.7rem;
+    background-color: rgb(33, 150, 243);
+    border-radius: 2rem;
+    border: 0;
+    color: white;
+    cursor: pointer;
+    padding: 0.4rem;
+    text-decoration: none;
+}
+
+.testss:hover {
+    animation: zooming 0.5s ease;
+    scale: 1.2;
+}
+
+.testss:not(:hover) {
+    animation: zoomingout 0.5s ease;
+    scale: 1;
 }
