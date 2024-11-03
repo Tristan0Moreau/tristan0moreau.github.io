@@ -780,3 +780,25 @@ section.menu_home {
     animation: zoomingout 0.5s ease;
     scale: 1;
 }
+
+.text_elevator_pitch {
+    text-align: center;
+}
+
+.elevator_pitch_video {
+    color: white;
+    padding: 0.8rem;
+    text-decoration: none;
+    background: cadetblue;
+    border-radius: 2rem;
+}
+
+.elevator_pitch_video:hover {
+    animation: zooming 0.5s ease;
+    scale: 1.2;
+}
+
+.elevator_pitch_video:not(:hover) {
+    animation: zoomingout 0.5s ease;
+    scale: 1;
+}
