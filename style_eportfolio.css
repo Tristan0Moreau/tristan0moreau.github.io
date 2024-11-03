@@ -355,6 +355,14 @@ section.menu_home {
     justify-content: center;
 }
 
+.mobility_container h3 {
+    margin-top: 0;
+}
+
+.mobility_container h2 {
+    margin-bottom: 0;
+}
+
 .experience_abroad h3 {
     margin-bottom: 0rem;
 }
@@ -732,4 +740,8 @@ section.menu_home {
 .ping_bis h2 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+}
+
+.languages_mobility {
+    text-align: left;
 }
