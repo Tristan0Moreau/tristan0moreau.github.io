@@ -9,7 +9,7 @@
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <header>
+        <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
         <div class="fieldplease">
@@ -28,31 +28,6 @@
                 <label for="5">Civic Engagement</label>
                 <input id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
-                <script>
-                    function function_about_me() { window.location = "about_me.html"; }
-                    function function_home() { window.location = "index.html"; }
-                    function function_contacts() { window.location = "contacts.html"; }
-                    function function_experience() { window.location = "experience.html"; }
-                    function function_mobility() { window.location = "mobility.html"; }
-                    function function_skills() { window.location = "skills.html"; }
-                    function function_projects() { window.location = "projects.html"; }
-                    
-                    function toggleTheme() {
-                        document.body.classList.toggle('dark-mode');
-                        var btn = document.querySelector('.theme-toggle');
-                        if (document.body.classList.contains('dark-mode')) {
-                            localStorage.setItem('theme', 'dark');
-                            btn.textContent = '☀️';
-                        } else {
-                            localStorage.setItem('theme', 'light');
-                            btn.textContent = '🌙';
-                        }
-                    }
-                    if (localStorage.getItem('theme') === 'dark') {
-                        document.body.classList.add('dark-mode');
-                        document.querySelector('.theme-toggle').textContent = '☀️';
-                    }
-                </script>
             </fieldset>
         </div>
 
@@ -81,6 +56,9 @@
             <a href="projects.html" class="project_button">Back to Projects</a>
         </div>
 
+        <a class="cornerbutton" href="#header">
+            <img src="Images_e_portfolio/fleche_haut.png">
+        </a>
         <footer>
             <div class="footer_content">
                 <p>&copy; 2025 Tristan Moreau - Engineering Student</p>
@@ -91,5 +69,6 @@
                 </div>
             </div>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>

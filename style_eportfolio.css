@@ -2,6 +2,8 @@
     width: 20rem;
     height: 20rem;
     border-radius: 10000rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
 }
 
 * {
@@ -11,6 +13,7 @@
 .photo_profil:hover {
     animation: zooming 0.5s ease;
     scale: 1.2;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .photo_profil:not(:hover) {
@@ -242,11 +245,14 @@ section.menu_home {
     border-radius: 3rem;
     border: 0;
     cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
 }
 
 .icone_contact:hover {
     animation: zooming 0.5s ease;
     scale: 1.2;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .icone_contact:not(:hover) {
@@ -314,6 +320,8 @@ section.menu_home {
     margin-right: 3rem;
     border-radius: 2rem;
     border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
 }
 
 .text_activities_badminton {
@@ -321,6 +329,10 @@ section.menu_home {
     flex-direction: column;
     width: 30rem;
     font-size: 1.5rem;
+}
+
+.photo_badminton:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .activities_escalade {
@@ -336,6 +348,12 @@ section.menu_home {
     margin-right: 3rem;
     border-radius: 2rem;
     border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.photo_escalade:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .text_activities_escalade {
@@ -380,6 +398,12 @@ section.menu_home {
     border: 2px solid black;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.photo_club:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .club_about_me {
@@ -398,6 +422,12 @@ section.menu_home {
     border: 2px solid black;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.photo_hobbies:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .hobbies_about_me {
@@ -585,6 +615,7 @@ section.menu_home {
     margin-top: 1rem;
     cursor: pointer;
     border-radius: 1000rem;
+    display: none;
 }
 
 .cornerbutton img {
@@ -594,7 +625,13 @@ section.menu_home {
     height: 2.5rem;
     padding: 0.5rem;
     background-color: cadetblue;
-    border-radius: 10000rem;   
+    border-radius: 10000rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.cornerbutton img:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .text_career_management {
@@ -690,6 +727,12 @@ section.menu_home {
     border-radius: 2rem;
     width: 20rem;
     border: 2px solid black;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.tennis:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .tennis h2 {
@@ -721,6 +764,12 @@ section.menu_home {
     border-radius: 2rem;
     width: 20rem;
     position: relative;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.ping:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .ping_bis {
@@ -744,27 +793,31 @@ section.menu_home {
     text-align: left;
 }
 
-.tests {
-    width: 8rem;
+.cv_download {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    margin: 2rem;
-    height: 8rem;
+    justify-content: center;
 }
 
 .testss {
-    width: fit-content;
-    height: 2rem;
-    font-size: 1.7rem;
+    width: 5.3rem;
+    height: 5.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.05rem;
     background-color: rgb(33, 150, 243);
     border-radius: 2rem;
     border: 0;
+    margin-bottom: 1.6rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
     color: white;
     cursor: pointer;
-    padding: 0.4rem;
+    padding: 1.4rem;
     text-decoration: none;
+    text-align: center;
+    font-weight: bold;
 }
 
 .testss:hover {
@@ -832,7 +885,12 @@ section.menu_home {
 .civic_image_wrapper img {
     height: auto;
     border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.civic_image_wrapper img:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 .civic_legend {
     font-style: italic;
@@ -859,9 +917,15 @@ section.menu_home {
 .japan_images img {
     height: 15rem;
     border-radius: 1rem;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     border: 2px solid black;
     object-fit: cover;
+    cursor: pointer;
+    transition: box-shadow 0.3s ease;
+}
+
+.japan_images img:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .skill_logo {
@@ -1008,10 +1072,14 @@ footer {
     width: 3rem;
     height: 3rem;
     transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 0.8rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
 .footer_icon:hover {
     transform: scale(1.2);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 /* --- Projects Page --- */
@@ -1123,7 +1191,12 @@ body.dark-mode .project_content p {
     object-fit: cover;
     border-radius: 1rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.project_detail_image:hover {
+    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .project_detail_text {
@@ -1141,4 +1214,62 @@ body.dark-mode .project_content p {
 /* Dark Mode for Details */
 body.dark-mode .project_detail_text {
     color: #e0e0e0;
+}
+
+/* --- Image Modal (Lightbox) --- */
+.image-modal {
+    display: none; 
+    position: fixed; 
+    z-index: 2000; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9); 
+}
+
+.image-modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 1000px;
+    max-height: 90vh;
+    object-fit: contain;
+    animation: zoomIn 0.3s;
+}
+
+@keyframes zoomIn {
+    from {transform:scale(0)} 
+    to {transform:scale(1)}
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Remove shadow on Contact page specific elements */
+.contact_container .icone_contact,
+.contact_container .testss {
+    box-shadow: none;
+}
+
+.contact_container .icone_contact:hover,
+.contact_container .testss:hover {
+    box-shadow: none;
 }
