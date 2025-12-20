@@ -5,7 +5,7 @@
 }
 
 * {
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .photo_profil:hover {
@@ -47,10 +47,10 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    width: 50rem;
+    width: 60rem;
     font-size: 1.3rem;
     color: cadetblue;
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 input[type=radio] {
@@ -73,7 +73,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: larger;
 }
 
@@ -109,6 +109,10 @@ section.menu_home {
 .fieldplease {
     display: flex;
     justify-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: rgb(248, 255, 255);
 }
 
 .corps_home {
@@ -125,7 +129,7 @@ section.menu_home {
     padding-left: 2rem;
     padding-bottom: 2rem;
     padding-right: 2rem;
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.6rem;
     width: 30rem;
     overflow: hidden;
@@ -156,7 +160,7 @@ section.menu_home {
 
 .contact_me_home h1 {
     margin: 0rem;
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     padding-top: 1.6rem;
     margin-bottom: 2rem;
 
@@ -190,7 +194,7 @@ section.menu_home {
 .texte_about_me {
     background-color: rgba(0, 0, 0, 0.4);
     font-size: 1rem;
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: white;
     display: flex;
     flex-direction: column;
@@ -254,8 +258,7 @@ section.menu_home {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: "Calibri", sans-serif;
-    font-size: 2rem;
+    font-family: "Roboto", sans-serif;
 }
 
 .corps_mobility h2 {
@@ -271,7 +274,7 @@ section.menu_home {
 .corps_contact_me {
     display: flex;
     justify-content: center;
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 2rem;
     overflow: hidden;
     object-fit: fill;
@@ -343,13 +346,14 @@ section.menu_home {
 }
 
 .experience_abroad {
-    font-family: "Calibri", sans-serif;
-    font-size: larger;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 40rem;
     text-align: center;
+    margin-bottom: 3rem;
 }
 
 .mobility_container {
@@ -419,7 +423,7 @@ section.menu_home {
 }
 
 .text_hobbies {
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-size: 1.8rem;
     width: 50rem;
     margin-bottom: 2rem;
@@ -462,7 +466,7 @@ section.menu_home {
     color: white;
     padding-top: 1.3rem;
     padding-bottom: 2rem;
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -475,7 +479,7 @@ section.menu_home {
 }
 
 .intro_about_me {
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     width: 40rem;
     font-size: 1.6rem;
     color: white;
@@ -487,7 +491,7 @@ section.menu_home {
 .texte_civic {
     display: flex;
     justify-content: center;
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 
 .contact_me_home h1 {
@@ -512,7 +516,7 @@ section.menu_home {
 }
 
 .text_skills {
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -540,40 +544,32 @@ section.menu_home {
     width: 30rem;
 }
 
-.corps_contact_me h2::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    animation: showright 1s linear forwards;
+.corps_contact_me h2 {
+    clip-path: inset(0 100% 0 0);
+    animation: revealRight 1s linear forwards;
 }
 
 @keyframes showright {
     100% {width: 0;}
 }
 
-@keyframes showright_delayed {
-    30% {width: 100%;}
-    100% {width: 0;}
+@keyframes revealRight {
+    100% { clip-path: inset(0 0 0 0); }
 }
 
-.contact_me_home h1::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    top: 21rem;
-    right: 0;
-    width: 100%;
-    height: 10rem;
-    background-color: white;
-    animation: showright_delayed 2s linear forwards;
+@keyframes revealRightDelayed {
+    0% { clip-path: inset(0 100% 0 0); }
+    30% { clip-path: inset(0 100% 0 0); }
+    100% { clip-path: inset(0 0 0 0); }
+}
+
+.contact_me_home h1 {
+    clip-path: inset(0 100% 0 0);
+    animation: revealRightDelayed 2s linear forwards;
 }
 
 .text_civic_engagement {
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     display: flex;
     justify-content: center;
     font-size: 1.3rem;
@@ -602,7 +598,7 @@ section.menu_home {
 }
 
 .text_career_management {
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -655,7 +651,7 @@ section.menu_home {
 
 .more_activities {
     background-color: rgba(0, 0, 0, 0);
-    font-family: "Calibri", sans-serif;
+    font-family: "Roboto", sans-serif;
     color: cadetblue;
     font-size: 1.3rem;
     border-radius: 10000rem;
@@ -801,4 +797,348 @@ section.menu_home {
 .elevator_pitch_video:not(:hover) {
     animation: zoomingout 0.5s ease;
     scale: 1;
+}
+
+.civic_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 50px;
+}
+.text_civic_column {
+    width: 50%;
+    width: 100%;
+    text-align: justify;
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+}
+.text_civic_column h2 {
+    text-align: center;
+}
+.images_civic_column {
+    width: 40%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.civic_image_wrapper {
+    margin-bottom: 20px;
+    text-align: center;
+}
+.civic_image_wrapper img {
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+.civic_legend {
+    font-style: italic;
+    margin-top: 5px;
+    color: #333;
+}
+
+#img_capitole_2024 {
+    max-width: 35%;
+}
+
+#img_capitole_2025 {
+    max-width: 90%;
+}
+
+.japan_images {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.japan_images img {
+    height: 15rem;
+    border-radius: 1rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    border: 2px solid black;
+    object-fit: cover;
+}
+
+.skill_logo {
+    height: 2rem;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
+.skill_logo:hover {
+    animation: zooming 0.5s ease;
+    scale: 1.2;
+}
+
+.skill_logo:not(:hover) {
+    animation: zoomingout 0.5s ease;
+    scale: 1;
+}
+
+.programming_list li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+@media screen and (min-width: 900px) {
+    .skills_skills ul {
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid cadetblue;
+        width: 100%;
+        max-width: 70rem;
+    }
+
+    .skills_skills li {
+        break-inside: avoid;
+    }
+
+    .skills_skills p {
+        width: auto;
+        max-width: 60rem;
+    }
+}
+
+/* Transitions fluides pour le changement de thème */
+body, header, footer, .fieldplease, .home_about_me, .first_fieldset, .bis_fieldset, label,
+.tennis, .ping, .photo_club, .photo_hobbies, .photo_badminton, .photo_escalade,
+.japan_images img, .civic_image_wrapper img, .mail_photo button {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.home_about_me h2::before,
+.home_about_me p::before {
+    transition: background-color 0.3s ease;
+}
+
+/* --- Dark Mode --- */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark-mode header {
+    background-color: #1f1f1f;
+}
+
+body.dark-mode .first_fieldset,
+body.dark-mode .bis_fieldset {
+    border-color: #80cbc4;
+    color: #80cbc4;
+}
+
+body.dark-mode label {
+    color: #80cbc4;
+}
+
+body.dark-mode .home_about_me {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+}
+
+body.dark-mode .home_about_me h2::before,
+body.dark-mode .home_about_me p::before {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .tennis,
+body.dark-mode .ping,
+body.dark-mode .photo_club,
+body.dark-mode .photo_hobbies,
+body.dark-mode .photo_badminton,
+body.dark-mode .photo_escalade,
+body.dark-mode .japan_images img,
+body.dark-mode .civic_image_wrapper img {
+    border-color: #e0e0e0;
+}
+
+body.dark-mode .fieldplease {
+    background-color: #121212;
+}
+
+body.dark-mode .mail_photo button {
+    background-color: #121212;
+}
+
+body.dark-mode footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+/* Bouton de bascule */
+.theme-toggle {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 1000;
+    filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));
+}
+
+/* --- Footer --- */
+footer {
+    background-color: cadetblue;
+    color: white;
+    padding: 2rem;
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.footer_socials {
+    display: flex;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.footer_icon {
+    width: 3rem;
+    height: 3rem;
+    transition: transform 0.3s ease;
+}
+
+.footer_icon:hover {
+    transform: scale(1.2);
+}
+
+/* --- Projects Page --- */
+.projects_container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.projects_container h1 {
+    text-align: center;
+    margin-bottom: 3rem;
+    color: cadetblue;
+}
+
+.projects_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.project_card {
+    background-color: white;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}
+
+.project_image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+
+.project_content {
+    padding: 1.5rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.project_content h2 {
+    margin-top: 0;
+    color: cadetblue;
+    font-size: 1.5rem;
+}
+
+.project_content p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    color: #555;
+}
+
+.project_button {
+    display: inline-block;
+    margin-top: auto;
+    padding: 0.8rem 1.5rem;
+    background-color: cadetblue;
+    color: white;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+}
+
+.project_button:hover {
+    background-color: #4db6ac;
+    transform: scale(1.05);
+}
+
+/* Dark Mode Projects */
+body.dark-mode .project_card {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+body.dark-mode .project_image {
+    border-bottom-color: #333;
+}
+
+body.dark-mode .project_content p {
+    color: #ccc;
+}
+
+/* --- Project Detail Pages --- */
+.project_detail_container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project_detail_image {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border-radius: 1rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.project_detail_text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    text-align: justify;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.project_detail_text p {
+    margin-bottom: 1.5rem;
+}
+
+/* Dark Mode for Details */
+body.dark-mode .project_detail_text {
+    color: #e0e0e0;
 }

@@ -4,25 +4,63 @@
         <link rel="stylesheet" href="style_eportfolio.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Calibri&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <style>
+            .civic_container {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: flex-start;
+                margin: 20px 50px;
+            }
+            .text_civic_column {
+                width: 50%;
+                text-align: justify;
+                font-size: 1.3rem;
+            }
+            .images_civic_column {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .civic_image_wrapper {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+            .civic_image_wrapper img {
+                max-width: 50%;
+                height: auto;
+                border-radius: 5px;
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            }
+            .civic_legend {
+                font-style: italic;
+                margin-top: 5px;
+                color: #333;
+            }
+        </style>
     </head>
     <body>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
         <header>
             <h1>Tristan Moreau</h1>
         </header>
         <div class="fieldplease">
             <fieldset class="first_fieldset">
-                <input checked id="1" name="menu" type="radio" onclick="function_home()"></input>
+                <input id="1" name="menu" type="radio" onclick="function_home()"></input>
                 <label for="1">About</label>
-                <input checked id="2" name="menu" type="radio" onclick="function_about_me()"></input>
+                <input id="2" name="menu" type="radio" onclick="function_about_me()"></input>
                 <label for="2">Career Management</label>
-                <input checked id="3" name="menu" type="radio" onclick="function_skills()"></input>
+                <input id="3" name="menu" type="radio" onclick="function_skills()"></input>
                 <label for="3">Skills</label>
-                <input checked id="4" name="menu" type="radio" onclick="function_mobility()"></input>
+                <input id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
+                <label for="nav_projects">Projects</label>
+                <input id="4" name="menu" type="radio" onclick="function_mobility()"></input>
                 <label for="4">Mobility</label>
                 <input checked id="5" name="menu" type="radio" onclick="function_experience()"></input>
                 <label for="5">Civic Engagement</label>
-                <input checked id="6" name="menu" type="radio" onclick="function_contacts()"></input>
+                <input id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
                 <script>
                     function function_about_me() {
@@ -43,6 +81,24 @@
                     function function_skills() {
                         window.location = "skills.html"
                     }
+                    function function_projects() {
+                        window.location = "projects.html";
+                    }
+                    function toggleTheme() {
+                        document.body.classList.toggle('dark-mode');
+                        var btn = document.querySelector('.theme-toggle');
+                        if (document.body.classList.contains('dark-mode')) {
+                            localStorage.setItem('theme', 'dark');
+                            btn.textContent = '☀️';
+                        } else {
+                            localStorage.setItem('theme', 'light');
+                            btn.textContent = '🌙';
+                        }
+                    }
+                    if (localStorage.getItem('theme') === 'dark') {
+                        document.body.classList.add('dark-mode');
+                        document.querySelector('.theme-toggle').textContent = '☀️';
+                    }
                 </script>
             </fieldset>
         </div>
@@ -51,8 +107,34 @@
                 Civic Engagement
             </h1>
         </div>
-        <div class="text_civic_engagement">
-            <p>Learn about my Civic engagement soon !</p>
+        <div class="civic_container">
+            <div class="text_civic_column">
+                <h2>Capitole du Libre - Toulouse</h2>
+                <p>
+                    I participated as a volunteer in the Capitole du Libre event in Toulouse in October 2024 and 2025.
+                    It is a major event dedicated to Free Software. This experience allowed me to contribute to the organization of the event and to immerse myself in the Open Source community.
+                </p>
+            </div>
+            <div class="images_civic_column">
+                <div class="civic_image_wrapper">
+                    <img src="Images_e_portfolio/capitole_2024.jpg" alt="Capitole du Libre 2024">
+                    <div class="civic_legend">Volunteer at Capitole du Libre 2024</div>
+                </div>
+                <div class="civic_image_wrapper">
+                    <img src="Images_e_portfolio/capitole_2025.jpg" alt="Capitole du Libre 2025">
+                    <div class="civic_legend">The team in 2025</div>
+                </div>
+            </div>
         </div>
+        <footer>
+            <div class="footer_content">
+                <p>&copy; 2025 Tristan Moreau - Engineering Student</p>
+                <div class="footer_socials">
+                    <a href="https://www.instagram.com/tristanmreau/" target="_blank"><img src="Images_e_portfolio/icone_insta.png" alt="Instagram" class="footer_icon"></a>
+                    <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" alt="LinkedIn" class="footer_icon"></a>
+                    <a href="mailto:tristan.moreau@etu.inp-n7.fr"><img src="Images_e_portfolio/icone_mail.png" alt="Email" class="footer_icon"></a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

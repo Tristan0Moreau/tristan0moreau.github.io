@@ -4,25 +4,28 @@
         <link rel="stylesheet" href="style_eportfolio.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Calibri&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     </head>
     <body>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
         <header>
             <h1>Tristan Moreau</h1>
         </header>
         <div class="fieldplease">
             <fieldset class="first_fieldset">
-                <input checked id="1" name="menu" type="radio" onclick="function_home()"></input>
+                <input id="1" name="menu" type="radio" onclick="function_home()"></input>
                 <label for="1">About</label>
-                <input checked id="2" name="menu" type="radio" onclick="function_about_me()"></input>
+                <input id="2" name="menu" type="radio" onclick="function_about_me()"></input>
                 <label for="2">Career Management</label>
-                <input checked id="3" name="menu" type="radio" onclick="function_skills()"></input>
+                <input id="3" name="menu" type="radio" onclick="function_skills()"></input>
                 <label for="3">Skills</label>
+                <input id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
+                <label for="nav_projects">Projects</label>
                 <input checked id="4" name="menu" type="radio" onclick="function_mobility()"></input>
                 <label for="4">Mobility</label>
-                <input checked id="5" name="menu" type="radio" onclick="function_experience()"></input>
+                <input id="5" name="menu" type="radio" onclick="function_experience()"></input>
                 <label for="5">Civic Engagement</label>
-                <input checked id="6" name="menu" type="radio" onclick="function_contacts()"></input>
+                <input id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
                 <script>
                     function function_about_me() {
@@ -43,37 +46,59 @@
                     function function_skills() {
                         window.location = "skills.html"
                     }
+                    function function_projects() {
+                        window.location = "projects.html";
+                    }
+                    function toggleTheme() {
+                        document.body.classList.toggle('dark-mode');
+                        var btn = document.querySelector('.theme-toggle');
+                        if (document.body.classList.contains('dark-mode')) {
+                            localStorage.setItem('theme', 'dark');
+                            btn.textContent = '☀️';
+                        } else {
+                            localStorage.setItem('theme', 'light');
+                            btn.textContent = '🌙';
+                        }
+                    }
+                    if (localStorage.getItem('theme') === 'dark') {
+                        document.body.classList.add('dark-mode');
+                        document.querySelector('.theme-toggle').textContent = '☀️';
+                    }
                 </script>
             </fieldset>
         </div>
         <div class="corps_mobility">
-            <h2>
-                Mobility
-            </h2>
-            <p>Learn about my mobility soon !</p>
-        </div>
-        <div class="mobility_container">
+            <h1>International Mobility</h1>
             <div class="experience_abroad">
-                <h2>Experience abroad</h2>
-                <h3>School exchange</h3>
+                <h2>Japan - Summer 2025</h2>
                 <p>
-                    In middle school, I was lucky enough to be part of a student exchange program and 
-                    went to London for a week. I spent 1 week in London which allowed me to practice 
-                    with natives and discover the english culture.
+                    I spent 2 months in Japan this summer.
                 </p>
-                <h3>Summer camp</h3>
                 <p>
-                    In high school, I went two years in a row to an english summer camp in Belgium for a week.
-                    It helped me a lot to increase my speaking skill as well as my comprehension skill.
+                    For the first 3 weeks, I visited the country and took Japanese lessons in the morning.
+                    For the rest of the trip, I did an internship in a hotel located at the foot of Mount Fuji.
                 </p>
-                <h2>Languages</h2>
-                <ul class="languages_mobility">
-                    <li>French (native)</li>
-                    <li>English (C1 - advanced level)</li>
-                    <li>German (A2 - beginner level)</li>
-                    <li>Japanese (School level)</li>
-                </ul>
+                <div class="japan_images">
+                    <img src="Images_e_portfolio/Tristan_japon_1.jpeg" alt="Japan Trip 1">
+                    <img src="Images_e_portfolio/Tristan_japon_2.jpg" alt="Japan Trip 2">
+                </div>
+            </div>
+            <div class="experience_abroad">
+                <h2>Upcoming International Mobility</h2>
+                <p>
+                    For the first semester of next year, I will be going on an international mobility program organized by my school. I am currently considering destinations such as Canada or Italia. This mobility will contribute to my knowledge about engineering as I should study AI in Polytechnique School of Montreal in Canada or Padova University in Italia.
+                </p>
             </div>
         </div>
+        <footer>
+            <div class="footer_content">
+                <p>&copy; 2025 Tristan Moreau - Engineering Student</p>
+                <div class="footer_socials">
+                    <a href="https://www.instagram.com/tristanmreau/" target="_blank"><img src="Images_e_portfolio/icone_insta.png" alt="Instagram" class="footer_icon"></a>
+                    <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" alt="LinkedIn" class="footer_icon"></a>
+                    <a href="mailto:tristan.moreau@etu.inp-n7.fr"><img src="Images_e_portfolio/icone_mail.png" alt="Email" class="footer_icon"></a>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Projects - Tristan Moreau</title>
         <link rel="stylesheet" href="style_eportfolio.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,41 +20,23 @@
                 <label for="2">Career Management</label>
                 <input id="3" name="menu" type="radio" onclick="function_skills()"></input>
                 <label for="3">Skills</label>
-                <input id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
+                <input checked id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
                 <label for="nav_projects">Projects</label>
                 <input id="4" name="menu" type="radio" onclick="function_mobility()"></input>
                 <label for="4">Mobility</label>
                 <input id="5" name="menu" type="radio" onclick="function_experience()"></input>
                 <label for="5">Civic Engagement</label>
-                <input checked id="6" name="menu" type="radio" onclick="function_contacts()"></input>
+                <input id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
                 <script>
-                    function function_about_me() {
-                        window.location = "about_me.html";
-                    }
-                    function function_home() {
-                        window.location = "index.html";
-                    }
-                    function function_contacts() {
-                        window.location = "contacts.html";
-                    }
-                    function function_experience() {
-                        window.location = "experience.html";
-                    }
-                    function function_mobility() {
-                        window.location = "mobility.html";
-                    }
-                    function function_skills() {
-                        window.location = "skills.html"
-                    }
-                    function function_projects() {
-                        window.location = "projects.html";
-                    }
-                    function myFunction() {
-                        var copyText = document.getElementById("myInput");
-                        navigator.clipboard.writeText(copyText.value);
-                        alert(copyText.value + " has been copied");
-                    }
+                    function function_about_me() { window.location = "about_me.html"; }
+                    function function_home() { window.location = "index.html"; }
+                    function function_contacts() { window.location = "contacts.html"; }
+                    function function_experience() { window.location = "experience.html"; }
+                    function function_mobility() { window.location = "mobility.html"; }
+                    function function_skills() { window.location = "skills.html"; }
+                    function function_projects() { window.location = "projects.html"; }
+                    
                     function toggleTheme() {
                         document.body.classList.toggle('dark-mode');
                         var btn = document.querySelector('.theme-toggle');
@@ -72,28 +55,42 @@
                 </script>
             </fieldset>
         </div>
-        <div class="corps_contact_me">
-            <h2>Want to get in touch with me ?</h2>
-        </div>
-        <div class="contact_me_home">
-            <h1>Contact Me :</h1>
-            <div class="contact_container">
-                <input type="text" value="tristan.moreau@etu.inp-n7.fr" id="myInput">
-                <div class="instagram_photo">
-                    <a href="https://www.instagram.com/tristanmreau/" target="_blank"><img src="Images_e_portfolio/icone_insta.png" class="icone_contact"/></a>
+
+        <div class="projects_container">
+            <h1>My Projects</h1>
+            <div class="projects_grid">
+                <!-- Project 1 -->
+                <div class="project_card">
+                    <img src="Images_e_portfolio/musique-n7.png" alt="Music Band" class="project_image">
+                    <div class="project_content">
+                        <h2>Club Zik - Band Singer</h2>
+                        <p>As a member of the school's music association (Club Zik), I am the lead singer of a band. We have performed at two major student concerts, managing rehearsals and stage presence.</p>
+                        <a href="project_music.html" class="project_button">En savoir plus</a>
+                    </div>
                 </div>
-                <div class="mail_photo">
-                    <button onclick="myFunction()"><img src="Images_e_portfolio/icone_mail.png" class="icone_contact"/></button>
+
+                <!-- Project 2 -->
+                <div class="project_card">
+                    <img src="Images_e_portfolio/game_world.png" alt="Video Game Project" class="project_image">
+                    <div class="project_content">
+                        <h2>Video Game Development</h2>
+                        <p>I am currently working on creating a video game with a friend. We are designing the game mechanics and coding the engine, combining our passion for gaming and programming.</p>
+                        <a href="project_game.html" class="project_button">En savoir plus</a>
+                    </div>
                 </div>
-                <div class="tests">
-                    <a href="Images_e_portfolio/French_CV_Tristan_Moreau.pdf" download class="testss">French CV</a>
-                    <a href="Images_e_portfolio/English_CV_Tristan_Moreau.pdf" download class="testss">English CV</a>
-                </div>
-                <div class="linkedin_photo">
-                    <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" class="icone_contact"/></a>
+
+                <!-- Placeholder for future projects -->
+                <div class="project_card">
+                    <img src="Images_e_portfolio/pexels-leozhao-5767580.jpg" alt="Future Project" class="project_image">
+                    <div class="project_content">
+                        <h2>Network Architecture Project</h2>
+                        <p>Upcoming project focusing on designing a secure enterprise network topology using OSPF and BGP protocols. (Coming soon)</p>
+                        <a href="project_network.html" class="project_button">En savoir plus</a>
+                    </div>
                 </div>
             </div>
         </div>
+
         <footer>
             <div class="footer_content">
                 <p>&copy; 2025 Tristan Moreau - Engineering Student</p>

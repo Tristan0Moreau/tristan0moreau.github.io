@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <title>Network Project - Tristan Moreau</title>
         <link rel="stylesheet" href="style_eportfolio.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,41 +20,23 @@
                 <label for="2">Career Management</label>
                 <input id="3" name="menu" type="radio" onclick="function_skills()"></input>
                 <label for="3">Skills</label>
-                <input id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
+                <input checked id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
                 <label for="nav_projects">Projects</label>
                 <input id="4" name="menu" type="radio" onclick="function_mobility()"></input>
                 <label for="4">Mobility</label>
                 <input id="5" name="menu" type="radio" onclick="function_experience()"></input>
                 <label for="5">Civic Engagement</label>
-                <input checked id="6" name="menu" type="radio" onclick="function_contacts()"></input>
+                <input id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
                 <script>
-                    function function_about_me() {
-                        window.location = "about_me.html";
-                    }
-                    function function_home() {
-                        window.location = "index.html";
-                    }
-                    function function_contacts() {
-                        window.location = "contacts.html";
-                    }
-                    function function_experience() {
-                        window.location = "experience.html";
-                    }
-                    function function_mobility() {
-                        window.location = "mobility.html";
-                    }
-                    function function_skills() {
-                        window.location = "skills.html"
-                    }
-                    function function_projects() {
-                        window.location = "projects.html";
-                    }
-                    function myFunction() {
-                        var copyText = document.getElementById("myInput");
-                        navigator.clipboard.writeText(copyText.value);
-                        alert(copyText.value + " has been copied");
-                    }
+                    function function_about_me() { window.location = "about_me.html"; }
+                    function function_home() { window.location = "index.html"; }
+                    function function_contacts() { window.location = "contacts.html"; }
+                    function function_experience() { window.location = "experience.html"; }
+                    function function_mobility() { window.location = "mobility.html"; }
+                    function function_skills() { window.location = "skills.html"; }
+                    function function_projects() { window.location = "projects.html"; }
+                    
                     function toggleTheme() {
                         document.body.classList.toggle('dark-mode');
                         var btn = document.querySelector('.theme-toggle');
@@ -72,28 +55,32 @@
                 </script>
             </fieldset>
         </div>
-        <div class="corps_contact_me">
-            <h2>Want to get in touch with me ?</h2>
-        </div>
-        <div class="contact_me_home">
-            <h1>Contact Me :</h1>
-            <div class="contact_container">
-                <input type="text" value="tristan.moreau@etu.inp-n7.fr" id="myInput">
-                <div class="instagram_photo">
-                    <a href="https://www.instagram.com/tristanmreau/" target="_blank"><img src="Images_e_portfolio/icone_insta.png" class="icone_contact"/></a>
-                </div>
-                <div class="mail_photo">
-                    <button onclick="myFunction()"><img src="Images_e_portfolio/icone_mail.png" class="icone_contact"/></button>
-                </div>
-                <div class="tests">
-                    <a href="Images_e_portfolio/French_CV_Tristan_Moreau.pdf" download class="testss">French CV</a>
-                    <a href="Images_e_portfolio/English_CV_Tristan_Moreau.pdf" download class="testss">English CV</a>
-                </div>
-                <div class="linkedin_photo">
-                    <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" class="icone_contact"/></a>
-                </div>
+
+        <div class="project_detail_container">
+            <h1>Network Architecture Project</h1>
+            <img src="Images_e_portfolio/pexels-leozhao-5767580.jpg" alt="Network Project" class="project_detail_image">
+            <div class="project_detail_text">
+                <p>
+                    This is an upcoming academic project focused on designing a robust and secure network architecture for a large enterprise.
+                </p>
+                <p>
+                    The goal is to simulate a real-world scenario where we need to connect multiple branch offices to a headquarters while ensuring redundancy and security.
+                </p>
+                <p>
+                    <strong>Key technologies involved:</strong>
+                </p>
+                <ul>
+                    <li><strong>Routing Protocols:</strong> Implementation of OSPF for internal routing and BGP for external connectivity.</li>
+                    <li><strong>VLANs & STP:</strong> Segmentation of the local network and loop prevention using Spanning Tree Protocol.</li>
+                    <li><strong>Security:</strong> Configuration of Firewalls and ACLs (Access Control Lists) to filter traffic.</li>
+                </ul>
+                <p>
+                    (More details will be added as the project progresses.)
+                </p>
             </div>
+            <a href="projects.html" class="project_button">Back to Projects</a>
         </div>
+
         <footer>
             <div class="footer_content">
                 <p>&copy; 2025 Tristan Moreau - Engineering Student</p>
