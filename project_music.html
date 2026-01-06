@@ -52,6 +52,49 @@
                         document.body.classList.add('dark-mode');
                         document.querySelector('.theme-toggle').textContent = '☀️';
                     }
+                    
+                    function copyFooterEmail(event) {
+                        event.preventDefault();
+                        var email = "tristan.moreau@etu.inp-n7.fr";
+                        navigator.clipboard.writeText(email);
+                        showNotification(email + " a été copié !");
+                    }
+
+                    function showNotification(message) {
+                        var notification = document.getElementById("custom-notification");
+                        if (!notification) {
+                            notification = document.createElement("div");
+                            notification.id = "custom-notification";
+                            Object.assign(notification.style, {
+                                position: "fixed",
+                                bottom: "30px",
+                                left: "50%",
+                                transform: "translateX(-50%)",
+                                backgroundColor: "#333",
+                                color: "#fff",
+                                padding: "12px 24px",
+                                borderRadius: "50px",
+                                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                                zIndex: "10000",
+                                opacity: "0",
+                                transition: "opacity 0.3s ease",
+                                fontFamily: "'Roboto', sans-serif",
+                                fontSize: "14px",
+                                pointerEvents: "none"
+                            });
+                            document.body.appendChild(notification);
+                        }
+                        notification.textContent = message;
+                        setTimeout(function() { notification.style.opacity = "1"; }, 10);
+                        setTimeout(function() { notification.style.opacity = "0"; }, 3000);
+                    }
+
+                    document.addEventListener("DOMContentLoaded", function() {
+                        var yearSpan = document.getElementById("current-year");
+                        if (yearSpan) {
+                            yearSpan.textContent = new Date().getFullYear();
+                        }
+                    });
                 </script>
             </fieldset>
         </div>
@@ -80,11 +123,10 @@
         </a>
         <footer>
             <div class="footer_content">
-                <p>&copy; 2025 Tristan Moreau - Engineering Student</p>
-                <div class="footer_socials">
-                    <a href="https://www.instagram.com/tristanmreau/" target="_blank"><img src="Images_e_portfolio/icone_insta.png" alt="Instagram" class="footer_icon"></a>
+                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Engineering Student</p>
+                <div class="footer_socials" style="display: flex; justify-content: center; gap: 20px;">
                     <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" alt="LinkedIn" class="footer_icon"></a>
-                    <a href="mailto:tristan.moreau@etu.inp-n7.fr"><img src="Images_e_portfolio/icone_mail.png" alt="Email" class="footer_icon"></a>
+                    <a href="#" onclick="copyFooterEmail(event)"><img src="Images_e_portfolio/icone_mail.png" alt="Email" class="footer_icon"></a>
                 </div>
             </div>
         </footer>

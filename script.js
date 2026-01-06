@@ -46,7 +46,7 @@ function myFunction() {
     var copyText = document.getElementById("myInput");
     if (copyText) {
         navigator.clipboard.writeText(copyText.value);
-        alert(copyText.value + " has been copied");
+        showNotification(copyText.value + " a été copié !");
     }
 }
 
@@ -63,3 +63,71 @@ function closeModal() {
     var modal = document.getElementById("imageModal");
     if (modal) modal.style.display = "none";
 }
+
+// Footer: Copy Email
+function copyFooterEmail(event) {
+    event.preventDefault();
+    var email = "tristan.moreau@etu.inp-n7.fr";
+    navigator.clipboard.writeText(email);
+    showNotification(email + " a été copié !");
+}
+
+// Fonction pour afficher une notification stylisée
+function showNotification(message) {
+    var notification = document.getElementById("custom-notification");
+    
+    // Créer l'élément s'il n'existe pas encore
+    if (!notification) {
+        notification = document.createElement("div");
+        notification.id = "custom-notification";
+        // Styles CSS appliqués directement en JS
+        Object.assign(notification.style, {
+            position: "fixed",
+            bottom: "30px",
+            left: "50%",
+            transform: "translateX(-50%)",
+            backgroundColor: "#333",
+            color: "#fff",
+            padding: "12px 24px",
+            borderRadius: "50px",
+            boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+            zIndex: "10000",
+            opacity: "0",
+            transition: "opacity 0.3s ease",
+            fontFamily: "'Roboto', sans-serif",
+            fontSize: "14px",
+            pointerEvents: "none" // Permet de cliquer au travers
+        });
+        document.body.appendChild(notification);
+    }
+
+    notification.textContent = message;
+    
+    // Afficher
+    setTimeout(function() { notification.style.opacity = "1"; }, 10);
+
+    // Masquer après 3 secondes
+    setTimeout(function() {
+        notification.style.opacity = "0";
+    }, 3000);
+}
+
+// Update Year and Age automatically
+document.addEventListener("DOMContentLoaded", function() {
+    var yearSpan = document.getElementById("current-year");
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+    }
+
+    var ageSpan = document.getElementById("my-age");
+    if (ageSpan) {
+        var birthDate = new Date(2004, 0, 26); // 26 Janvier 2004
+        var today = new Date();
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        ageSpan.textContent = age;
+    }
+});
