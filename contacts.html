@@ -28,6 +28,8 @@
                 border-radius: 5px;
                 font-family: 'Roboto', sans-serif;
                 box-sizing: border-box;
+                background-color: #ffffff; /* Force le fond blanc pour être visible */
+                color: #000000; /* Force le texte en noir */
             }
             .contact-form button {
                 padding: 12px 24px;
@@ -53,8 +55,6 @@
             body.dark-mode .contact-form button { background-color: #fff; color: #333; }
             body.dark-mode .contact-form button:hover { background-color: #ddd; }
         </style>
-        <!-- Script reCAPTCHA Google -->
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
@@ -85,6 +85,7 @@
         <div class="contact_me_home">
             <h1>Contact Me :</h1>
             <!-- Formulaire déplacé hors du conteneur des boutons pour être indépendant -->
+            <!-- IMPORTANT : Remplacez 'YOUR_FORM_ID' ci-dessous par votre propre ID Formspree -->
             <form action="https://formspree.io/f/xrebnkyr" method="POST" class="contact-form">
                 <label for="email">Your Email:</label>
                 <input type="email" id="email" name="email" required placeholder="your.email@example.com">
@@ -92,9 +93,6 @@
                 <label for="message">Message:</label>
                 <textarea id="message" name="message" rows="8" required placeholder="Hi Tristan, I would like to contact you regarding..."></textarea>
                 
-                <!-- Widget reCAPTCHA : Remplacez VOTRE_CLE_DU_SITE par la clé fournie par Google -->
-                <div class="g-recaptcha" data-sitekey="6LerUUMsAAAAAIehLQR4J2c2n9VgVfHyNRzRHPFP" style="margin-bottom: 15px;"></div>
-
                 <button type="submit">Send Message</button>
             </form>
 
