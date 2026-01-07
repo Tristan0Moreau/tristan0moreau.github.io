@@ -62,34 +62,89 @@
             </fieldset>
         </div>
         <div class="text_skills">
-            <h1>Skills, projects and courses</h1>
-            <div class="skills_skills">
+            <h1>Skills, courses and education</h1>
+            <div class="skills_skills reveal">
                 <h2>Skills</h2>
                 <h3>Network Engineering & Telecommunications</h3>
                 <p>
                     As a second-year engineering student specializing in Computer Networks and Telecommunications, I have acquired strong technical skills in the following areas:
                 </p>
-                <ul>
-                    <li><strong>Routing & Layer 3 Protocols:</strong> IP (IPv4/IPv6), OSPF, RIP, BGP, ICMP, ARP, NAT, X25</li>
-                    <li><strong>Local Area Networks (LAN):</strong> Ethernet, VLAN (802.1Q), STP (Spanning Tree Protocol), RSTP, Trunking.</li>
-                    <li><strong>Telecommunications & Signaling:</strong> SS7 Stack (MTP1-3, SCCP, ISUP, TCAP), FTTH, ADSL, ATM, HDLC, RTC.</li>
-                    <li><strong>Transport & Application:</strong> TCP/UDP, DNS, DHCP, HTTP/HTTPS, MPLS</li>
-                </ul>
+                
+                <!-- Nouvelle grille de compétences techniques -->
+                <div class="tech-skills-grid">
+                    <div class="tech-skill-card card-routing reveal">
+                        <h4>🌐 Routing & Layer 3</h4>
+                        <div class="tech-tags">
+                            <span>IP (IPv4/IPv6)</span><span>OSPF</span><span>RIP</span><span>BGP</span><span>ICMP</span><span>ARP</span><span>NAT</span><span>X25</span>
+                        </div>
+                    </div>
+                    <div class="tech-skill-card card-lan reveal">
+                        <h4>🔗 Local Area Networks (LAN)</h4>
+                        <div class="tech-tags">
+                            <span>Ethernet</span><span>VLAN (802.1Q)</span><span>STP</span><span>RSTP</span><span>Trunking</span>
+                        </div>
+                    </div>
+                    <div class="tech-skill-card card-telecom reveal">
+                        <h4>📡 Telecom & Signaling</h4>
+                        <div class="tech-tags">
+                            <span>SS7 Stack</span><span>FTTH</span><span>ADSL</span><span>ATM</span><span>HDLC</span><span>RTC</span>
+                        </div>
+                    </div>
+                    <div class="tech-skill-card card-transport reveal">
+                        <h4>📦 Transport & Application</h4>
+                        <div class="tech-tags">
+                            <span>TCP/UDP</span><span>DNS</span><span>DHCP</span><span>HTTP/HTTPS</span><span>MPLS</span>
+                        </div>
+                    </div>
+                </div>
+
                 <h3>Programming Languages</h3>
-                <p>
-                    I have also developed strong programming skills through various projects and courses:
-                </p>
-                <ul class="programming_list">
-                    <li><img src="Images_e_portfolio/c_logo.png" class="skill_logo" alt="C"> <strong>C:</strong> System programming and low-level memory management.</li>
-                    <li><img src="Images_e_portfolio/java_logo.png" class="skill_logo" alt="Java"> <strong>Java:</strong> Object-Oriented Programming (OOP) and application development.</li>
-                    <li><img src="Images_e_portfolio/python_logo.png" class="skill_logo" alt="Python"> <strong>Python:</strong> Scripting, automation, and data analysis.</li>
-                    <li><img src="Images_e_portfolio/ada_logo.png" class="skill_logo" alt="Ada"> <strong>Ada:</strong> Safety-critical systems and real-time programming.</li>
-                </ul>
+                
+                <!-- Barres de progression ajoutées -->
+                <div class="skills_container" style="width: 100%; max-width: 60rem; margin-top: 2rem;">
+                    <div class="skill_box" data-tooltip="Machine Learning, Data Analysis and self programming">
+                        <div class="skill_title">
+                            <span><img src="Images_e_portfolio/python_logo.png" class="skill_logo" alt="Python"> Python</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill_bar">
+                            <span class="skill_per python" style="width: 90%;"></span>
+                        </div>
+                    </div>
+                    <div class="skill_box" data-tooltip="System programming">
+                        <div class="skill_title">
+                            <span><img src="Images_e_portfolio/c_logo.png" class="skill_logo" alt="C"> C</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skill_bar">
+                            <span class="skill_per lang_c" style="width: 60%;"></span>
+                        </div>
+                    </div>
+                    <div class="skill_box" data-tooltip="Object-Oriented Programming (OOP) and application development.">
+                        <div class="skill_title">
+                            <span><img src="Images_e_portfolio/java_logo.png" class="skill_logo" alt="Java"> Java</span>
+                            <span>70%</span>
+                        </div>
+                        <div class="skill_bar">
+                            <span class="skill_per java" style="width: 70%;"></span>
+                        </div>
+                    </div>
+                    <div class="skill_box" data-tooltip="Imperative Programming">
+                        <div class="skill_title">
+                            <span><img src="Images_e_portfolio/ada_logo.png" class="skill_logo" alt="Ada"> Ada</span>
+                            <span>60%</span>
+                        </div>
+                        <div class="skill_bar">
+                            <span class="skill_per ada" style="width: 60%;"></span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="skills_skills">
+            <div class="skills_skills reveal">
                 <h2>Courses</h2>
+                <h3>1st Year - Semester 1</h3>
                 <details>
-                    <summary><h3>1st Year - Semester 1</h3></summary>
+                    <summary>View courses</summary>
                     <ul>
                         <li>Imperative Programming</li>
                         <li>Integration</li>
@@ -103,8 +158,9 @@
                         <li>Computer Architecture</li>
                     </ul>
                 </details>
+                <h3>1st Year - Semester 2</h3>
                 <details>
-                    <summary><h3>1st Year - Semester 2</h3></summary>
+                    <summary>View courses</summary>
                     <ul>
                         <li>Signal Processing</li>
                         <li>Telecommunications</li>
@@ -117,8 +173,9 @@
                         <li>Operating Systems</li>
                     </ul>
                 </details>
+                <h3>2nd Year - Semester 1</h3>
                 <details>
-                    <summary><h3>2nd Year - Semester 1</h3></summary>
+                    <summary>View courses</summary>
                     <ul>
                         <li>Channel Modeling</li>
                         <li>Channel Equalization</li>
@@ -134,7 +191,7 @@
                     </ul>
                 </details>
             </div>
-            <div class="skills_skills">
+            <div class="skills_skills reveal">
                 <h2>Education</h2>
                 <div class="timeline">
                     <div class="timeline-item">

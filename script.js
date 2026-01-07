@@ -130,4 +130,61 @@ document.addEventListener("DOMContentLoaded", function() {
         }
         ageSpan.textContent = age;
     }
+
+    // --- Scroll Reveal Animation ---
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1 // Déclenche l'animation quand 10% de l'élément est visible
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target); // L'animation ne se joue qu'une fois
+            }
+        });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach(el => observer.observe(el));
+
+    // --- Automatic Skills Progress Bars ---
+    // Met à jour la largeur de la barre en fonction du texte (ex: "60%")
+    const skillBoxes = document.querySelectorAll('.skill_box');
+    skillBoxes.forEach(box => {
+        const percentageElement = box.querySelector('.skill_title span:last-child');
+        const barElement = box.querySelector('.skill_per');
+        
+        if (percentageElement && barElement) {
+            const targetText = percentageElement.textContent.trim();
+            const targetValue = parseInt(targetText);
+
+            // Applique la largeur pour l'animation CSS
+            barElement.style.width = targetText;
+
+            // Animation du compteur (ex: 0% -> 60%)
+            if (!isNaN(targetValue)) {
+                let startTimestamp = null;
+                const duration = 1500; // 1.5s pour correspondre à l'animation CSS
+
+                const step = (timestamp) => {
+                    if (!startTimestamp) startTimestamp = timestamp;
+                    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                    const easeProgress = 1 - Math.pow(1 - progress, 3); // Ease-out cubic pour un effet naturel
+                    
+                    const currentValue = Math.floor(easeProgress * targetValue);
+                    percentageElement.textContent = currentValue + "%";
+
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        percentageElement.textContent = targetText; // S'assure de la valeur finale exacte
+                    }
+                };
+                window.requestAnimationFrame(step);
+            }
+        }
+    });
 });
