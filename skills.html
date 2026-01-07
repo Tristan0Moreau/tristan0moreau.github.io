@@ -5,6 +5,38 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <style>
+            /* Style pour la Timeline Education */
+            .timeline {
+                position: relative;
+                padding-left: 30px;
+                border-left: 2px solid #ccc;
+            }
+            .timeline-item {
+                margin-bottom: 20px;
+                position: relative;
+            }
+            .timeline-item::before {
+                content: '';
+                position: absolute;
+                left: -36px;
+                top: 5px;
+                width: 10px;
+                height: 10px;
+                background: #333;
+                border-radius: 50%;
+                border: 2px solid #fff;
+            }
+            .timeline-date {
+                font-weight: bold;
+                color: #555;
+                font-size: 0.9em;
+            }
+            /* Adaptation Dark Mode simple */
+            body.dark-mode .timeline { border-left-color: #555; }
+            body.dark-mode .timeline-item::before { background: #fff; border-color: #333; }
+            body.dark-mode .timeline-date { color: #aaa; }
+        </style>
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
@@ -55,22 +87,72 @@
                 </ul>
             </div>
             <div class="skills_skills">
-                <h2>Projects</h2>
-                <p>
-                    Joining the Club Zik in my school, I have been the singer of a band and we performed for 2 student's concert of the school.
-                </p>
-                <p>
-                    I am also into the creation of video games and with one of my friends, we would like to create our own video game.
-                </p>
-                <p>Learn about my other projects ! (Coming soon)</p>
+                <h2>Courses</h2>
+                <details>
+                    <summary><h3>1st Year - Semester 1</h3></summary>
+                    <ul>
+                        <li>Imperative Programming</li>
+                        <li>Integration</li>
+                        <li>Probability</li>
+                        <li>Numerical Analysis</li>
+                        <li>Optimization</li>
+                        <li>Statistics</li>
+                        <li>Control Theory</li>
+                        <li>Data Analysis</li>
+                        <li>Modeling</li>
+                        <li>Computer Architecture</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><h3>1st Year - Semester 2</h3></summary>
+                    <ul>
+                        <li>Signal Processing</li>
+                        <li>Telecommunications</li>
+                        <li>Networks</li>
+                        <li>Internet</li>
+                        <li>Scientific Computing</li>
+                        <li>Machine Learning</li>
+                        <li>Object-Oriented Programming</li>
+                        <li>Computer Architecture</li>
+                        <li>Operating Systems</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary><h3>2nd Year - Semester 1</h3></summary>
+                    <ul>
+                        <li>Channel Modeling</li>
+                        <li>Channel Equalization</li>
+                        <li>OFDM</li>
+                        <li>Channel Coding</li>
+                        <li>Source Coding</li>
+                        <li>Internet</li>
+                        <li>Graph Theory</li>
+                        <li>Local Area Networks</li>
+                        <li>Telecommunication Networks</li>
+                        <li>Concurrent Systems</li>
+                        <li>Middleware</li>
+                    </ul>
+                </details>
             </div>
             <div class="skills_skills">
                 <h2>Education</h2>
-                <ul>
-                    <li>2024 - 2027 : Toulouse INP N7 (ENSEEIHT) | Engineering Degree specialized in Computer Science - Networks and Telecommunications</li>
-                    <li>2022 - 2024 : CPGE PCSI - PC | Preparatory Class to Engineering school specialized in Physics and Chemistry</li>
-                    <li>2020 - 2022 : High School Diploma | Specialized in Mathematics, Physics and Chemistry</li>
-                </ul>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2024 - 2027</div>
+                        <strong>Toulouse INP N7 (ENSEEIHT)</strong><br>
+                        Engineering Degree specialized in Computer Science - Networks and Telecommunications
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2022 - 2024</div>
+                        <strong>CPGE PCSI - PC</strong><br>
+                        Preparatory Class to Engineering school specialized in Physics and Chemistry
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020 - 2022</div>
+                        <strong>High School Diploma</strong><br>
+                        Specialized in Mathematics, Physics and Chemistry
+                    </div>
+                </div>
             </div>
         </div>
         <a class="cornerbutton" href="#header">
