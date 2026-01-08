@@ -339,7 +339,64 @@ section.menu_home {
 }
 
 .timeline {
-    margin-top: 1.5rem;
+    margin-top: 3rem;
+    position: relative;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 2rem;
+}
+
+/* Ligne verticale centrale */
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: cadetblue;
+    border-radius: 2px;
+}
+
+.timeline_item {
+    position: relative;
+    margin-bottom: 3rem;
+    padding-left: 2rem;
+}
+
+/* Point sur la ligne */
+.timeline_dot {
+    position: absolute;
+    left: -0.55rem; /* Centré sur la ligne de 4px */
+    top: 0;
+    width: 1.2rem;
+    height: 1.2rem;
+    background-color: white;
+    border: 4px solid cadetblue;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 1;
+}
+
+.timeline_item:hover .timeline_dot {
+    transform: scale(1.3);
+    background-color: cadetblue;
+}
+
+/* Contenu de l'événement */
+.timeline_content {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-left: 5px solid cadetblue;
+}
+
+.timeline_item:hover .timeline_content {
+    transform: translateX(10px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .photo_badminton:hover {
@@ -1133,6 +1190,11 @@ footer {
     height: 200px;
     object-fit: cover;
     border-bottom: 1px solid #eee;
+    transition: transform 0.5s ease;
+}
+
+.project_card:hover .project_image {
+    transform: scale(1.05);
 }
 
 .project_content {
@@ -1463,6 +1525,26 @@ body.dark-mode .tech-skill-card h4 {
     border-bottom-color: #333;
 }
 
+/* Dark Mode Timeline */
+body.dark-mode .timeline::before {
+    background: #80cbc4;
+}
+
+body.dark-mode .timeline_dot {
+    background-color: #121212;
+    border-color: #80cbc4;
+}
+
+body.dark-mode .timeline_item:hover .timeline_dot {
+    background-color: #80cbc4;
+}
+
+body.dark-mode .timeline_content {
+    background-color: #1e1e1e;
+    border-left-color: #80cbc4;
+    color: #e0e0e0;
+}
+
 body.dark-mode .tech-tags span {
     background-color: rgba(128, 203, 196, 0.1);
     color: #80cbc4;
@@ -1504,3 +1586,8 @@ body.dark-mode .tech-tags span:hover {
 .tech-skills-grid .tech-skill-card.reveal:nth-child(2) { transition-delay: 0.2s; }
 .tech-skills-grid .tech-skill-card.reveal:nth-child(3) { transition-delay: 0.3s; }
 .tech-skills-grid .tech-skill-card.reveal:nth-child(4) { transition-delay: 0.4s; }
+
+/* Animation séquentielle pour la timeline (Education) */
+.timeline-item.reveal:nth-child(1) { transition-delay: 0.2s; }
+.timeline-item.reveal:nth-child(2) { transition-delay: 0.4s; }
+.timeline-item.reveal:nth-child(3) { transition-delay: 0.6s; }
