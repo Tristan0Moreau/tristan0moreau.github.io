@@ -242,7 +242,9 @@ section.menu_home {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    height: 13.5rem;
+    height: auto;
+    flex-wrap: wrap;
+    padding-bottom: 2rem;
 }
 
 .icone_contact {
@@ -902,21 +904,22 @@ section.menu_home {
 }
 
 .elevator_pitch_video {
-    color: white;
-    padding: 0.8rem;
+    color: cadetblue;
+    padding: 0.8rem 1.5rem;
     text-decoration: none;
-    background: cadetblue;
-    border-radius: 2rem;
+    background: white;
+    border: 2px solid cadetblue;
+    border-radius: 10000rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .elevator_pitch_video:hover {
-    animation: zooming 0.5s ease;
-    scale: 1.2;
-}
-
-.elevator_pitch_video:not(:hover) {
-    animation: zoomingout 0.5s ease;
-    scale: 1;
+    background-color: cadetblue;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .civic_container {
@@ -1688,11 +1691,13 @@ body.dark-mode .timeline-date { color: #aaa; }
 }
 
 body.dark-mode .cta-button,
-body.dark-mode .testss { 
+body.dark-mode .testss,
+body.dark-mode .elevator_pitch_video { 
     background-color: transparent; color: #80cbc4; border-color: #80cbc4; 
 }
 body.dark-mode .cta-button:hover,
-body.dark-mode .testss:hover { 
+body.dark-mode .testss:hover,
+body.dark-mode .elevator_pitch_video:hover { 
     background-color: #80cbc4; color: #121212; border-color: #80cbc4; 
 }
 
