@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <link rel="stylesheet" href="style_eportfolio.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,55 +51,55 @@
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇫🇷</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
         <div class="fieldplease">
             <fieldset class="first_fieldset">
                 <input checked id="1" name="menu" type="radio" onclick="function_home()"></input>
-                <label for="1">About</label>
+                <label for="1">À propos</label>
                 <input checked id="2" name="menu" type="radio" onclick="function_about_me()"></input>
-                <label for="2">Career Management</label>
+                <label for="2">Projet Pro</label>
                 <input checked id="3" name="menu" type="radio" onclick="function_skills()"></input>
-                <label for="3">Skills</label>
+                <label for="3">Compétences</label>
                 <input id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
-                <label for="nav_projects">Projects</label>
+                <label for="nav_projects">Projets</label>
                 <input checked id="4" name="menu" type="radio" onclick="function_mobility()"></input>
-                <label for="4">Mobility</label>
+                <label for="4">Mobilité</label>
                 <input checked id="5" name="menu" type="radio" onclick="function_experience()"></input>
-                <label for="5">Civic Engagement</label>
+                <label for="5">Engagement</label>
                 <input checked id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
             </fieldset>
         </div>
         <div class="text_skills">
-            <h1>Skills, courses and education</h1>
+            <h1>Compétences, cours et formation</h1>
             <div class="skills_skills reveal">
-                <h2>Skills</h2>
-                <h3>Network Engineering & Telecommunications</h3>
+                <h2>Compétences</h2>
+                <h3>Ingénierie Réseaux & Télécommunications</h3>
                 <p>
-                    As a second-year engineering student specializing in Computer Networks and Telecommunications, I have acquired strong technical skills in the following areas:
+                    En tant qu'étudiant ingénieur de deuxième année spécialisé en Réseaux et Télécommunications, j'ai acquis de solides compétences techniques dans les domaines suivants :
                 </p>
                 
                 <!-- Nouvelle grille de compétences techniques -->
                 <div class="tech-skills-grid">
                     <div class="tech-skill-card card-routing reveal">
-                        <h4>🌐 Routing & Layer 3</h4>
+                        <h4>🌐 Routage & Couche 3</h4>
                         <div class="tech-tags">
                             <span>IP (IPv4/IPv6)</span><span>OSPF</span><span>RIP</span><span>BGP</span><span>ICMP</span><span>ARP</span><span>NAT</span><span>X25</span>
                         </div>
                     </div>
                     <div class="tech-skill-card card-lan reveal">
-                        <h4>🔗 Local Area Networks (LAN)</h4>
+                        <h4>🔗 Réseaux Locaux (LAN)</h4>
                         <div class="tech-tags">
                             <span>Ethernet</span><span>VLAN (802.1Q)</span><span>STP</span><span>RSTP</span><span>Trunking</span>
                         </div>
                     </div>
                     <div class="tech-skill-card card-telecom reveal">
-                        <h4>📡 Telecom & Signaling</h4>
+                        <h4>📡 Télécoms & Signalisation</h4>
                         <div class="tech-tags">
-                            <span>SS7 Stack</span><span>FTTH</span><span>ADSL</span><span>ATM</span><span>HDLC</span><span>RTC</span>
+                            <span>Pile SS7</span><span>FTTH</span><span>ADSL</span><span>ATM</span><span>HDLC</span><span>RTC</span>
                         </div>
                     </div>
                     <div class="tech-skill-card card-transport reveal">
@@ -110,11 +110,11 @@
                     </div>
                 </div>
 
-                <h3>Programming Languages</h3>
+                <h3>Langages de Programmation</h3>
                 
                 <!-- Barres de progression ajoutées -->
                 <div class="skills_container" style="width: 100%; max-width: 60rem; margin-top: 2rem;">
-                    <div class="skill_box" data-tooltip="Machine Learning, Data Analysis and self programming">
+                    <div class="skill_box" data-tooltip="Machine Learning, Analyse de données et projets personnels">
                         <div class="skill_title">
                             <span><img src="Images_e_portfolio/python_logo.png" class="skill_logo" alt="Python"> Python</span>
                             <span>90%</span>
@@ -123,7 +123,7 @@
                             <span class="skill_per python" style="width: 90%;"></span>
                         </div>
                     </div>
-                    <div class="skill_box" data-tooltip="System programming">
+                    <div class="skill_box" data-tooltip="Programmation système">
                         <div class="skill_title">
                             <span><img src="Images_e_portfolio/c_logo.png" class="skill_logo" alt="C"> C</span>
                             <span>60%</span>
@@ -132,7 +132,7 @@
                             <span class="skill_per lang_c" style="width: 60%;"></span>
                         </div>
                     </div>
-                    <div class="skill_box" data-tooltip="Object-Oriented Programming (OOP) and application development.">
+                    <div class="skill_box" data-tooltip="Programmation Orientée Objet (POO) et développement d'applications.">
                         <div class="skill_title">
                             <span><img src="Images_e_portfolio/java_logo.png" class="skill_logo" alt="Java"> Java</span>
                             <span>70%</span>
@@ -141,7 +141,7 @@
                             <span class="skill_per java" style="width: 70%;"></span>
                         </div>
                     </div>
-                    <div class="skill_box" data-tooltip="Imperative Programming">
+                    <div class="skill_box" data-tooltip="Programmation Impérative">
                         <div class="skill_title">
                             <span><img src="Images_e_portfolio/ada_logo.png" class="skill_logo" alt="Ada"> Ada</span>
                             <span>60%</span>
@@ -153,73 +153,46 @@
                 </div>
             </div>
             <div class="skills_skills reveal">
-                <h2>Courses</h2>
-                <h3>1st Year - Semester 1</h3>
+                <h2>Cours</h2>
+                <h3>1ère Année - Semestre 1</h3>
                 <details>
-                    <summary>View courses</summary>
+                    <summary>Voir les cours</summary>
                     <ul>
-                        <li>Imperative Programming</li>
-                        <li>Integration</li>
-                        <li>Probability</li>
-                        <li>Numerical Analysis</li>
-                        <li>Optimization</li>
-                        <li>Statistics</li>
-                        <li>Control Theory</li>
-                        <li>Data Analysis</li>
-                        <li>Modeling</li>
-                        <li>Computer Architecture</li>
+                        <li>Programmation Impérative</li><li>Intégration</li><li>Probabilités</li><li>Analyse Numérique</li><li>Optimisation</li><li>Statistiques</li><li>Automatique</li><li>Analyse de Données</li><li>Modélisation</li><li>Architecture des Ordinateurs</li>
                     </ul>
                 </details>
-                <h3>1st Year - Semester 2</h3>
+                <h3>1ère Année - Semestre 2</h3>
                 <details>
-                    <summary>View courses</summary>
+                    <summary>Voir les cours</summary>
                     <ul>
-                        <li>Signal Processing</li>
-                        <li>Telecommunications</li>
-                        <li>Networks</li>
-                        <li>Internet</li>
-                        <li>Scientific Computing</li>
-                        <li>Machine Learning</li>
-                        <li>Object-Oriented Programming</li>
-                        <li>Computer Architecture</li>
-                        <li>Operating Systems</li>
+                        <li>Traitement du Signal</li><li>Télécommunications</li><li>Réseaux</li><li>Internet</li><li>Calcul Scientifique</li><li>Apprentissage Automatique</li><li>Programmation Orientée Objet</li><li>Architecture des Ordinateurs</li><li>Systèmes d'Exploitation</li>
                     </ul>
                 </details>
-                <h3>2nd Year - Semester 1</h3>
+                <h3>2ème Année - Semestre 1</h3>
                 <details>
-                    <summary>View courses</summary>
+                    <summary>Voir les cours</summary>
                     <ul>
-                        <li>Channel Modeling</li>
-                        <li>Channel Equalization</li>
-                        <li>OFDM</li>
-                        <li>Channel Coding</li>
-                        <li>Source Coding</li>
-                        <li>Internet</li>
-                        <li>Graph Theory</li>
-                        <li>Local Area Networks</li>
-                        <li>Telecommunication Networks</li>
-                        <li>Concurrent Systems</li>
-                        <li>Middleware</li>
+                        <li>Modélisation de Canal</li><li>Égalisation de Canal</li><li>OFDM</li><li>Codage de Canal</li><li>Codage de Source</li><li>Internet</li><li>Théorie des Graphes</li><li>Réseaux Locaux</li><li>Réseaux de Télécommunications</li><li>Systèmes Concurrents</li><li>Middleware</li>
                     </ul>
                 </details>
             </div>
             <div class="skills_skills">
-                <h2>Education</h2>
+                <h2>Formation</h2>
                 <div class="timeline">
                     <div class="timeline-item reveal">
                         <div class="timeline-date">2024 - 2027</div>
                         <strong>Toulouse INP N7 (ENSEEIHT)</strong><br>
-                        Engineering Degree specialized in Computer Science - Networks and Telecommunications
+                        Diplôme d'Ingénieur spécialisé en Sciences du Numérique - Réseaux et Télécommunications
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-date">2022 - 2024</div>
                         <strong>CPGE PCSI - PC</strong><br>
-                        Preparatory Class to Engineering school specialized in Physics and Chemistry
+                        Classes Préparatoires aux Grandes Écoles spécialité Physique et Chimie
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-date">2020 - 2022</div>
-                        <strong>High School Diploma</strong><br>
-                        Specialized in Mathematics, Physics and Chemistry
+                        <strong>Baccalauréat</strong><br>
+                        Spécialité Mathématiques, Physique et Chimie
                     </div>
                 </div>
             </div>
@@ -229,7 +202,7 @@
         </a>
         <footer>
             <div class="footer_content">
-                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Engineering Student</p>
+                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Élève Ingénieur</p>
                 <div class="footer_socials" style="display: flex; justify-content: center; gap: 20px;">
                     <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" alt="LinkedIn" class="footer_icon"></a>
                     <a href="#" onclick="copyFooterEmail(event)"><img src="Images_e_portfolio/icone_mail.png" alt="Email" class="footer_icon"></a>
@@ -238,20 +211,16 @@
         </footer>
         <script src="script.js"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                updateLangButton();
-            });
+            // Redirection vers les pages FR
+            function function_home() { window.location = "index_fr.html"; }
+            function function_about_me() { window.location = "about_me_fr.html"; }
+            function function_projects() { window.location = "projects_fr.html"; }
+            function function_skills() { window.location = "skills_fr.html"; }
+            function function_mobility() { window.location = "mobility_fr.html"; }
+            function function_experience() { window.location = "experience_fr.html"; }
+            function function_contacts() { window.location = "contacts_fr.html"; }
 
-            function toggleLanguage() {
-                localStorage.setItem('lang', 'fr');
-                window.location.href = 'skills_fr.html';
-            }
-
-            function updateLangButton() {
-                const btn = document.querySelector('.lang-toggle');
-                const lang = localStorage.getItem('lang') || 'en';
-                btn.textContent = lang === 'en' ? '🇫🇷' : '🇬🇧';
-            }
+            function toggleLanguage() { localStorage.setItem('lang', 'en'); window.location.href = 'skills.html'; }
         </script>
     </body>
 </html>

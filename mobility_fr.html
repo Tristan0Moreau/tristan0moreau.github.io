@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <link rel="stylesheet" href="style_eportfolio.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,48 +20,48 @@
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇫🇷</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
         <div class="fieldplease">
             <fieldset class="first_fieldset">
                 <input id="1" name="menu" type="radio" onclick="function_home()">
-                <label for="1">About</label>
+                <label for="1">À propos</label>
                 <input id="2" name="menu" type="radio" onclick="function_about_me()">
-                <label for="2">Career Management</label>
+                <label for="2">Projet Pro</label>
                 <input id="3" name="menu" type="radio" onclick="function_skills()">
-                <label for="3">Skills</label>
+                <label for="3">Compétences</label>
                 <input id="nav_projects" name="menu" type="radio" onclick="function_projects()">
-                <label for="nav_projects">Projects</label>
+                <label for="nav_projects">Projets</label>
                 <input checked id="4" name="menu" type="radio" onclick="function_mobility()">
-                <label for="4">Mobility</label>
+                <label for="4">Mobilité</label>
                 <input id="5" name="menu" type="radio" onclick="function_experience()">
-                <label for="5">Civic Engagement</label>
+                <label for="5">Engagement</label>
                 <input id="6" name="menu" type="radio" onclick="function_contacts()">
                 <label for="6">Contacts</label>
             </fieldset>
         </div>
         <div class="corps_mobility">
-            <h1>International Mobility</h1>
+            <h1>Mobilité Internationale</h1>
             <div class="experience_abroad">
-                <h2>Japan - Summer 2025</h2>
+                <h2>Japon - Été 2025</h2>
                 <p>
-                    I spent 2 months in Japan this summer.
+                    J'ai passé 2 mois au Japon cet été.
                 </p>
                 <p>
-                    For the first 3 weeks, I visited the country and took Japanese lessons in the morning.
-                    For the rest of the trip, I did an internship in a hotel located at the foot of Mount Fuji.
+                    Pendant les 3 premières semaines, j'ai visité le pays et pris des cours de japonais le matin.
+                    Pour le reste du voyage, j'ai fait un stage dans un hôtel situé au pied du Mont Fuji.
                 </p>
                 <div class="japan_images">
-                    <img src="Images_e_portfolio/Tristan_japon_1.jpeg" alt="Japan Trip 1" onclick="openModal(this)">
-                    <img src="Images_e_portfolio/Tristan_japon_2.jpg" alt="Japan Trip 2" onclick="openModal(this)">
+                    <img src="Images_e_portfolio/Tristan_japon_1.jpeg" alt="Voyage Japon 1" onclick="openModal(this)">
+                    <img src="Images_e_portfolio/Tristan_japon_2.jpg" alt="Voyage Japon 2" onclick="openModal(this)">
                 </div>
             </div>
             <div class="experience_abroad">
-                <h2>Upcoming International Mobility</h2>
+                <h2>Mobilité Internationale à venir</h2>
                 <p>
-                    For the first semester of next year, I will be going on an international mobility program organized by my school. I am currently considering destinations such as Canada or Italia. This mobility will contribute to my knowledge about engineering as I should study AI in Polytechnique School of Montreal in Canada or Padova University in Italia.
+                    Pour le premier semestre de l'année prochaine, je partirai en mobilité internationale organisée par mon école. J'envisage actuellement des destinations comme le Canada ou l'Italie. Cette mobilité contribuera à mes connaissances en ingénierie car je devrais étudier l'IA à l'École Polytechnique de Montréal au Canada ou à l'Université de Padoue en Italie.
                 </p>
             </div>
         </div>
@@ -77,7 +77,7 @@
         </a>
         <footer>
             <div class="footer_content">
-                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Engineering Student</p>
+                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Élève Ingénieur</p>
                 <div class="footer_socials" style="display: flex; justify-content: center; gap: 20px;">
                     <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" alt="LinkedIn" class="footer_icon"></a>
                     <a href="#" onclick="copyFooterEmail(event)"><img src="Images_e_portfolio/icone_mail.png" alt="Email" class="footer_icon"></a>
@@ -86,20 +86,16 @@
         </footer>
         <script src="script.js"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                updateLangButton();
-            });
+            // Redirection vers les pages FR
+            function function_home() { window.location = "index_fr.html"; }
+            function function_about_me() { window.location = "about_me_fr.html"; }
+            function function_projects() { window.location = "projects_fr.html"; }
+            function function_skills() { window.location = "skills_fr.html"; }
+            function function_experience() { window.location = "experience_fr.html"; }
+            function function_contacts() { window.location = "contacts_fr.html"; }
+            function function_mobility() { window.location = "mobility_fr.html"; }
 
-            function toggleLanguage() {
-                localStorage.setItem('lang', 'fr');
-                window.location.href = 'mobility_fr.html';
-            }
-
-            function updateLangButton() {
-                const btn = document.querySelector('.lang-toggle');
-                const lang = localStorage.getItem('lang') || 'en';
-                btn.textContent = lang === 'en' ? '🇫🇷' : '🇬🇧';
-            }
+            function toggleLanguage() { localStorage.setItem('lang', 'en'); window.location.href = 'mobility.html'; }
         </script>
     </body>
 </html>

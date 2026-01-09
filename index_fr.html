@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <title>E-portfolio de Tristan</title>
         <link rel="stylesheet" href="style_eportfolio.css" />
@@ -51,24 +51,24 @@
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇫🇷</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
         <div class="fieldplease">
             <fieldset class="first_fieldset">
                 <input checked id="1" name="menu" type="radio" onclick="function_home()"></input>
-                <label for="1">About</label>
+                <label for="1">À propos</label>
                 <input checked id="2" name="menu" type="radio" onclick="function_about_me()"></input>
-                <label for="2">Career Management</label>
+                <label for="2">Projet Pro</label>
                 <input checked id="3" name="menu" type="radio" onclick="function_skills()"></input>
-                <label for="3">Skills</label>
+                <label for="3">Compétences</label>
                 <input id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
-                <label for="nav_projects">Projects</label>
+                <label for="nav_projects">Projets</label>
                 <input checked id="4" name="menu" type="radio" onclick="function_mobility()"></input>
-                <label for="4">Mobility</label>
+                <label for="4">Mobilité</label>
                 <input checked id="5" name="menu" type="radio" onclick="function_experience()"></input>
-                <label for="5">Civic Engagement</label>
+                <label for="5">Engagement</label>
                 <input checked id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
             </fieldset>
@@ -78,12 +78,12 @@
             <div class="home_about_me reveal">
                 <h2 id="typing-text"></h2>
                 <p>
-                    I am an engineering student at ENSEEIHT in Toulouse.
-                    I am in the Computer Science section of the school.
+                    Je suis étudiant ingénieur à l'ENSEEIHT à Toulouse.
+                    Je suis dans la filière Sciences du Numérique.
                 </p>
                 <div style="display: flex; gap: 15px; flex-wrap: wrap;">
-                    <a href="projects.html" class="cta-button">View My Projects</a>
-                    <a href="Images_e_portfolio/English_CV_Tristan_Moreau.pdf" download class="cta-button secondary">Download CV</a>
+                    <a href="projects.html" class="cta-button">Voir mes projets</a>
+                    <a href="Images_e_portfolio/CV français.pdf" download class="cta-button secondary">Télécharger mon CV</a>
                 </div>
             </div>
             <div class="photo reveal">
@@ -95,33 +95,32 @@
 
         <div class="page_about_me">
             <div class="texte_about_me">
-                <h1>About me</h1>
+                <h1>À propos de moi</h1>
                 <div class="intro_about_me reveal">
                     <p>
-                        Hi ! I'm <strong>Tristan Moreau</strong>, a <span id="my-age">21</span> years old engineering student in second year at N7 and specialized in Networks and Telecommunications.
+                        Bonjour ! Je suis <strong>Tristan Moreau</strong>, un étudiant ingénieur de <span id="my-age">21</span> ans en deuxième année à l'N7, spécialisé en Réseaux et Télécommunications.
                     </p>
                     <p>
-                        I am interested in software development, cybersecurity as well as Artificial Intelligence.
+                        Je m'intéresse au développement logiciel, à la cybersécurité ainsi qu'à l'Intelligence Artificielle.
                     </p>
                 </div>
                 <div class="activities_about_me reveal">
-                    <h2>Activities</h2>
+                    <h2>Activités</h2>
                     <div class="activities_photo_text">
                         <img src="Images_e_portfolio/pexels-leozhao-5767580.jpg" class="photo_badminton" />
                         <div class="text_activities_badminton">
-                            <p>At N7, I joined both the badminton club and the badminton competition group.</p>
+                            <p>À l'N7, j'ai rejoint le club de badminton ainsi que l'équipe de compétition.</p>
                         </div>
                     </div>
                     <div class="activities_escalade">
                         <img src="Images_e_portfolio/bouldering-1138492_1920.jpg" class="photo_escalade" />
                         <div class="text_activities_escalade">
-                            <p>I am also bouldering with the physical education course.</p>
+                            <p>Je pratique également l'escalade dans le cadre des cours de sport.</p>
                         </div>
                     </div>
-                    <!-- <button class="more_activities" onclick="function_activities()"><strong>More about my activities</strong></button> -->
                 </div>
                 <div class="club_about_me reveal">
-                    <h2>Clubs and associations</h2>
+                    <h2>Clubs et associations</h2>
                     <div class="club">
                         <div class="net7">
                             <img src="Images_e_portfolio/net7-n7.png" class="photo_club"/>
@@ -132,13 +131,13 @@
                     </div>
                     <div class="text_club">
                         <p>
-                            In the school, I joined Net7, Japan7, Club'Zik and 7voix.
-                            They are respectively the school's Computer Science, Japan, Music and Singing association.
+                            À l'école, j'ai rejoint Net7, Japan7, Club'Zik et 7voix.
+                            Ce sont respectivement les associations d'Informatique, de culture Japonaise, de Musique et de Chant.
                         </p>
                     </div>
                 </div>
                 <div class="hobbies_about_me reveal">
-                    <h2>Hobbies</h2>
+                    <h2>Loisirs</h2>
                     <div class="hobbies">
                         <img src="Images_e_portfolio/pexels-suvan-chowdhury-37305-144429.jpg" class="photo_hobbies"/>
                         <img src="Images_e_portfolio/rando.jpg" class="photo_hobbies" />
@@ -147,8 +146,8 @@
                     </div>
                     <div class="text_hobbies">
                         <p>
-                            I really enjoy singing (mostly french songs), as well as walking and discovering new places.
-                            Moreover, I like card tricks, playing card games and coding on my computer.
+                            J'aime beaucoup chanter (surtout de la variété française), ainsi que marcher et découvrir de nouveaux endroits.
+                            De plus, j'aime la magie des cartes, les jeux de société et programmer sur mon ordinateur.
                         </p>
                     </div>
                 </div>
@@ -159,7 +158,7 @@
         </a>
         <footer>
             <div class="footer_content">
-                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Engineering Student</p>
+                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Élève Ingénieur</p>
                 <div class="footer_socials" style="display: flex; justify-content: center; gap: 20px;">
                     <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" alt="LinkedIn" class="footer_icon"></a>
                     <a href="#" onclick="copyFooterEmail(event)"><img src="Images_e_portfolio/icone_mail.png" alt="Email" class="footer_icon"></a>
@@ -168,8 +167,17 @@
         </footer>
         <script src="script.js"></script>
         <script>
+            // Surcharge de la fonction home pour rester sur la page FR
+            function function_home() { window.location = "index_fr.html"; }
+            function function_about_me() { window.location = "about_me_fr.html"; }
+            function function_skills() { window.location = "skills_fr.html"; }
+            function function_projects() { window.location = "projects_fr.html"; }
+            function function_mobility() { window.location = "mobility_fr.html"; }
+            function function_experience() { window.location = "experience_fr.html"; }
+            function function_contacts() { window.location = "contacts_fr.html"; }
+
             document.addEventListener('DOMContentLoaded', function() {
-                const text = "Hi ! I'm Tristan MOREAU.";
+                const text = "Bonjour ! Je suis Tristan MOREAU.";
                 const element = document.getElementById('typing-text');
                 let i = 0;
                 
@@ -177,29 +185,16 @@
                     if (i < text.length) {
                         element.innerHTML += text.charAt(i);
                         i++;
-                        setTimeout(typeWriter, 100); // Vitesse de frappe (ms)
+                        setTimeout(typeWriter, 100);
                     }
                 }
                 
                 typeWriter();
-                updateLangButton();
             });
 
             function toggleLanguage() {
-                const currentLang = localStorage.getItem('lang') || 'en';
-                const newLang = currentLang === 'en' ? 'fr' : 'en';
-                localStorage.setItem('lang', newLang);
-                updateLangButton();
-                
-                if (newLang === 'fr') {
-                    window.location.href = 'index_fr.html';
-                }
-            }
-
-            function updateLangButton() {
-                const btn = document.querySelector('.lang-toggle');
-                const lang = localStorage.getItem('lang') || 'en';
-                btn.textContent = lang === 'en' ? '🇫🇷' : '🇬🇧';
+                localStorage.setItem('lang', 'en');
+                window.location.href = 'index.html';
             }
         </script>
     </body>

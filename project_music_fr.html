@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <title>Club Zik - Tristan Moreau</title>
         <link rel="stylesheet" href="style_eportfolio.css" />
@@ -21,34 +21,35 @@
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇫🇷</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
         <div class="fieldplease">
             <fieldset class="first_fieldset">
                 <input id="1" name="menu" type="radio" onclick="function_home()"></input>
-                <label for="1">About</label>
+                <label for="1">À propos</label>
                 <input id="2" name="menu" type="radio" onclick="function_about_me()"></input>
-                <label for="2">Career Management</label>
+                <label for="2">Projet Pro</label>
                 <input id="3" name="menu" type="radio" onclick="function_skills()"></input>
-                <label for="3">Skills</label>
+                <label for="3">Compétences</label>
                 <input checked id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
-                <label for="nav_projects">Projects</label>
+                <label for="nav_projects">Projets</label>
                 <input id="4" name="menu" type="radio" onclick="function_mobility()"></input>
-                <label for="4">Mobility</label>
+                <label for="4">Mobilité</label>
                 <input id="5" name="menu" type="radio" onclick="function_experience()"></input>
-                <label for="5">Civic Engagement</label>
+                <label for="5">Engagement</label>
                 <input id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
                 <script>
-                    function function_about_me() { window.location = "about_me.html"; }
-                    function function_home() { window.location = "index.html"; }
-                    function function_contacts() { window.location = "contacts.html"; }
-                    function function_experience() { window.location = "experience.html"; }
-                    function function_mobility() { window.location = "mobility.html"; }
-                    function function_skills() { window.location = "skills.html"; }
-                    function function_projects() { window.location = "projects.html"; }
+                    // Redirection vers les pages FR disponibles
+                    function function_home() { window.location = "index_fr.html"; }
+                    function function_about_me() { window.location = "about_me_fr.html"; }
+                    function function_projects() { window.location = "projects_fr.html"; }
+                    function function_skills() { window.location = "skills_fr.html"; }
+                    function function_mobility() { window.location = "mobility_fr.html"; }
+                    function function_experience() { window.location = "experience_fr.html"; }
+                    function function_contacts() { window.location = "contacts_fr.html"; }
                     
                     function toggleTheme() {
                         document.body.classList.toggle('dark-mode');
@@ -67,19 +68,8 @@
                     }
 
                     function toggleLanguage() {
-                        const currentLang = localStorage.getItem('lang') || 'en';
-                        const newLang = currentLang === 'en' ? 'fr' : 'en';
-                        localStorage.setItem('lang', newLang);
-                        updateLangButton();
-                        if (newLang === 'fr') {
-                            window.location.href = 'project_music_fr.html';
-                        }
-                    }
-
-                    function updateLangButton() {
-                        const btn = document.querySelector('.lang-toggle');
-                        const lang = localStorage.getItem('lang') || 'en';
-                        btn.textContent = lang === 'en' ? '🇫🇷' : '🇬🇧';
+                        localStorage.setItem('lang', 'en');
+                        window.location.href = 'project_music.html';
                     }
                     
                     function copyFooterEmail(event) {
@@ -123,29 +113,27 @@
                         if (yearSpan) {
                             yearSpan.textContent = new Date().getFullYear();
                         }
-                        updateLangButton();
                     });
                 </script>
             </fieldset>
         </div>
 
         <div class="project_detail_container">
-            <h1>Club Zik - Band Singer</h1>
+            <h1>Club Zik - Chanteur de Groupe</h1>
             <img src="Images_e_portfolio/concert_1A.jpg" alt="Concert Club Zik" class="project_detail_image">
             <div class="project_detail_text">
                 <p>
-                    Joining the music association Club Zik in my school was one of the first things I did after joining ENSEEIHT to develop my passion.
+                    Rejoindre l'association musicale Club Zik de mon école a été l'une des premières choses que j'ai faites après avoir intégré l'ENSEEIHT pour développer ma passion.
                 </p>
                 <p>
-                    As the lead singer of my band, I have had the opportunity to perform on stage during major student events. This role involves not only vocal performance but also coordination with other musicians (2 guitarists, drummer, bassist and pianist) and stage management.
+                    En tant que chanteur principal de mon groupe, j'ai eu l'opportunité de me produire sur scène lors d'événements étudiants majeurs. Ce rôle implique non seulement la performance vocale mais aussi la coordination avec les autres musiciens (2 guitaristes, batteur, bassiste et pianiste) et la gestion scénique.
                 </p>
                 <img src="Images_e_portfolio/concert_1A2.jpg" alt="Concert Performance" class="project_detail_image">
                 <p>
-                    It tooks weeks to prepare our setlist, which covers various genres of rock and pop. This experience has taught me a lot about teamwork, leadership, and managing stress in front of a large audience.
+                    Il a fallu des semaines pour préparer notre setlist, qui couvre divers genres de rock et de pop. Cette expérience m'a beaucoup appris sur le travail d'équipe, le leadership et la gestion du stress devant un large public.
                 </p>
-               
             </div>
-            <a href="projects.html" class="project_button">Back to Projects</a>
+            <a href="projects_fr.html" class="project_button">Retour aux Projets</a>
         </div>
 
         <a class="cornerbutton" href="#header">
@@ -153,7 +141,7 @@
         </a>
         <footer>
             <div class="footer_content">
-                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Engineering Student</p>
+                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Élève Ingénieur</p>
                 <div class="footer_socials" style="display: flex; justify-content: center; gap: 20px;">
                     <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" alt="LinkedIn" class="footer_icon"></a>
                     <a href="#" onclick="copyFooterEmail(event)"><img src="Images_e_portfolio/icone_mail.png" alt="Email" class="footer_icon"></a>

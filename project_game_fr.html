@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-        <title>Video Game Dev - Tristan Moreau</title>
+        <title>Développement Jeu Vidéo - Tristan Moreau</title>
         <link rel="stylesheet" href="style_eportfolio.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,50 +21,50 @@
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇫🇷</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
         <div class="fieldplease">
             <fieldset class="first_fieldset">
                 <input id="1" name="menu" type="radio" onclick="function_home()">
-                <label for="1">About</label>
+                <label for="1">À propos</label>
                 <input id="2" name="menu" type="radio" onclick="function_about_me()">
-                <label for="2">Career Management</label>
+                <label for="2">Projet Pro</label>
                 <input id="3" name="menu" type="radio" onclick="function_skills()">
-                <label for="3">Skills</label>
+                <label for="3">Compétences</label>
                 <input checked id="nav_projects" name="menu" type="radio" onclick="function_projects()">
-                <label for="nav_projects">Projects</label>
+                <label for="nav_projects">Projets</label>
                 <input id="4" name="menu" type="radio" onclick="function_mobility()">
-                <label for="4">Mobility</label>
+                <label for="4">Mobilité</label>
                 <input id="5" name="menu" type="radio" onclick="function_experience()">
-                <label for="5">Civic Engagement</label>
+                <label for="5">Engagement</label>
                 <input id="6" name="menu" type="radio" onclick="function_contacts()">
                 <label for="6">Contacts</label>
             </fieldset>
         </div>
 
         <div class="project_detail_container">
-            <h1>Video Game Development</h1>
-            <img src="Images_e_portfolio/game_world.png" alt="Video Game Project" class="project_detail_image">
+            <h1>Développement de Jeu Vidéo</h1>
+            <img src="Images_e_portfolio/game_world.png" alt="Projet Jeu Vidéo" class="project_detail_image">
             <div class="project_detail_text">
                 <p>
-                    Combining my passion for gaming and my programming skills, I wanted to create my own video game.
+                    Alliant ma passion pour le jeu et mes compétences en programmation, j'ai voulu créer mon propre jeu vidéo.
                 </p>
                 <p>
-                    I am coding this game in Python with the Arcade library which is designed to create 2D games. 
+                    Je code ce jeu en Python avec la bibliothèque Arcade qui est conçue pour créer des jeux 2D.
                 </p>
                 <ul>
-                    <li><strong>Game Physics:</strong> Implementing collision detection and movement mechanics.</li>
-                    <li><strong>Artificial Intelligence:</strong> Creating behaviors for non-player characters (NPCs).</li>
-                    <li><strong>Graphics & UI:</strong> Designing the user interface and integrating assets.</li>
+                    <li><strong>Physique du Jeu :</strong> Implémentation de la détection de collision et des mécaniques de mouvement.</li>
+                    <li><strong>Intelligence Artificielle :</strong> Création de comportements pour les personnages non-joueurs (PNJ).</li>
+                    <li><strong>Graphismes & UI :</strong> Conception de l'interface utilisateur et intégration des assets.</li>
                 </ul>
                 <p>
-                    It is a challenging but incredibly rewarding project that pushes me to learn new technologies and solve every problem I encounter.
+                    C'est un projet stimulant mais incroyablement gratifiant qui me pousse à apprendre de nouvelles technologies et à résoudre chaque problème que je rencontre.
                 </p>
-                <img src="Images_e_portfolio/game_combat.png" alt="Game Screenshot" class="project_detail_image">
+                <img src="Images_e_portfolio/game_combat.png" alt="Capture d'écran du jeu" class="project_detail_image">
             </div>
-            <a href="projects.html" class="project_button">Back to Projects</a>
+            <a href="projects_fr.html" class="project_button">Retour aux Projets</a>
         </div>
 
         <a class="cornerbutton" href="#header">
@@ -72,7 +72,7 @@
         </a>
         <footer>
             <div class="footer_content">
-                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Engineering Student</p>
+                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Élève Ingénieur</p>
                 <div class="footer_socials" style="display: flex; justify-content: center; gap: 20px;">
                     <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" alt="LinkedIn" class="footer_icon"></a>
                     <a href="#" onclick="copyFooterEmail(event)"><img src="Images_e_portfolio/icone_mail.png" alt="Email" class="footer_icon"></a>
@@ -81,19 +81,18 @@
         </footer>
         <script src="script.js"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                updateLangButton();
-            });
+            // Redirection vers les pages FR
+            function function_home() { window.location = "index_fr.html"; }
+            function function_about_me() { window.location = "about_me_fr.html"; }
+            function function_projects() { window.location = "projects_fr.html"; }
+            function function_skills() { window.location = "skills_fr.html"; }
+            function function_mobility() { window.location = "mobility_fr.html"; }
+            function function_experience() { window.location = "experience_fr.html"; }
+            function function_contacts() { window.location = "contacts_fr.html"; }
 
             function toggleLanguage() {
-                localStorage.setItem('lang', 'fr');
-                window.location.href = 'project_game_fr.html';
-            }
-
-            function updateLangButton() {
-                const btn = document.querySelector('.lang-toggle');
-                const lang = localStorage.getItem('lang') || 'en';
-                btn.textContent = lang === 'en' ? '🇫🇷' : '🇬🇧';
+                localStorage.setItem('lang', 'en');
+                window.location.href = 'project_game.html';
             }
         </script>
     </body>

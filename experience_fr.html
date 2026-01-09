@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <link rel="stylesheet" href="style_eportfolio.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,49 +53,49 @@
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇫🇷</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
         <div class="fieldplease">
             <fieldset class="first_fieldset">
                 <input id="1" name="menu" type="radio" onclick="function_home()"></input>
-                <label for="1">About</label>
+                <label for="1">À propos</label>
                 <input id="2" name="menu" type="radio" onclick="function_about_me()"></input>
-                <label for="2">Career Management</label>
+                <label for="2">Projet Pro</label>
                 <input id="3" name="menu" type="radio" onclick="function_skills()"></input>
-                <label for="3">Skills</label>
+                <label for="3">Compétences</label>
                 <input id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
-                <label for="nav_projects">Projects</label>
+                <label for="nav_projects">Projets</label>
                 <input id="4" name="menu" type="radio" onclick="function_mobility()"></input>
-                <label for="4">Mobility</label>
+                <label for="4">Mobilité</label>
                 <input checked id="5" name="menu" type="radio" onclick="function_experience()"></input>
-                <label for="5">Civic Engagement</label>
+                <label for="5">Engagement</label>
                 <input id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
             </fieldset>
         </div>
         <div class="texte_civic">
             <h1>
-                Civic Engagement
+                Engagement Citoyen
             </h1>
         </div>
         <div class="civic_container">
             <div class="text_civic_column">
                 <h2>Capitole du Libre - Toulouse</h2>
                 <p>
-                    I participated as a volunteer in the Capitole du Libre event in Toulouse in October 2024 and 2025.
-                    It is a major event dedicated to Free Software. This experience allowed me to contribute to the organization of the event and to immerse myself in the Open Source community.
+                    J'ai participé en tant que bénévole à l'événement Capitole du Libre à Toulouse en octobre 2024 et 2025.
+                    C'est un événement majeur dédié au Logiciel Libre. Cette expérience m'a permis de contribuer à l'organisation de l'événement et de m'immerger dans la communauté Open Source.
                 </p>
             </div>
             <div class="images_civic_column">
                 <div class="civic_image_wrapper">
                     <img src="Images_e_portfolio/capitole_2024.jpg" alt="Capitole du Libre 2024">
-                    <div class="civic_legend">Volunteer at Capitole du Libre 2025</div>
+                    <div class="civic_legend">Bénévole au Capitole du Libre 2025</div>
                 </div>
                 <div class="civic_image_wrapper">
                     <img src="Images_e_portfolio/capitole_2025.jpg" alt="Capitole du Libre 2025">
-                    <div class="civic_legend">Our team in 2024</div>
+                    <div class="civic_legend">Notre équipe en 2024</div>
                 </div>
             </div>
         </div>
@@ -104,7 +104,7 @@
         </a>
         <footer>
             <div class="footer_content">
-                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Engineering Student</p>
+                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Élève Ingénieur</p>
                 <div class="footer_socials" style="display: flex; justify-content: center; gap: 20px;">
                     <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" alt="LinkedIn" class="footer_icon"></a>
                     <a href="#" onclick="copyFooterEmail(event)"><img src="Images_e_portfolio/icone_mail.png" alt="Email" class="footer_icon"></a>
@@ -113,20 +113,16 @@
         </footer>
         <script src="script.js"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                updateLangButton();
-            });
+            // Redirection vers les pages FR
+            function function_home() { window.location = "index_fr.html"; }
+            function function_about_me() { window.location = "about_me_fr.html"; }
+            function function_projects() { window.location = "projects_fr.html"; }
+            function function_skills() { window.location = "skills_fr.html"; }
+            function function_experience() { window.location = "experience_fr.html"; }
+            function function_contacts() { window.location = "contacts_fr.html"; }
+            function function_mobility() { window.location = "mobility_fr.html"; }
 
-            function toggleLanguage() {
-                localStorage.setItem('lang', 'fr');
-                window.location.href = 'experience_fr.html';
-            }
-
-            function updateLangButton() {
-                const btn = document.querySelector('.lang-toggle');
-                const lang = localStorage.getItem('lang') || 'en';
-                btn.textContent = lang === 'en' ? '🇫🇷' : '🇬🇧';
-            }
+            function toggleLanguage() { localStorage.setItem('lang', 'en'); window.location.href = 'experience.html'; }
         </script>
     </body>
 </html>

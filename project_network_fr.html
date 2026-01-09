@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
-        <title>Network Project - Tristan Moreau</title>
+        <title>Projet Réseau - Tristan Moreau</title>
         <link rel="stylesheet" href="style_eportfolio.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -21,49 +21,49 @@
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇫🇷</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
         <div class="fieldplease">
             <fieldset class="first_fieldset">
                 <input id="1" name="menu" type="radio" onclick="function_home()"></input>
-                <label for="1">About</label>
+                <label for="1">À propos</label>
                 <input id="2" name="menu" type="radio" onclick="function_about_me()"></input>
-                <label for="2">Career Management</label>
+                <label for="2">Projet Pro</label>
                 <input id="3" name="menu" type="radio" onclick="function_skills()"></input>
-                <label for="3">Skills</label>
+                <label for="3">Compétences</label>
                 <input checked id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
-                <label for="nav_projects">Projects</label>
+                <label for="nav_projects">Projets</label>
                 <input id="4" name="menu" type="radio" onclick="function_mobility()"></input>
-                <label for="4">Mobility</label>
+                <label for="4">Mobilité</label>
                 <input id="5" name="menu" type="radio" onclick="function_experience()"></input>
-                <label for="5">Civic Engagement</label>
+                <label for="5">Engagement</label>
                 <input id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
             </fieldset>
         </div>
 
         <div class="project_detail_container">
-            <h1>Network Architecture Project</h1>
-            <img src="Images_e_portfolio/pexels-leozhao-5767580.jpg" alt="Network Project" class="project_detail_image">
+            <h1>Projet d'Architecture Réseau</h1>
+            <img src="Images_e_portfolio/pexels-leozhao-5767580.jpg" alt="Projet Réseau" class="project_detail_image">
             <div class="project_detail_text">
                 <p>
-                    In this group project, we are designing a complete network architecture acting as an Autonomous System (AS).
+                    Dans ce projet de groupe, nous concevons une architecture réseau complète agissant comme un Système Autonome (AS).
                 </p>
                 <p>
-                    The scenario involves external clients who need to connect securely to the company's internal network via a VPN infrastructure.
+                    Le scénario implique des clients externes qui doivent se connecter de manière sécurisée au réseau interne de l'entreprise via une infrastructure VPN.
                 </p>
                 <p>
-                    <strong>Key services and features:</strong>
+                    <strong>Services et fonctionnalités clés :</strong>
                 </p>
                 <ul>
-                    <li><strong>Services:</strong> Implementation of VoIP for communication and FTP for file transfer.</li>
-                    <li><strong>Authentication:</strong> Secure identification system (username/password) for accessing company resources.</li>
-                    <li><strong>Routing:</strong> Management of the AS with BGP and internal routing.</li>
+                    <li><strong>Services :</strong> Mise en œuvre de la VoIP pour la communication et du FTP pour le transfert de fichiers.</li>
+                    <li><strong>Authentification :</strong> Système d'identification sécurisé (nom d'utilisateur/mot de passe) pour accéder aux ressources de l'entreprise.</li>
+                    <li><strong>Routage :</strong> Gestion de l'AS avec BGP et routage interne.</li>
                 </ul>
             </div>
-            <a href="projects.html" class="project_button">Back to Projects</a>
+            <a href="projects_fr.html" class="project_button">Retour aux Projets</a>
         </div>
 
         <a class="cornerbutton" href="#header">
@@ -71,7 +71,7 @@
         </a>
         <footer>
             <div class="footer_content">
-                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Engineering Student</p>
+                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Élève Ingénieur</p>
                 <div class="footer_socials" style="display: flex; justify-content: center; gap: 20px;">
                     <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" alt="LinkedIn" class="footer_icon"></a>
                     <a href="#" onclick="copyFooterEmail(event)"><img src="Images_e_portfolio/icone_mail.png" alt="Email" class="footer_icon"></a>
@@ -80,19 +80,18 @@
         </footer>
         <script src="script.js"></script>
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                updateLangButton();
-            });
+            // Redirection vers les pages FR
+            function function_home() { window.location = "index_fr.html"; }
+            function function_about_me() { window.location = "about_me_fr.html"; }
+            function function_projects() { window.location = "projects_fr.html"; }
+            function function_skills() { window.location = "skills_fr.html"; }
+            function function_mobility() { window.location = "mobility_fr.html"; }
+            function function_experience() { window.location = "experience_fr.html"; }
+            function function_contacts() { window.location = "contacts_fr.html"; }
 
             function toggleLanguage() {
-                localStorage.setItem('lang', 'fr');
-                window.location.href = 'project_network_fr.html';
-            }
-
-            function updateLangButton() {
-                const btn = document.querySelector('.lang-toggle');
-                const lang = localStorage.getItem('lang') || 'en';
-                btn.textContent = lang === 'en' ? '🇫🇷' : '🇬🇧';
+                localStorage.setItem('lang', 'en');
+                window.location.href = 'project_network.html';
             }
         </script>
     </body>
