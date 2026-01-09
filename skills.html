@@ -5,53 +5,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-            /* Style pour la Timeline Education */
-            .timeline {
-                position: relative;
-                padding-left: 30px;
-                border-left: 2px solid #ccc;
-            }
-            .timeline-item {
-                margin-bottom: 20px;
-                position: relative;
-            }
-            .timeline-item::before {
-                content: '';
-                position: absolute;
-                left: -36px;
-                top: 5px;
-                width: 10px;
-                height: 10px;
-                background: #333;
-                border-radius: 50%;
-                border: 2px solid #fff;
-            }
-            .timeline-date {
-                font-weight: bold;
-                color: #555;
-                font-size: 0.9em;
-            }
-            /* Adaptation Dark Mode simple */
-            body.dark-mode .timeline { border-left-color: #555; }
-            body.dark-mode .timeline-item::before { background: #fff; border-color: #333; }
-            body.dark-mode .timeline-date { color: #aaa; }
-
-            .lang-toggle {
-                position: fixed;
-                top: 20px;
-                right: 80px;
-                background: transparent;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                z-index: 1000;
-            }
-        </style>
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇫🇷</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">Français</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
@@ -237,21 +194,5 @@
             </div>
         </footer>
         <script src="script.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                updateLangButton();
-            });
-
-            function toggleLanguage() {
-                localStorage.setItem('lang', 'fr');
-                window.location.href = 'skills_fr.html';
-            }
-
-            function updateLangButton() {
-                const btn = document.querySelector('.lang-toggle');
-                const lang = localStorage.getItem('lang') || 'en';
-                btn.textContent = lang === 'en' ? '🇫🇷' : '🇬🇧';
-            }
-        </script>
     </body>
 </html>

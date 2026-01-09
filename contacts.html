@@ -5,77 +5,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-            /* Styles pour le formulaire de contact */
-            .contact-form {
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-                max-width: 800px; /* Formulaire plus large */
-                margin: 0 auto 60px auto; /* Marge en bas pour séparer des boutons */
-                text-align: left;
-                width: 100%;
-                padding: 40px; /* Espace intérieur pour aérer */
-                background-color: rgba(0, 0, 0, 0.03); /* Fond léger pour l'effet fenêtre */
-                border-radius: 15px;
-                box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* Ombre douce */
-                position: relative;
-                z-index: 100; /* S'assure que le formulaire est au-dessus des autres éléments */
-            }
-            .contact-form label { font-weight: bold; margin-bottom: 5px; display: block; }
-            .contact-form input, .contact-form textarea {
-                width: 100%;
-                padding: 10px;
-                border: 1px solid #ccc;
-                border-radius: 5px;
-                font-family: 'Roboto', sans-serif;
-                box-sizing: border-box;
-                background-color: #ffffff !important; /* Force le fond blanc avec priorité absolue */
-                color: #000000 !important; /* Force le texte en noir avec priorité absolue */
-                display: block !important; /* Force l'affichage */
-                opacity: 1 !important;
-            }
-            .contact-form button {
-                padding: 12px 24px;
-                background-color: #333;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                cursor: pointer;
-                font-size: 1rem;
-                transition: background-color 0.3s;
-                align-self: flex-start;
-                position: relative; /* S'assure que le bouton est bien cliquable */
-                z-index: 200;
-            }
-            .contact-form button:hover { background-color: #555; }
-            
-            /* Adaptation Dark Mode */
-            body.dark-mode .contact-form input, 
-            body.dark-mode .contact-form textarea {
-                background-color: #444 !important;
-                color: white !important;
-                border-color: #666;
-            }
-            body.dark-mode .contact-form { background-color: rgba(255, 255, 255, 0.05); }
-            body.dark-mode .contact-form button { background-color: #fff; color: #333; }
-            body.dark-mode .contact-form button:hover { background-color: #ddd; }
-
-            .lang-toggle {
-                position: fixed;
-                top: 20px;
-                right: 80px;
-                background: transparent;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                z-index: 1000;
-            }
-        </style>
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇫🇷</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">Français</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
@@ -119,8 +52,8 @@
                 <div class="cv_download">
                     <a href="Images_e_portfolio/English CV.pdf" download class="testss">English CV</a>
                 </div>
-                <div class="linkedin_photo">
-                    <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank"><img src="Images_e_portfolio/icone_linkedin.png" class="icone_contact"/></a>
+                <div class="cv_download">
+                    <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank" class="testss">LinkedIn</a>
                 </div>
             </div>
         </div>
@@ -137,21 +70,5 @@
             </div>
         </footer>
         <script src="script.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                updateLangButton();
-            });
-
-            function toggleLanguage() {
-                localStorage.setItem('lang', 'fr');
-                window.location.href = 'contacts_fr.html';
-            }
-
-            function updateLangButton() {
-                const btn = document.querySelector('.lang-toggle');
-                const lang = localStorage.getItem('lang') || 'en';
-                btn.textContent = lang === 'en' ? '🇫🇷' : '🇬🇧';
-            }
-        </script>
     </body>
 </html>

@@ -6,52 +6,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-            html { scroll-behavior: smooth; }
-            .cta-button {
-                display: inline-block;
-                margin-top: 15px;
-                padding: 10px 20px;
-                background-color: #333;
-                color: white;
-                text-decoration: none;
-                border-radius: 5px;
-                transition: background-color 0.3s;
-                border: 2px solid #333;
-            }
-            .cta-button:hover { background-color: #555; border-color: #555; }
-            
-            /* Style bouton secondaire (CV) */
-            .cta-button.secondary {
-                background-color: transparent;
-                color: #333;
-            }
-            .cta-button.secondary:hover {
-                background-color: #333;
-                color: white;
-            }
-
-            body.dark-mode .cta-button { background-color: #fff; color: #333; border-color: #fff; }
-            body.dark-mode .cta-button:hover { background-color: #ddd; border-color: #ddd; }
-            
-            body.dark-mode .cta-button.secondary { background-color: transparent; color: #fff; }
-            body.dark-mode .cta-button.secondary:hover { background-color: #fff; color: #333; }
-
-            .lang-toggle {
-                position: fixed;
-                top: 20px;
-                right: 80px; /* Positionné à gauche du bouton thème */
-                background: transparent;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                z-index: 1000;
-            }
-        </style>
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">English</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
@@ -76,7 +34,7 @@
 
         <div class="corps_home">
             <div class="home_about_me reveal">
-                <h2 id="typing-text"></h2>
+                <h2 id="typing-text" data-text="Bienvenue sur mon E-portfolio !"></h2>
                 <p>
                     Je suis étudiant ingénieur à l'ENSEEIHT à Toulouse.
                     Je suis dans la filière Sciences du Numérique.
@@ -98,10 +56,10 @@
                 <h1>À propos de moi</h1>
                 <div class="intro_about_me reveal">
                     <p>
-                        Bonjour ! Je suis <strong>Tristan Moreau</strong>, un étudiant ingénieur de <span id="my-age">21</span> ans en deuxième année à l'N7, spécialisé en Réseaux et Télécommunications.
+                        Bonjour ! Je suis <strong>Tristan Moreau</strong>, un étudiant en école d'ingénierie de <span id="my-age">21</span> ans en deuxième année à l'N7, spécialisé en Réseaux et Télécommunications.
                     </p>
                     <p>
-                        Je m'intéresse au développement logiciel, à la cybersécurité ainsi qu'à l'Intelligence Artificielle.
+                        J'aime programmer des petits logiciels et je m'intéresse à la cybersécurité ainsi qu'à l'Intelligence Artificielle.
                     </p>
                 </div>
                 <div class="activities_about_me reveal">
@@ -109,13 +67,13 @@
                     <div class="activities_photo_text">
                         <img src="Images_e_portfolio/pexels-leozhao-5767580.jpg" class="photo_badminton" />
                         <div class="text_activities_badminton">
-                            <p>À l'N7, j'ai rejoint le club de badminton ainsi que l'équipe de compétition.</p>
+                            <p>À l'N7, j'ai rejoint le club de badminton avec l'AS et je fais de la compétition par équipe avec l'INP.</p>
                         </div>
                     </div>
                     <div class="activities_escalade">
                         <img src="Images_e_portfolio/bouldering-1138492_1920.jpg" class="photo_escalade" />
                         <div class="text_activities_escalade">
-                            <p>Je pratique également l'escalade dans le cadre des cours de sport.</p>
+                            <p>J'ai également pu pratiquer l'escalade avec les cours de sport et j'ai rejoint l'association d'escalade, Gr'INP.</p>
                         </div>
                     </div>
                 </div>
@@ -132,7 +90,7 @@
                     <div class="text_club">
                         <p>
                             À l'école, j'ai rejoint Net7, Japan7, Club'Zik et 7voix.
-                            Ce sont respectivement les associations d'Informatique, de culture Japonaise, de Musique et de Chant.
+                            Ce sont respectivement les associations d'Informatique, de Japonais, de Musique et la chorale de l'école
                         </p>
                     </div>
                 </div>
@@ -146,8 +104,8 @@
                     </div>
                     <div class="text_hobbies">
                         <p>
-                            J'aime beaucoup chanter (surtout de la variété française), ainsi que marcher et découvrir de nouveaux endroits.
-                            De plus, j'aime la magie des cartes, les jeux de société et programmer sur mon ordinateur.
+                            J'aime beaucoup chanter, ainsi que marcher et découvrir de nouveaux endroits.
+                            De plus, je collectionne les jeux de cartes et j'aime les jeux de société et programmer sur mon ordinateur.
                         </p>
                     </div>
                 </div>
@@ -166,36 +124,5 @@
             </div>
         </footer>
         <script src="script.js"></script>
-        <script>
-            // Surcharge de la fonction home pour rester sur la page FR
-            function function_home() { window.location = "index_fr.html"; }
-            function function_about_me() { window.location = "about_me_fr.html"; }
-            function function_skills() { window.location = "skills_fr.html"; }
-            function function_projects() { window.location = "projects_fr.html"; }
-            function function_mobility() { window.location = "mobility_fr.html"; }
-            function function_experience() { window.location = "experience_fr.html"; }
-            function function_contacts() { window.location = "contacts_fr.html"; }
-
-            document.addEventListener('DOMContentLoaded', function() {
-                const text = "Bonjour ! Je suis Tristan MOREAU.";
-                const element = document.getElementById('typing-text');
-                let i = 0;
-                
-                function typeWriter() {
-                    if (i < text.length) {
-                        element.innerHTML += text.charAt(i);
-                        i++;
-                        setTimeout(typeWriter, 100);
-                    }
-                }
-                
-                typeWriter();
-            });
-
-            function toggleLanguage() {
-                localStorage.setItem('lang', 'en');
-                window.location.href = 'index.html';
-            }
-        </script>
     </body>
 </html>

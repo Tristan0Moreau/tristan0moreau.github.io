@@ -1,13 +1,19 @@
 // Navigation Functions
-function function_about_me() { window.location = "about_me.html"; }
-function function_home() { window.location = "index.html"; }
-function function_contacts() { window.location = "contacts.html"; }
-function function_experience() { window.location = "experience.html"; }
-function function_mobility() { window.location = "mobility.html"; }
-function function_skills() { window.location = "skills.html"; }
-function function_projects() { window.location = "projects.html"; }
-function function_career_management() { window.location = "about_me.html"; }
-function function_activities() { window.location = "activities_suite.html"; }
+// Fonction générique pour naviguer vers la bonne version (FR ou EN)
+function navigateTo(pageName) {
+    const isFr = window.location.pathname.includes('_fr.html');
+    window.location.href = pageName + (isFr ? '_fr.html' : '.html');
+}
+
+function function_about_me() { navigateTo("about_me"); }
+function function_home() { navigateTo("index"); }
+function function_contacts() { navigateTo("contacts"); }
+function function_experience() { navigateTo("experience"); }
+function function_mobility() { navigateTo("mobility"); }
+function function_skills() { navigateTo("skills"); }
+function function_projects() { navigateTo("projects"); }
+function function_career_management() { navigateTo("about_me"); }
+function function_activities() { navigateTo("activities_suite"); }
 
 // Theme Management
 function toggleTheme() {
@@ -114,6 +120,27 @@ function showNotification(message) {
 
 // Update Year and Age automatically
 document.addEventListener("DOMContentLoaded", function() {
+    // --- Language Button Management ---
+    updateLangButton();
+
+    // --- TypeWriter Effect (Generic) ---
+    const typeWriterElement = document.getElementById('typing-text');
+    if (typeWriterElement) {
+        const text = typeWriterElement.getAttribute('data-text') || "";
+        let i = 0;
+        typeWriterElement.innerHTML = ""; // Clear content initially
+        
+        function typeWriter() {
+            if (i < text.length) {
+                typeWriterElement.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 100);
+            }
+        }
+        typeWriter();
+    }
+
+    // --- Footer Year ---
     var yearSpan = document.getElementById("current-year");
     if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
@@ -188,3 +215,32 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 });
+
+// --- Language Management ---
+function toggleLanguage() {
+    const currentPath = window.location.pathname;
+    const filename = currentPath.split('/').pop();
+    let newFilename;
+
+    if (filename.includes('_fr.html')) {
+        // Passer en Anglais
+        newFilename = filename.replace('_fr.html', '.html');
+        localStorage.setItem('lang', 'en');
+    } else {
+        // Passer en Français
+        let base = filename.replace('.html', '');
+        if (!base) base = 'index'; // Cas racine
+        newFilename = base + '_fr.html';
+        localStorage.setItem('lang', 'fr');
+    }
+    window.location.href = newFilename;
+}
+
+function updateLangButton() {
+    const btn = document.querySelector('.lang-toggle');
+    if (!btn) return;
+    
+    // Si on est sur une page FR, le bouton propose l'anglais, et inversement
+    const isFr = window.location.pathname.includes('_fr.html');
+    btn.textContent = isFr ? 'English' : 'Français';
+}

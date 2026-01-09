@@ -6,22 +6,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-            .lang-toggle {
-                position: fixed;
-                top: 20px;
-                right: 80px;
-                background: transparent;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                z-index: 1000;
-            }
-        </style>
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">English</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
@@ -52,8 +40,8 @@
                     <img src="Images_e_portfolio/musique-n7.png" alt="Music Band" class="project_image">
                     <div class="project_content">
                         <h2>Club Zik - Chanteur</h2>
-                        <p>Membre de l'association musicale de l'école (Club Zik), j'ai été chanteur dans un groupe. Nous avons joué lors de deux grands concerts étudiants, gérant les répétitions et la présence scénique.</p>
-                        <a href="project_music.html" class="project_button">En savoir plus</a>
+                        <p>Membre de l'association de musique de l'école (Club Zik), j'ai été chanteur dans un groupe. Nous avons joué lors de deux concerts étudiants, gérant les répétitions et nos prestations sur scène.</p>
+                        <a href="project_music_fr.html" class="project_button">En savoir plus</a>
                     </div>
                 </div>
 
@@ -62,8 +50,8 @@
                     <img src="Images_e_portfolio/game_world.png" alt="Video Game Project" class="project_image">
                     <div class="project_content">
                         <h2>Développement de Jeu Vidéo</h2>
-                        <p>Je travaille actuellement sur la création d'un jeu vidéo avec un ami. Nous concevons les mécaniques de jeu et codons le moteur, alliant notre passion pour le jeu et la programmation.</p>
-                        <a href="project_game.html" class="project_button">En savoir plus</a>
+                        <p>Je travaille actuellement sur la création d'un jeu vidéo avec le langage Python. Je conçois les mécaniques de jeu et crée la carte du monde.</p>
+                        <a href="project_game_fr.html" class="project_button">En savoir plus</a>
                     </div>
                 </div>
 
@@ -71,9 +59,9 @@
                 <div class="project_card reveal">
                     <img src="Images_e_portfolio/pexels-leozhao-5767580.jpg" alt="Network Project" class="project_image">
                     <div class="project_content">
-                        <h2>Architecture Réseau & AS</h2>
-                        <p>Conception d'un Système Autonome (AS) complet avec accès VPN, VoIP, services FTP et authentification sécurisée pour des clients d'entreprise.</p>
-                        <a href="project_network.html" class="project_button">En savoir plus</a>
+                        <h2>Architecture Réseau</h2>
+                        <p>Avec mon groupe, nous concevons un Système Autonome (AS) complet avec accès VPN, VoIP, services FTP et authentification sécurisée pour des clients d'entreprise.</p>
+                        <a href="project_network_fr.html" class="project_button">En savoir plus</a>
                     </div>
                 </div>
             </div>
@@ -92,17 +80,5 @@
             </div>
         </footer>
         <script src="script.js"></script>
-        <script>
-            // Redirection vers les pages FR
-            function function_home() { window.location = "index_fr.html"; }
-            function function_about_me() { window.location = "about_me_fr.html"; }
-            function function_projects() { window.location = "projects_fr.html"; }
-            function function_skills() { window.location = "skills_fr.html"; }
-            function function_mobility() { window.location = "mobility_fr.html"; }
-            function function_experience() { window.location = "experience_fr.html"; }
-            function function_contacts() { window.location = "contacts_fr.html"; }
-
-            function toggleLanguage() { localStorage.setItem('lang', 'en'); window.location.href = 'projects.html'; }
-        </script>
     </body>
 </html>

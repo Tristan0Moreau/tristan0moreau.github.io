@@ -6,22 +6,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-            .lang-toggle {
-                position: fixed;
-                top: 20px;
-                right: 80px;
-                background: transparent;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                z-index: 1000;
-            }
-        </style>
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">English</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
@@ -41,92 +29,18 @@
                 <label for="5">Engagement</label>
                 <input id="6" name="menu" type="radio" onclick="function_contacts()"></input>
                 <label for="6">Contacts</label>
-                <script>
-                    // Redirection vers les pages FR disponibles
-                    function function_home() { window.location = "index_fr.html"; }
-                    function function_about_me() { window.location = "about_me_fr.html"; }
-                    function function_projects() { window.location = "projects_fr.html"; }
-                    function function_skills() { window.location = "skills_fr.html"; }
-                    function function_mobility() { window.location = "mobility_fr.html"; }
-                    function function_experience() { window.location = "experience_fr.html"; }
-                    function function_contacts() { window.location = "contacts_fr.html"; }
-                    
-                    function toggleTheme() {
-                        document.body.classList.toggle('dark-mode');
-                        var btn = document.querySelector('.theme-toggle');
-                        if (document.body.classList.contains('dark-mode')) {
-                            localStorage.setItem('theme', 'dark');
-                            btn.textContent = '☀️';
-                        } else {
-                            localStorage.setItem('theme', 'light');
-                            btn.textContent = '🌙';
-                        }
-                    }
-                    if (localStorage.getItem('theme') === 'dark') {
-                        document.body.classList.add('dark-mode');
-                        document.querySelector('.theme-toggle').textContent = '☀️';
-                    }
-
-                    function toggleLanguage() {
-                        localStorage.setItem('lang', 'en');
-                        window.location.href = 'project_music.html';
-                    }
-                    
-                    function copyFooterEmail(event) {
-                        event.preventDefault();
-                        var email = "tristan.moreau@etu.inp-n7.fr";
-                        navigator.clipboard.writeText(email);
-                        showNotification(email + " a été copié !");
-                    }
-
-                    function showNotification(message) {
-                        var notification = document.getElementById("custom-notification");
-                        if (!notification) {
-                            notification = document.createElement("div");
-                            notification.id = "custom-notification";
-                            Object.assign(notification.style, {
-                                position: "fixed",
-                                bottom: "30px",
-                                left: "50%",
-                                transform: "translateX(-50%)",
-                                backgroundColor: "#333",
-                                color: "#fff",
-                                padding: "12px 24px",
-                                borderRadius: "50px",
-                                boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-                                zIndex: "10000",
-                                opacity: "0",
-                                transition: "opacity 0.3s ease",
-                                fontFamily: "'Roboto', sans-serif",
-                                fontSize: "14px",
-                                pointerEvents: "none"
-                            });
-                            document.body.appendChild(notification);
-                        }
-                        notification.textContent = message;
-                        setTimeout(function() { notification.style.opacity = "1"; }, 10);
-                        setTimeout(function() { notification.style.opacity = "0"; }, 3000);
-                    }
-
-                    document.addEventListener("DOMContentLoaded", function() {
-                        var yearSpan = document.getElementById("current-year");
-                        if (yearSpan) {
-                            yearSpan.textContent = new Date().getFullYear();
-                        }
-                    });
-                </script>
             </fieldset>
         </div>
 
         <div class="project_detail_container">
-            <h1>Club Zik - Chanteur de Groupe</h1>
+            <h1>Club Zik - Chanteur dans un Groupe</h1>
             <img src="Images_e_portfolio/concert_1A.jpg" alt="Concert Club Zik" class="project_detail_image">
             <div class="project_detail_text">
                 <p>
-                    Rejoindre l'association musicale Club Zik de mon école a été l'une des premières choses que j'ai faites après avoir intégré l'ENSEEIHT pour développer ma passion.
+                    Rejoindre l'association Club Zik de mon école a été l'une des premières choses que j'ai faites après avoir intégré l'ENSEEIHT. Ayant été assez timide plus jeune, chanter m'a permis de dépasser cette peur du regard des autres.
                 </p>
                 <p>
-                    En tant que chanteur principal de mon groupe, j'ai eu l'opportunité de me produire sur scène lors d'événements étudiants majeurs. Ce rôle implique non seulement la performance vocale mais aussi la coordination avec les autres musiciens (2 guitaristes, batteur, bassiste et pianiste) et la gestion scénique.
+                    En tant que seul chanteur de mon groupe, j'ai eu l'opportunité de me produire sur scène lors d'événements étudiants. Ce rôle implique non seulement de controler sa voix mais aussi la coordination avec les autres musiciens (2 guitaristes, batteur, bassiste et pianiste) et la gestion de la scène.
                 </p>
                 <img src="Images_e_portfolio/concert_1A2.jpg" alt="Concert Performance" class="project_detail_image">
                 <p>
@@ -148,5 +62,6 @@
                 </div>
             </div>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>

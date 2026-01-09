@@ -6,22 +6,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-            .lang-toggle {
-                position: fixed;
-                top: 20px;
-                right: 80px;
-                background: transparent;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                z-index: 1000;
-            }
-        </style>
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇫🇷</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">Français</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
@@ -80,21 +68,5 @@
             </div>
         </footer>
         <script src="script.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                updateLangButton();
-            });
-
-            function toggleLanguage() {
-                localStorage.setItem('lang', 'fr');
-                window.location.href = 'project_game_fr.html';
-            }
-
-            function updateLangButton() {
-                const btn = document.querySelector('.lang-toggle');
-                const lang = localStorage.getItem('lang') || 'en';
-                btn.textContent = lang === 'en' ? '🇫🇷' : '🇬🇧';
-            }
-        </script>
     </body>
 </html>

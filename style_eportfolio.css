@@ -141,7 +141,7 @@ section.menu_home {
     padding-right: 2rem;
     font-family: "Roboto", sans-serif;
     font-size: 1.6rem;
-    width: 30rem;
+    width: 38rem;
     overflow: hidden;
     position: relative;
 }
@@ -868,34 +868,33 @@ section.menu_home {
 }
 
 .testss {
-    width: 5.3rem;
-    height: 5.3rem;
+    width: auto;
+    height: auto;
+    min-width: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.05rem;
-    background-color: rgb(33, 150, 243);
-    border-radius: 2rem;
-    border: 0;
+    background-color: white;
+    border-radius: 10000rem;
+    border: 2px solid cadetblue;
     margin-bottom: 1.6rem;
     margin-right: 1.5rem;
     margin-left: 1.5rem;
-    color: white;
+    color: cadetblue;
     cursor: pointer;
-    padding: 1.4rem;
+    padding: 1rem 2rem;
     text-decoration: none;
     text-align: center;
     font-weight: bold;
+    transition: all 0.3s ease;
 }
 
 .testss:hover {
-    animation: zooming 0.5s ease;
-    scale: 1.2;
-}
-
-.testss:not(:hover) {
-    animation: zoomingout 0.5s ease;
-    scale: 1;
+    background-color: cadetblue;
+    color: white;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 .text_elevator_pitch {
@@ -925,13 +924,10 @@ section.menu_home {
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
-    flex-direction: column;
-    align-items: center;
     margin: 20px 50px;
 }
 .text_civic_column {
     width: 50%;
-    width: 100%;
     text-align: justify;
     font-size: 1.3rem;
     margin-bottom: 2rem;
@@ -941,7 +937,6 @@ section.menu_home {
 }
 .images_civic_column {
     width: 40%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -951,6 +946,7 @@ section.menu_home {
     text-align: center;
 }
 .civic_image_wrapper img {
+    width: 15rem;
     height: auto;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
@@ -1107,9 +1103,9 @@ body.dark-mode footer {
 
 /* Bouton de bascule */
 .theme-toggle {
-    position: fixed;
-    top: 1rem;
-    right: 1rem;
+    position: absolute;
+    top: 2.7rem;
+    right: 2rem;
     background: none;
     border: none;
     font-size: 2rem;
@@ -1591,3 +1587,175 @@ body.dark-mode .tech-tags span:hover {
 .timeline-item.reveal:nth-child(1) { transition-delay: 0.2s; }
 .timeline-item.reveal:nth-child(2) { transition-delay: 0.4s; }
 .timeline-item.reveal:nth-child(3) { transition-delay: 0.6s; }
+
+/* Language Toggle Button */
+.lang-toggle {
+    position: absolute;
+    top: 2rem;
+    right: 6rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid cadetblue;
+    border-radius: 10000rem;
+    width: auto;
+    height: 3.5rem;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    padding: 0 2rem;
+    line-height: 1;
+    color: cadetblue;
+}
+
+.lang-toggle:hover {
+    transform: scale(1.1) rotate(5deg);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    background-color: white;
+}
+
+.lang-toggle:active {
+    transform: scale(0.95);
+}
+
+body.dark-mode .lang-toggle {
+    background-color: rgba(30, 30, 30, 0.9);
+    border-color: #80cbc4;
+    color: #80cbc4;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .lang-toggle:hover {
+    background-color: #424242;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.5);
+}
+
+/* --- Styles rapatriés des fichiers HTML --- */
+
+/* Timeline (Skills) */
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 5px;
+    width: 10px;
+    height: 10px;
+    background: #333;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+.timeline-date {
+    font-weight: bold;
+    color: #555;
+    font-size: 0.9em;
+}
+body.dark-mode .timeline-item::before { background: #fff; border-color: #333; }
+body.dark-mode .timeline-date { color: #aaa; }
+
+/* Boutons CTA (Index) */
+.cta-button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: white;
+    color: cadetblue;
+    text-decoration: none;
+    border-radius: 10000rem;
+    transition: all 0.3s ease;
+    border: 2px solid cadetblue;
+    font-weight: bold;
+}
+.cta-button:hover { 
+    background-color: cadetblue; 
+    color: white; 
+    border-color: cadetblue; 
+}
+
+/* Le style secondary est maintenant identique au style de base, on peut le garder pour la sémantique ou le simplifier */
+.cta-button.secondary { 
+    background-color: white; 
+    color: cadetblue; 
+    border: 2px solid cadetblue; 
+    border-radius: 10000rem; 
+}
+
+body.dark-mode .cta-button,
+body.dark-mode .testss { 
+    background-color: transparent; color: #80cbc4; border-color: #80cbc4; 
+}
+body.dark-mode .cta-button:hover,
+body.dark-mode .testss:hover { 
+    background-color: #80cbc4; color: #121212; border-color: #80cbc4; 
+}
+
+/* Formulaire de Contact */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: left;
+    width: 100%;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 100;
+}
+.contact-form label { font-weight: bold; margin-bottom: 5px; display: block; }
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    display: block !important;
+    opacity: 1 !important;
+}
+.contact-form button {
+    padding: 1rem 2rem;
+    background-color: white;
+    color: cadetblue;
+    border: 2px solid cadetblue;
+    border-radius: 10000rem;
+    cursor: pointer;
+    font-size: 1.05rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    position: relative;
+    z-index: 200;
+}
+.contact-form button:hover { 
+    background-color: cadetblue; 
+    color: white; 
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+body.dark-mode .contact-form input, 
+body.dark-mode .contact-form textarea {
+    background-color: #444 !important;
+    color: white !important;
+    border-color: #666;
+}
+body.dark-mode .contact-form { background-color: rgba(255, 255, 255, 0.05); }
+body.dark-mode .contact-form button { 
+    background-color: transparent; color: #80cbc4; border-color: #80cbc4; 
+}
+body.dark-mode .contact-form button:hover { 
+    background-color: #80cbc4; color: #121212; 
+}

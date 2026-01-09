@@ -6,22 +6,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-            .lang-toggle {
-                position: fixed;
-                top: 20px;
-                right: 80px;
-                background: transparent;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                z-index: 1000;
-            }
-        </style>
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">English</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
@@ -52,15 +40,15 @@
                     Alliant ma passion pour le jeu et mes compétences en programmation, j'ai voulu créer mon propre jeu vidéo.
                 </p>
                 <p>
-                    Je code ce jeu en Python avec la bibliothèque Arcade qui est conçue pour créer des jeux 2D.
+                    Je code ce jeu en Python avec la bibliothèque Arcade qui permet aisément de créer des jeux 2D.
                 </p>
                 <ul>
                     <li><strong>Physique du Jeu :</strong> Implémentation de la détection de collision et des mécaniques de mouvement.</li>
-                    <li><strong>Intelligence Artificielle :</strong> Création de comportements pour les personnages non-joueurs (PNJ).</li>
-                    <li><strong>Graphismes & UI :</strong> Conception de l'interface utilisateur et intégration des assets.</li>
+                    <li><strong>Intelligence Artificielle :</strong> Création de comportements naturel pour les ennemis du joueur.</li>
+                    <li><strong>Graphismes & UI :</strong> Conception de l'interface utilisateur et graphismes assez primaires pour le jeu.</li>
                 </ul>
                 <p>
-                    C'est un projet stimulant mais incroyablement gratifiant qui me pousse à apprendre de nouvelles technologies et à résoudre chaque problème que je rencontre.
+                    C'est un projet stimulant mais incroyablement gratifiant qui me pousse à comprendre une nouvelle librairie Python et à résoudre chaque problème que je rencontre.
                 </p>
                 <img src="Images_e_portfolio/game_combat.png" alt="Capture d'écran du jeu" class="project_detail_image">
             </div>
@@ -80,20 +68,5 @@
             </div>
         </footer>
         <script src="script.js"></script>
-        <script>
-            // Redirection vers les pages FR
-            function function_home() { window.location = "index_fr.html"; }
-            function function_about_me() { window.location = "about_me_fr.html"; }
-            function function_projects() { window.location = "projects_fr.html"; }
-            function function_skills() { window.location = "skills_fr.html"; }
-            function function_mobility() { window.location = "mobility_fr.html"; }
-            function function_experience() { window.location = "experience_fr.html"; }
-            function function_contacts() { window.location = "contacts_fr.html"; }
-
-            function toggleLanguage() {
-                localStorage.setItem('lang', 'en');
-                window.location.href = 'project_game.html';
-            }
-        </script>
     </body>
 </html>

@@ -5,53 +5,10 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <style>
-            /* Style pour la Timeline Education */
-            .timeline {
-                position: relative;
-                padding-left: 30px;
-                border-left: 2px solid #ccc;
-            }
-            .timeline-item {
-                margin-bottom: 20px;
-                position: relative;
-            }
-            .timeline-item::before {
-                content: '';
-                position: absolute;
-                left: -36px;
-                top: 5px;
-                width: 10px;
-                height: 10px;
-                background: #333;
-                border-radius: 50%;
-                border: 2px solid #fff;
-            }
-            .timeline-date {
-                font-weight: bold;
-                color: #555;
-                font-size: 0.9em;
-            }
-            /* Adaptation Dark Mode simple */
-            body.dark-mode .timeline { border-left-color: #555; }
-            body.dark-mode .timeline-item::before { background: #fff; border-color: #333; }
-            body.dark-mode .timeline-date { color: #aaa; }
-
-            .lang-toggle {
-                position: fixed;
-                top: 20px;
-                right: 80px;
-                background: transparent;
-                border: none;
-                font-size: 24px;
-                cursor: pointer;
-                z-index: 1000;
-            }
-        </style>
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
-        <button class="lang-toggle" onclick="toggleLanguage()">🇬🇧</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">English</button>
         <header id="header">
             <h1>Tristan Moreau</h1>
         </header>
@@ -123,7 +80,7 @@
                             <span class="skill_per python" style="width: 90%;"></span>
                         </div>
                     </div>
-                    <div class="skill_box" data-tooltip="Programmation système">
+                    <div class="skill_box" data-tooltip="Programmation de systèmes d'exploitations">
                         <div class="skill_title">
                             <span><img src="Images_e_portfolio/c_logo.png" class="skill_logo" alt="C"> C</span>
                             <span>60%</span>
@@ -132,7 +89,7 @@
                             <span class="skill_per lang_c" style="width: 60%;"></span>
                         </div>
                     </div>
-                    <div class="skill_box" data-tooltip="Programmation Orientée Objet (POO) et développement d'applications.">
+                    <div class="skill_box" data-tooltip="Technologie Objet (Programmation orientée objet) et projet de développement d'applications.">
                         <div class="skill_title">
                             <span><img src="Images_e_portfolio/java_logo.png" class="skill_logo" alt="Java"> Java</span>
                             <span>70%</span>
@@ -141,7 +98,7 @@
                             <span class="skill_per java" style="width: 70%;"></span>
                         </div>
                     </div>
-                    <div class="skill_box" data-tooltip="Programmation Impérative">
+                    <div class="skill_box" data-tooltip="Programmation Impérative et projet de codage / décodage de fichiers avec l'algorithme d'Huffman">
                         <div class="skill_title">
                             <span><img src="Images_e_portfolio/ada_logo.png" class="skill_logo" alt="Ada"> Ada</span>
                             <span>60%</span>
@@ -165,14 +122,14 @@
                 <details>
                     <summary>Voir les cours</summary>
                     <ul>
-                        <li>Traitement du Signal</li><li>Télécommunications</li><li>Réseaux</li><li>Internet</li><li>Calcul Scientifique</li><li>Apprentissage Automatique</li><li>Programmation Orientée Objet</li><li>Architecture des Ordinateurs</li><li>Systèmes d'Exploitation</li>
+                        <li>Traitement du Signal</li><li>Télécommunications</li><li>Réseaux</li><li>Internet</li><li>Calcul Scientifique</li><li>Apprentissage</li><li>Technologie Objet</li><li>Architecture des Ordinateurs</li><li>Systèmes d'Exploitation</li>
                     </ul>
                 </details>
                 <h3>2ème Année - Semestre 1</h3>
                 <details>
                     <summary>Voir les cours</summary>
                     <ul>
-                        <li>Modélisation de Canal</li><li>Égalisation de Canal</li><li>OFDM</li><li>Codage de Canal</li><li>Codage de Source</li><li>Internet</li><li>Théorie des Graphes</li><li>Réseaux Locaux</li><li>Réseaux de Télécommunications</li><li>Systèmes Concurrents</li><li>Middleware</li>
+                        <li>Modélisation de Canal</li><li>Égalisation de Canal</li><li>OFDM</li><li>Codage Canal</li><li>Codage Source</li><li>Internet</li><li>Théorie des Graphes</li><li>Réseaux Locaux</li><li>Réseaux de Télécommunications</li><li>Systèmes Concurrents</li><li>Intergiciel</li>
                     </ul>
                 </details>
             </div>
@@ -187,7 +144,7 @@
                     <div class="timeline-item reveal">
                         <div class="timeline-date">2022 - 2024</div>
                         <strong>CPGE PCSI - PC</strong><br>
-                        Classes Préparatoires aux Grandes Écoles spécialité Physique et Chimie
+                        Classes Préparatoires aux Grandes Écoles dans la filière PCSI puis PC.
                     </div>
                     <div class="timeline-item reveal">
                         <div class="timeline-date">2020 - 2022</div>
@@ -210,17 +167,5 @@
             </div>
         </footer>
         <script src="script.js"></script>
-        <script>
-            // Redirection vers les pages FR
-            function function_home() { window.location = "index_fr.html"; }
-            function function_about_me() { window.location = "about_me_fr.html"; }
-            function function_projects() { window.location = "projects_fr.html"; }
-            function function_skills() { window.location = "skills_fr.html"; }
-            function function_mobility() { window.location = "mobility_fr.html"; }
-            function function_experience() { window.location = "experience_fr.html"; }
-            function function_contacts() { window.location = "contacts_fr.html"; }
-
-            function toggleLanguage() { localStorage.setItem('lang', 'en'); window.location.href = 'skills.html'; }
-        </script>
     </body>
 </html>
