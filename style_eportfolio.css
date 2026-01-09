@@ -85,6 +85,9 @@ header {
     align-items: center;
     font-family: "Roboto", sans-serif;
     font-size: larger;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 100;
 }
 
 body {
@@ -92,6 +95,7 @@ body {
     padding: 0rem;
     background-color: rgb(248, 255, 255);
     scrollbar-width: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 body::-webkit-scrollbar {
@@ -1231,6 +1235,7 @@ footer {
 .project_button:hover {
     background-color: #4db6ac;
     transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
 /* Dark Mode Projects */
@@ -1679,7 +1684,9 @@ body.dark-mode .timeline-date { color: #aaa; }
 .cta-button:hover { 
     background-color: cadetblue; 
     color: white; 
-    border-color: cadetblue; 
+    border-color: cadetblue;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
 }
 
 /* Le style secondary est maintenant identique au style de base, on peut le garder pour la sémantique ou le simplifier */
@@ -1688,17 +1695,28 @@ body.dark-mode .timeline-date { color: #aaa; }
     color: cadetblue; 
     border: 2px solid cadetblue; 
     border-radius: 10000rem; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
 }
+.cta-button.secondary:hover { 
+    background-color: cadetblue; 
+    color: white; 
+    border-color: cadetblue; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+}
+
+
 
 body.dark-mode .cta-button,
 body.dark-mode .testss,
 body.dark-mode .elevator_pitch_video { 
-    background-color: transparent; color: #80cbc4; border-color: #80cbc4; 
+    background-color: transparent; color: #80cbc4; border-color: #80cbc4;
+    box-shadow: none; 
 }
 body.dark-mode .cta-button:hover,
 body.dark-mode .testss:hover,
 body.dark-mode .elevator_pitch_video:hover { 
-    background-color: #80cbc4; color: #121212; border-color: #80cbc4; 
+    background-color: #80cbc4; color: #121212; border-color: #80cbc4;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
 }
 
 /* Formulaire de Contact */
@@ -1729,6 +1747,7 @@ body.dark-mode .elevator_pitch_video:hover {
     color: #000000 !important;
     display: block !important;
     opacity: 1 !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 .contact-form button {
     padding: 1rem 2rem;
@@ -1743,6 +1762,7 @@ body.dark-mode .elevator_pitch_video:hover {
     align-self: flex-start;
     position: relative;
     z-index: 200;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 .contact-form button:hover { 
     background-color: cadetblue; 
@@ -1759,8 +1779,24 @@ body.dark-mode .contact-form textarea {
 }
 body.dark-mode .contact-form { background-color: rgba(255, 255, 255, 0.05); }
 body.dark-mode .contact-form button { 
-    background-color: transparent; color: #80cbc4; border-color: #80cbc4; 
+    background-color: transparent; color: #80cbc4; border-color: #80cbc4;
+    box-shadow: none; 
 }
 body.dark-mode .contact-form button:hover { 
     background-color: #80cbc4; color: #121212; 
+}
+
+
+@keyframes buttonPop {
+    0% {
+        opacity: 0;
+        transform: scale(0.8) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+.cta-button, .testss, .elevator_pitch_video, .project_button, .lang-toggle, .contact-form button {
+    animation: buttonPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards;
 }
