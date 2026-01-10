@@ -164,14 +164,6 @@ section.menu_home {
     animation: backgroundFadenot .3s;
 }
 
-.contact_me_home {
-    color: black;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .contact_me_home h1 {
     margin: 0rem;
     font-family: "Roboto", sans-serif;
@@ -238,8 +230,12 @@ section.menu_home {
 }
 
 .contact_me_home {
+    color: black;
+    margin: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .contact_container {
@@ -328,15 +324,6 @@ section.menu_home {
     font-size: 1.8rem;
 }
 
-.photo_badminton {
-    width: 13rem;
-    margin-right: 3rem;
-    border-radius: 2rem;
-    border: 2px solid black;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: box-shadow 0.3s ease;
-}
-
 .text_activities_badminton {
     display: flex;
     flex-direction: column;
@@ -405,10 +392,6 @@ section.menu_home {
     box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
-.photo_badminton:hover {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-}
-
 .activities_escalade {
     display: flex;
     align-items: center;
@@ -417,17 +400,16 @@ section.menu_home {
     margin-top: 2rem;
 }
 
-.photo_escalade {
+/* Styles groupés pour les photos d'activités */
+.photo_badminton,
+.photo_escalade,
+.photo_club,
+.photo_hobbies {
     width: 13rem;
-    margin-right: 3rem;
     border-radius: 2rem;
     border: 2px solid black;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     transition: box-shadow 0.3s ease;
-}
-
-.photo_escalade:hover {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
 .text_activities_escalade {
@@ -465,23 +447,16 @@ section.menu_home {
     margin-bottom: 0rem;
 }
 
-.photo_club {
+.photo_badminton, .photo_escalade {
+    margin-right: 3rem;
+}
+
+.photo_club, .photo_hobbies {
     height: 10rem;
-    border-radius: 2rem;
-    background-color: white;
-    border: 2px solid black;
+    width: auto;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: box-shadow 0.3s ease;
-}
-
-.photo_club:hover {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
-}
-
-.club_about_me {
-    text-align: center;
+    background-color: white;
 }
 
 .text_club {
@@ -490,28 +465,15 @@ section.menu_home {
     margin-bottom: 2rem;
 }
 
-.photo_hobbies {
-    height: 10rem;
-    border-radius: 2rem;
-    border: 2px solid black;
-    margin-top: 1rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: box-shadow 0.3s ease;
-}
-
+.photo_badminton:hover,
+.photo_escalade:hover,
+.photo_club:hover,
 .photo_hobbies:hover {
     box-shadow: 0 8px 16px rgba(0,0,0,0.5);
 }
 
+.club_about_me,
 .hobbies_about_me {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.club_about_me {
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -609,10 +571,6 @@ section.menu_home {
     padding: 0;
 }
 
-.contact_me_home input {
-    display: none;
-}
-
 .icone_contact_container {
     display: flex;
     align-items: center;
@@ -627,16 +585,16 @@ section.menu_home {
     text-align: center;
 }
 
-.skills_skills ul {
-    text-align: left;
-}
-
 .skills_skills {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0;
     font-size: 1.3rem;
+}
+
+.skills_skills ul {
+    text-align: left;
 }
 
 .skills_skills h2 {
@@ -894,6 +852,7 @@ section.menu_home {
     text-align: center;
     font-weight: bold;
     transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .testss:hover {
@@ -986,17 +945,40 @@ section.menu_home {
 }
 
 .japan_images img {
-    height: 15rem;
+    height: 22rem;
     border-radius: 1rem;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    border: 2px solid black;
     object-fit: cover;
     cursor: pointer;
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+@keyframes japanZoomPulse {
+    0% { transform: scale(1.1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1.1); }
 }
 
 .japan_images img:hover {
-    box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.6);
+    transform: scale(1.1);
+    animation: japanZoomPulse 3s ease-in-out 0.3s infinite;
+}
+
+.japan_img_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.japan_legend {
+    margin-top: 1.5rem; /* Espace suffisant pour ne pas être caché par le zoom de l'image */
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    color: #333;
+    font-style: italic;
+    text-align: center;
+    transition: color 0.3s ease;
 }
 
 .skill_logo {
@@ -1090,9 +1072,12 @@ body.dark-mode .photo_club,
 body.dark-mode .photo_hobbies,
 body.dark-mode .photo_badminton,
 body.dark-mode .photo_escalade,
-body.dark-mode .japan_images img,
 body.dark-mode .civic_image_wrapper img {
     border-color: #e0e0e0;
+}
+
+body.dark-mode .japan_legend {
+    color: #e0e0e0;
 }
 
 body.dark-mode .fieldplease {
@@ -1341,14 +1326,49 @@ body.dark-mode .project_detail_text {
 }
 
 /* Remove shadow on Contact page specific elements */
-.contact_container .icone_contact,
-.contact_container .testss {
+.contact_container .icone_contact {
     box-shadow: none;
 }
 
-.contact_container .icone_contact:hover,
-.contact_container .testss:hover {
+.contact_container .icone_contact:hover {
     box-shadow: none;
+}
+
+/* Icônes pour les boutons de contact (CV, LinkedIn, GitHub) */
+/* Note : Nécessite que FontAwesome soit inclus dans le <head> de la page contact */
+.testss[href*="cv"]::before, 
+.testss[href*="CV"]::before {
+    content: "\f019"; /* fa-download */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 0.8rem;
+    display: inline-block;
+}
+
+.testss[href*="linkedin"]::before {
+    content: "\f08c"; /* fa-linkedin */
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    margin-right: 0.8rem;
+    display: inline-block;
+}
+
+.testss[href*="github"]::before {
+    content: "\f09b"; /* fa-github */
+    font-family: "Font Awesome 6 Brands";
+    font-weight: 400;
+    margin-right: 0.8rem;
+    display: inline-block;
+}
+
+/* Animation de rebond pour l'icône au survol */
+@keyframes iconBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-3px); }
+}
+
+.testss:hover::before {
+    animation: iconBounce 0.6s ease infinite;
 }
 
 /* --- Skills Section on Home --- */
@@ -1743,10 +1763,8 @@ body.dark-mode .elevator_pitch_video:hover {
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
     box-sizing: border-box;
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    display: block !important;
-    opacity: 1 !important;
+    background-color: #ffffff;
+    color: #000000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 .contact-form button {
@@ -1773,8 +1791,8 @@ body.dark-mode .elevator_pitch_video:hover {
 
 body.dark-mode .contact-form input, 
 body.dark-mode .contact-form textarea {
-    background-color: #444 !important;
-    color: white !important;
+    background-color: #444;
+    color: white;
     border-color: #666;
 }
 body.dark-mode .contact-form { background-color: rgba(255, 255, 255, 0.05); }
@@ -1799,4 +1817,98 @@ body.dark-mode .contact-form button:hover {
 }
 .cta-button, .testss, .elevator_pitch_video, .project_button, .lang-toggle, .contact-form button {
     animation: buttonPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards;
+}
+
+/* Styles pour la section "Autres Langages & Outils" */
+.skills_container + .reveal {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.5rem;
+    width: 100%;
+    max-width: 60rem;
+}
+
+.skills_container + .reveal h3 {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.skills_container + .reveal .tech-tags {
+    justify-content: center;
+}
+
+.skills_container + .reveal .tech-tags span {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.05);
+    position: relative; /* Nécessaire pour positionner l'infobulle */
+}
+
+.skills_container + .reveal .tech-tags span:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Espace pour l'icône dans les tags */
+.skills_container + .reveal .tech-tags span i {
+    margin-right: 0.5rem;
+}
+
+/* Styles de l'infobulle (Tooltip) pour les tags */
+.skills_container + .reveal .tech-tags span::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: rgba(50, 50, 50, 0.95);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 8px;
+}
+
+/* Apparition de l'infobulle au survol */
+.skills_container + .reveal .tech-tags span:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Animation d'apparition des tags */
+@keyframes tagPop {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.skills_container + .reveal.active .tech-tags span {
+    animation: tagPop 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards;
+}
+
+/* Délais pour l'effet en cascade */
+.skills_container + .reveal.active .tech-tags span:nth-child(1) { animation-delay: 0.1s; }
+.skills_container + .reveal.active .tech-tags span:nth-child(2) { animation-delay: 0.2s; }
+.skills_container + .reveal.active .tech-tags span:nth-child(3) { animation-delay: 0.3s; }
+.skills_container + .reveal.active .tech-tags span:nth-child(4) { animation-delay: 0.4s; }
+.skills_container + .reveal.active .tech-tags span:nth-child(5) { animation-delay: 0.5s; }
+.skills_container + .reveal.active .tech-tags span:nth-child(6) { animation-delay: 0.6s; }
+
+body.dark-mode .skills_container + .reveal h3 {
+    color: #e0e0e0;
+}
+
+body.dark-mode .skills_container + .reveal .tech-tags span {
+    color: #e0e0e0;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .skills_container + .reveal .tech-tags span:hover {
+    background-color: #e0e0e0;
+    color: #121212;
 }
