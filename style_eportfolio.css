@@ -150,19 +150,18 @@ section.menu_home {
     position: relative;
 }
 
-.fieldplease label:hover {
-    padding: 0.2rem;
+.fieldplease label {
+    transition: all 0.3s ease;
     border-radius: 1000rem;
-    animation: backgroundFade .3s;
+    padding: 0.2rem;
+}
+
+.fieldplease label:hover {
     background-color: cadetblue;
     color: white;
     font-size: 1.5rem;
 }
 
-.fieldplease label:not(:hover) {
-    border-radius: 1000rem;
-    animation: backgroundFadenot .3s;
-}
 
 .contact_me_home h1 {
     margin: 0rem;
@@ -916,11 +915,13 @@ section.menu_home {
     height: auto;
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    transition: box-shadow 0.3s ease;
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
+    cursor: pointer;
 }
 
 .civic_image_wrapper img:hover {
     box-shadow: 0 8px 16px rgba(0,0,0,0.5);
+    transform: scale(1.15);
 }
 .civic_legend {
     font-style: italic;
@@ -950,7 +951,7 @@ section.menu_home {
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     object-fit: cover;
     cursor: pointer;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: box-shadow 0.5s ease, transform 0.5s ease;
 }
 
 @keyframes japanZoomPulse {
@@ -961,8 +962,7 @@ section.menu_home {
 
 .japan_images img:hover {
     box-shadow: 0 12px 24px rgba(0,0,0,0.6);
-    transform: scale(1.1);
-    animation: japanZoomPulse 3s ease-in-out 0.3s infinite;
+    transform: scale(1.15);
 }
 
 .japan_img_wrapper {
@@ -1337,7 +1337,9 @@ body.dark-mode .project_detail_text {
 /* Icônes pour les boutons de contact (CV, LinkedIn, GitHub) */
 /* Note : Nécessite que FontAwesome soit inclus dans le <head> de la page contact */
 .testss[href*="cv"]::before, 
-.testss[href*="CV"]::before {
+.testss[href*="CV"]::before,
+.cta-button[href*="CV"]::before,
+.cta-button[href*="cv"]::before {
     content: "\f019"; /* fa-download */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
@@ -1361,14 +1363,38 @@ body.dark-mode .project_detail_text {
     display: inline-block;
 }
 
+.testss[href*="contact"]::before,
+.testss[href*="Contact"]::before {
+    content: "\f0e0"; /* fa-envelope */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 0.8rem;
+    display: inline-block;
+}
+
 /* Animation de rebond pour l'icône au survol */
 @keyframes iconBounce {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-3px); }
 }
 
-.testss:hover::before {
+.testss:hover::before,
+.cta-button:hover::before {
     animation: iconBounce 0.6s ease infinite;
+}
+
+/* Flèche pour le bouton Projets */
+.cta-button[href*="project"]::after {
+    content: "\f061"; /* fa-arrow-right */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-left: 0.8rem;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.cta-button[href*="project"]:hover::after {
+    transform: translateX(5px);
 }
 
 /* --- Skills Section on Home --- */
@@ -1700,6 +1726,7 @@ body.dark-mode .timeline-date { color: #aaa; }
     transition: all 0.3s ease;
     border: 2px solid cadetblue;
     font-weight: bold;
+    animation-delay: 0.2s;
 }
 .cta-button:hover { 
     background-color: cadetblue; 
@@ -1707,6 +1734,7 @@ body.dark-mode .timeline-date { color: #aaa; }
     border-color: cadetblue;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 
+    transform: scale(1.05);
 }
 
 /* Le style secondary est maintenant identique au style de base, on peut le garder pour la sémantique ou le simplifier */
@@ -1715,13 +1743,14 @@ body.dark-mode .timeline-date { color: #aaa; }
     color: cadetblue; 
     border: 2px solid cadetblue; 
     border-radius: 10000rem; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    animation-delay: 0.4s;
 }
 .cta-button.secondary:hover { 
     background-color: cadetblue; 
     color: white; 
     border-color: cadetblue; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    transform: scale(1.05);
 }
 
 
@@ -1815,10 +1844,18 @@ body.dark-mode .contact-form button:hover {
         transform: scale(1) translateY(0);
     }
 }
-.cta-button, .testss, .elevator_pitch_video, .project_button, .lang-toggle, .contact-form button {
+.cta-button, .testss, .elevator_pitch_video, .project_button, .lang-toggle, .contact-form button, .first_fieldset label {
     animation: buttonPop 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) backwards;
 }
 
+/* Délais pour l'animation en cascade du menu */
+.first_fieldset label:nth-of-type(1) { animation-delay: 0.1s; }
+.first_fieldset label:nth-of-type(2) { animation-delay: 0.2s; }
+.first_fieldset label:nth-of-type(3) { animation-delay: 0.3s; }
+.first_fieldset label:nth-of-type(4) { animation-delay: 0.4s; }
+.first_fieldset label:nth-of-type(5) { animation-delay: 0.5s; }
+.first_fieldset label:nth-of-type(6) { animation-delay: 0.6s; }
+.first_fieldset label:nth-of-type(7) { animation-delay: 0.7s; }
 /* Styles pour la section "Autres Langages & Outils" */
 .skills_container + .reveal {
     text-align: center;
@@ -1911,4 +1948,32 @@ body.dark-mode .skills_container + .reveal .tech-tags span {
 body.dark-mode .skills_container + .reveal .tech-tags span:hover {
     background-color: #e0e0e0;
     color: #121212;
+}
+
+/* PDF Viewer Styles */
+.cv_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.pdf_container {
+    width: 90%;
+    max-width: 1000px;
+    height: 800px;
+    border: 2px solid cadetblue;
+    border-radius: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    overflow: hidden;
+    background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .pdf_container {
+        height: 500px;
+        width: 95%;
+    }
 }

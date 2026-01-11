@@ -60,6 +60,18 @@ function myFunction() {
 function openModal(element) {
     var modal = document.getElementById("imageModal");
     var modalImg = document.getElementById("modalImg");
+
+    // Création dynamique du modal s'il n'existe pas (pour les pages autres que Mobilité)
+    if (!modal) {
+        modal = document.createElement("div");
+        modal.id = "imageModal";
+        modal.className = "image-modal";
+        modal.innerHTML = '<span class="close-modal" onclick="closeModal()">&times;</span><img class="image-modal-content" id="modalImg">';
+        document.body.appendChild(modal);
+        modalImg = document.getElementById("modalImg");
+        modal.onclick = function(e) { if(e.target === modal) closeModal(); };
+    }
+
     if (modal && modalImg) {
         modal.style.display = "block";
         modalImg.src = element.src;
@@ -213,6 +225,14 @@ document.addEventListener("DOMContentLoaded", function() {
                 window.requestAnimationFrame(step);
             }
         }
+    });
+
+    // --- Civic Engagement Images Click Event ---
+    const civicImages = document.querySelectorAll('.civic_image_wrapper img');
+    civicImages.forEach(img => {
+        img.addEventListener('click', function() {
+            openModal(this);
+        });
     });
 });
 
