@@ -592,8 +592,47 @@ section.menu_home {
     font-size: 1.3rem;
 }
 
+.skills_skills details {
+    width: 100%;
+    max-width: 70rem;
+    margin-bottom: 1.5rem;
+}
+
 .skills_skills ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .skills_skills ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.skills_skills li {
+    background-color: white;
+    padding: 1rem 1.2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border-left: 5px solid cadetblue;
+    font-weight: 500;
+    color: #444;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
     text-align: left;
+}
+
+.skills_skills li:hover {
+    transform: translateY(-3px) translateX(3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background-color: cadetblue;
+    color: white;
 }
 
 .skills_skills h2 {
@@ -1006,17 +1045,6 @@ section.menu_home {
 }
 
 @media screen and (min-width: 900px) {
-    .skills_skills ul {
-        column-count: 2;
-        column-gap: 4rem;
-        column-rule: 1px solid cadetblue;
-        width: 100%;
-        max-width: 70rem;
-    }
-
-    .skills_skills li {
-        break-inside: avoid;
-    }
 
     .skills_skills p {
         width: auto;
@@ -1573,6 +1601,18 @@ body.dark-mode .tech-skill-card {
 
 body.dark-mode .tech-skill-card h4 {
     border-bottom-color: #333;
+}
+
+/* Dark Mode for Course Cards */
+body.dark-mode .skills_skills li {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+body.dark-mode .skills_skills li:hover {
+    background-color: cadetblue;
+    color: white;
 }
 
 /* Dark Mode Timeline */

@@ -234,6 +234,9 @@ document.addEventListener("DOMContentLoaded", function() {
             openModal(this);
         });
     });
+
+    // Add icons to courses automatically
+    addCourseIcons();
 });
 
 // --- Language Management ---
@@ -263,4 +266,68 @@ function updateLangButton() {
     // Si on est sur une page FR, le bouton propose l'anglais, et inversement
     const isFr = window.location.pathname.includes('_fr.html');
     btn.textContent = isFr ? 'English' : 'Français';
+}
+
+// --- Automatic Course Icons ---
+function addCourseIcons() {
+    const courses = document.querySelectorAll('.skills_skills details ul li');
+    
+    const iconMap = {
+        // Networks & Telecom
+        'network': 'fa-network-wired', 'réseau': 'fa-network-wired',
+        'interconnexion': 'fa-network-wired', 'interconnection': 'fa-network-wired',
+        'telecom': 'fa-satellite-dish', 'télécom': 'fa-satellite-dish',
+        'wireless': 'fa-wifi', 'sans fil': 'fa-wifi', 'mobile': 'fa-mobile-screen',
+        'signal': 'fa-wave-square', 'ofdm': 'fa-wave-square', 'physique': 'fa-microchip', 'physical': 'fa-microchip',
+        'internet': 'fa-globe', 'web': 'fa-globe',
+        
+        // Programming & CS
+        'program': 'fa-code', 'code': 'fa-code', 'coding': 'fa-code', 'codage': 'fa-code',
+        'java': 'fa-java', 'objet': 'fa-cubes', 'object': 'fa-cubes',
+        'system': 'fa-server', 'système': 'fa-server', 'os': 'fa-server', 'linux': 'fa-linux',
+        'data': 'fa-database', 'donnée': 'fa-database',
+        'architecture': 'fa-microchip', 'concurrent': 'fa-arrows-split-up-and-left',
+        'security': 'fa-shield-halved', 'sécurité': 'fa-shield-halved',
+        
+        // Math & Science
+        'math': 'fa-calculator', 'calcul': 'fa-calculator', 'algebra': 'fa-calculator',
+        'analysis': 'fa-chart-line', 'analyse': 'fa-chart-line',
+        'probabilit': 'fa-dice', 'statistic': 'fa-chart-pie', 'statistique': 'fa-chart-pie',
+        'graph': 'fa-circle-nodes', 'graphe': 'fa-circle-nodes',
+        'model': 'fa-project-diagram', 'modélisation': 'fa-project-diagram',
+        'control': 'fa-gears', 'automatique': 'fa-gears', 'learning': 'fa-brain', 'apprentissage': 'fa-brain',
+        'optimization': 'fa-arrow-trend-up', 'optimisation': 'fa-arrow-trend-up',
+        
+        // Soft Skills / Management
+        'management': 'fa-people-group', 'gestion': 'fa-people-group',
+        'english': 'fa-language', 'anglais': 'fa-language',
+        'project': 'fa-list-check', 'projet': 'fa-list-check'
+    };
+
+    courses.forEach(li => {
+        const text = li.textContent.toLowerCase();
+        let iconClass = 'fa-book-open'; // Default icon
+
+        for (const [key, value] of Object.entries(iconMap)) {
+            if (text.includes(key)) {
+                iconClass = value;
+                break;
+            }
+        }
+
+        const icon = document.createElement('i');
+        // Check if it's a brand icon
+        if (['fa-java', 'fa-linux', 'fa-html5', 'fa-python'].includes(iconClass)) {
+            icon.className = `fa-brands ${iconClass}`;
+        } else {
+            icon.className = `fa-solid ${iconClass}`;
+        }
+        
+        icon.style.marginRight = '12px';
+        icon.style.color = 'cadetblue';
+        icon.style.width = '20px'; // Fixed width for alignment
+        icon.style.textAlign = 'center';
+
+        li.prepend(icon);
+    });
 }
