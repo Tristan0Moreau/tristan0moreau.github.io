@@ -1,8 +1,12 @@
 // Navigation Functions
 // Fonction générique pour naviguer vers la bonne version (FR ou EN)
+// Fonctionne avec ou sans extension .html dans l'URL (ex: GitHub Pages)
+function isFrenchPage() {
+    return /_fr(\.html)?$/.test(window.location.pathname);
+}
+
 function navigateTo(pageName) {
-    const isFr = window.location.pathname.includes('_fr.html');
-    window.location.href = pageName + (isFr ? '_fr.html' : '.html');
+    window.location.href = pageName + (isFrenchPage() ? '_fr.html' : '.html');
 }
 
 function function_about_me() { navigateTo("about_me"); }
@@ -241,17 +245,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // --- Language Management ---
 function toggleLanguage() {
-    const currentPath = window.location.pathname;
-    const filename = currentPath.split('/').pop();
+    const filename = window.location.pathname.split('/').pop();
+    let base = filename.replace(/\.html$/, '');
     let newFilename;
 
-    if (filename.includes('_fr.html')) {
+    if (isFrenchPage()) {
         // Passer en Anglais
-        newFilename = filename.replace('_fr.html', '.html');
+        newFilename = base.replace(/_fr$/, '') + '.html';
         localStorage.setItem('lang', 'en');
     } else {
         // Passer en Français
-        let base = filename.replace('.html', '');
         if (!base) base = 'index'; // Cas racine
         newFilename = base + '_fr.html';
         localStorage.setItem('lang', 'fr');
@@ -264,8 +267,7 @@ function updateLangButton() {
     if (!btn) return;
     
     // Si on est sur une page FR, le bouton propose l'anglais, et inversement
-    const isFr = window.location.pathname.includes('_fr.html');
-    btn.textContent = isFr ? 'English' : 'Français';
+    btn.textContent = isFrenchPage() ? 'English' : 'Français';
 }
 
 // --- Automatic Course Icons ---
@@ -295,7 +297,7 @@ function addCourseIcons() {
         'probabilit': 'fa-dice', 'statistic': 'fa-chart-pie', 'statistique': 'fa-chart-pie',
         'graph': 'fa-circle-nodes', 'graphe': 'fa-circle-nodes',
         'model': 'fa-project-diagram', 'modélisation': 'fa-project-diagram',
-        'control': 'fa-gears', 'automatique': 'fa-gears', 'learning': 'fa-brain', 'apprentissage': 'fa-brain',
+        'control': 'fa-gears', 'contrôle': 'fa-gears', 'automatique': 'fa-gears', 'learning': 'fa-brain', 'apprentissage': 'fa-brain', 'intelligence': 'fa-brain',
         'optimization': 'fa-arrow-trend-up', 'optimisation': 'fa-arrow-trend-up',
         
         // Soft Skills / Management

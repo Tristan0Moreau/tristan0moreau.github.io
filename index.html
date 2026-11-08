@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
-        <title>E-portfolio de Tristan</title>
+        <meta charset="UTF-8">
+        <title>Tristan Moreau - E-portfolio</title>
         <link rel="stylesheet" href="style_eportfolio.css" />
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%235f9ea0'/><text x='50' y='70' text-anchor='middle' font-size='60' fill='white' font-family='sans-serif' font-weight='bold'>TM</text></svg>">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     </head>
     <body>
         <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
@@ -17,29 +18,30 @@
         </header>
         <div class="fieldplease">
             <fieldset class="first_fieldset">
-                <input checked id="1" name="menu" type="radio" onclick="function_home()"></input>
+                <input checked id="1" name="menu" type="radio" onclick="function_home()">
                 <label for="1">About</label>
-                <input checked id="2" name="menu" type="radio" onclick="function_about_me()"></input>
+                <input id="2" name="menu" type="radio" onclick="function_about_me()">
                 <label for="2">Career Management</label>
-                <input checked id="3" name="menu" type="radio" onclick="function_skills()"></input>
+                <input id="3" name="menu" type="radio" onclick="function_skills()">
                 <label for="3">Skills</label>
-                <input id="nav_projects" name="menu" type="radio" onclick="function_projects()"></input>
+                <input id="nav_projects" name="menu" type="radio" onclick="function_projects()">
                 <label for="nav_projects">Projects</label>
-                <input checked id="4" name="menu" type="radio" onclick="function_mobility()"></input>
+                <input id="4" name="menu" type="radio" onclick="function_mobility()">
                 <label for="4">Mobility</label>
-                <input checked id="5" name="menu" type="radio" onclick="function_experience()"></input>
+                <input id="5" name="menu" type="radio" onclick="function_experience()">
                 <label for="5">Civic Engagement</label>
-                <input checked id="6" name="menu" type="radio" onclick="function_contacts()"></input>
+                <input id="6" name="menu" type="radio" onclick="function_contacts()">
                 <label for="6">Contacts</label>
             </fieldset>
         </div>
 
         <div class="corps_home">
             <div class="home_about_me reveal">
-                <h2 id="typing-text" data-text="Welcome to my E-portfolio !"></h2>
+                <h2 id="typing-text" data-text="Welcome to my E-portfolio!"></h2>
                 <p>
                     I am an engineering student at ENSEEIHT in Toulouse.
                     I am in the Computer Science section of the school.
+                    This semester, I am on exchange at Polytechnique Montréal in Canada.
                 </p>
                 <div style="display: flex; gap: 15px; flex-wrap: wrap;">
                     <a href="projects.html" class="cta-button">View My Projects</a>
@@ -58,7 +60,7 @@
                 <h1>About me</h1>
                 <div class="intro_about_me reveal">
                     <p>
-                        Hi ! I'm <strong>Tristan Moreau</strong>, a <span id="my-age">21</span> years old engineering student in second year at N7 and specialized in Networks and Telecommunications.
+                        Hi! I'm <strong>Tristan Moreau</strong>, a <span id="my-age">21</span> years old engineering student in third year at N7 and specialized in Networks and Telecommunications.
                     </p>
                     <p>
                         I am interested in software development, cybersecurity as well as Artificial Intelligence.
