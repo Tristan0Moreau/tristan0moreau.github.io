@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Application Android - Maison connectée Bluetooth - Tristan Moreau</title>
+        <link rel="stylesheet" href="style_eportfolio.css" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%235f9ea0'/><text x='50' y='70' text-anchor='middle' font-size='60' fill='white' font-family='sans-serif' font-weight='bold'>TM</text></svg>">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">English</button>
+        <header id="header">
+            <h1>Tristan Moreau</h1>
+        </header>
+        <div class="fieldplease">
+            <fieldset class="first_fieldset">
+                <input id="1" name="menu" type="radio" onclick="function_home()">
+                <label for="1">À propos</label>
+                <input id="2" name="menu" type="radio" onclick="function_about_me()">
+                <label for="2">Projet Pro</label>
+                <input id="3" name="menu" type="radio" onclick="function_skills()">
+                <label for="3">Compétences</label>
+                <input checked id="nav_projects" name="menu" type="radio" onclick="function_projects()">
+                <label for="nav_projects">Projets</label>
+                <input id="4" name="menu" type="radio" onclick="function_mobility()">
+                <label for="4">Mobilité</label>
+                <input id="5" name="menu" type="radio" onclick="function_experience()">
+                <label for="5">Engagement</label>
+                <input id="6" name="menu" type="radio" onclick="function_contacts()">
+                <label for="6">Contacts</label>
+            </fieldset>
+        </div>
+
+        <div class="project_detail_container">
+            <h1>Application Android - Maison connectée Bluetooth</h1>
+            <img class="project_detail_image" src="Images_e_portfolio/programmation_mobile.png" alt="Capture d'écran d'Android Studio avec l'application" onclick="openModal(this)">
+            <div class="project_detail_text">
+                <p>Projet du cours de Programmation de mobiles (parcours Réseaux et Télécommunications), réalisé en binôme sur deux smartphones Android physiques prêtés par l'école, sans émulateur.</p>
+                <h3 style="margin: 1.5rem 0 0.5rem;">Objectif</h3>
+                <p>Faire échanger des informations à deux smartphones Android via une connexion Bluetooth afin de contrôler une maison connectée.</p>
+                <h3 style="margin: 1.5rem 0 0.5rem;">Fonctionnement</h3>
+                <ul style="text-align: left; padding-left: 1.5rem; margin-bottom: 1.5rem;"><li>Un premier écran permet de choisir un rôle : client (la télécommande) ou serveur (le hub).</li><li>Une fois la connexion Bluetooth établie, le client affiche la liste des appareils connectés au téléphone du serveur. Allumer ou éteindre un appareil envoie une requête via Bluetooth.</li><li>Le serveur sert de passerelle entre le Bluetooth et une API REST (le simulateur de maison connectée). Il transmet l'action, puis renvoie l'état mis à jour au client. Il affiche aussi un écran de monitoring rafraîchi périodiquement.</li></ul>
+                <h3 style="margin: 1.5rem 0 0.5rem;">Aspects techniques</h3>
+                <ul style="text-align: left; padding-left: 1.5rem; margin-bottom: 1.5rem;"><li>Sockets Bluetooth RFCOMM entre deux téléphones déjà appairés : le serveur attend une connexion et le client se connecte grâce à un UUID commun.</li><li>Un thread dédié lit et écrit sur le socket, et un Handler transmet les données reçues au thread graphique principal. Le thread est partagé entre les activités avec un singleton.</li><li>Composants Android : Activities et Intents.</li></ul>
+                <h3 style="margin: 1.5rem 0 0.5rem;">Livrables</h3>
+                <p>Code commenté, rapport de trois pages maximum décrivant l'architecture et le fonctionnement de l'application, et démonstration en direct.</p>
+            </div>
+            <div class="tech-tags" style="margin-bottom: 2rem;"><span>Java</span><span>Android Studio</span><span>Bluetooth</span><span>API REST</span><span>Multithreading</span></div>
+            <a href="projects_fr.html" class="project_button" style="align-self: center;">Retour aux projets</a>
+        </div>
+
+        <a class="cornerbutton" href="#header">
+            <img src="Images_e_portfolio/fleche_haut.png">
+        </a>
+        <footer>
+            <div class="footer_content">
+                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Élève Ingénieur</p>
+                <div class="footer_socials" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank" class="testss">LinkedIn</a>
+                    <a href="https://github.com/Tristan0Moreau" target="_blank" class="testss">GitHub</a>
+                    <a href="contacts_fr.html#contact_form" class="testss">Me contacter</a>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

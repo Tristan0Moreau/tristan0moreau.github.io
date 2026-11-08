@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Minishell - Unix Shell in C - Tristan Moreau</title>
+        <link rel="stylesheet" href="style_eportfolio.css" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%235f9ea0'/><text x='50' y='70' text-anchor='middle' font-size='60' fill='white' font-family='sans-serif' font-weight='bold'>TM</text></svg>">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">Français</button>
+        <header id="header">
+            <h1>Tristan Moreau</h1>
+        </header>
+        <div class="fieldplease">
+            <fieldset class="first_fieldset">
+                <input id="1" name="menu" type="radio" onclick="function_home()">
+                <label for="1">About</label>
+                <input id="2" name="menu" type="radio" onclick="function_about_me()">
+                <label for="2">Career Management</label>
+                <input id="3" name="menu" type="radio" onclick="function_skills()">
+                <label for="3">Skills</label>
+                <input checked id="nav_projects" name="menu" type="radio" onclick="function_projects()">
+                <label for="nav_projects">Projects</label>
+                <input id="4" name="menu" type="radio" onclick="function_mobility()">
+                <label for="4">Mobility</label>
+                <input id="5" name="menu" type="radio" onclick="function_experience()">
+                <label for="5">Civic Engagement</label>
+                <input id="6" name="menu" type="radio" onclick="function_contacts()">
+                <label for="6">Contacts</label>
+            </fieldset>
+        </div>
+
+        <div class="project_detail_container">
+            <h1>Minishell - Unix Shell in C</h1>
+            <img class="project_detail_image" src="Images_e_portfolio/capture_SEC.png" alt="minishell.c open in VS Code" onclick="openModal(this)">
+            <div class="project_detail_text">
+                <p>Individual project for the Operating Systems course (Sciences du Numérique), developed in C during lab sessions.</p>
+                <h3 style="margin: 1.5rem 0 0.5rem;">Goal</h3>
+                <p>Develop a simplified command interpreter offering the basic features of Unix shells such as bash.</p>
+                <h3 style="margin: 1.5rem 0 0.5rem;">How it works</h3>
+                <ul style="text-align: left; padding-left: 1.5rem; margin-bottom: 1.5rem;"><li>The core is a loop that prints a prompt, reads a line from standard input and interprets it as a command, using a <code>readcmd</code> parsing module.</li><li>Each command is run by a child process, and the shell waits for its result before prompting again.</li><li>Built-in commands such as <code>exit</code>, which ends the loop, and <code>cd</code> are handled by the shell itself.</li></ul>
+                <h3 style="margin: 1.5rem 0 0.5rem;">Scope of the assignment</h3>
+                <p>The project is built step by step over the lab sessions: process management, signal handling, file redirections, pipes and multiplexing with <code>select</code>.</p>
+            </div>
+            <div class="tech-tags" style="margin-bottom: 2rem;"><span>C</span><span>Unix</span><span>Processes</span><span>Makefile</span></div>
+            <a href="projects.html" class="project_button" style="align-self: center;">Back to projects</a>
+        </div>
+
+        <a class="cornerbutton" href="#header">
+            <img src="Images_e_portfolio/fleche_haut.png">
+        </a>
+        <footer>
+            <div class="footer_content">
+                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Engineering Student</p>
+                <div class="footer_socials" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank" class="testss">LinkedIn</a>
+                    <a href="https://github.com/Tristan0Moreau" target="_blank" class="testss">GitHub</a>
+                    <a href="contacts.html#contact_form" class="testss">Contact</a>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>

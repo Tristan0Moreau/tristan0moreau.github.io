@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Android App - Bluetooth Smart Home - Tristan Moreau</title>
+        <link rel="stylesheet" href="style_eportfolio.css" />
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%235f9ea0'/><text x='50' y='70' text-anchor='middle' font-size='60' fill='white' font-family='sans-serif' font-weight='bold'>TM</text></svg>">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </head>
+    <body>
+        <button class="theme-toggle" onclick="toggleTheme()">🌙</button>
+        <button class="lang-toggle" onclick="toggleLanguage()">Français</button>
+        <header id="header">
+            <h1>Tristan Moreau</h1>
+        </header>
+        <div class="fieldplease">
+            <fieldset class="first_fieldset">
+                <input id="1" name="menu" type="radio" onclick="function_home()">
+                <label for="1">About</label>
+                <input id="2" name="menu" type="radio" onclick="function_about_me()">
+                <label for="2">Career Management</label>
+                <input id="3" name="menu" type="radio" onclick="function_skills()">
+                <label for="3">Skills</label>
+                <input checked id="nav_projects" name="menu" type="radio" onclick="function_projects()">
+                <label for="nav_projects">Projects</label>
+                <input id="4" name="menu" type="radio" onclick="function_mobility()">
+                <label for="4">Mobility</label>
+                <input id="5" name="menu" type="radio" onclick="function_experience()">
+                <label for="5">Civic Engagement</label>
+                <input id="6" name="menu" type="radio" onclick="function_contacts()">
+                <label for="6">Contacts</label>
+            </fieldset>
+        </div>
+
+        <div class="project_detail_container">
+            <h1>Android App - Bluetooth Smart Home</h1>
+            <img class="project_detail_image" src="Images_e_portfolio/programmation_mobile.png" alt="Android Studio screenshot of the app" onclick="openModal(this)">
+            <div class="project_detail_text">
+                <p>Project for the Mobile Programming course (Networks and Telecommunications track), carried out in pairs on two physical Android smartphones lent by the school, with no emulator.</p>
+                <h3 style="margin: 1.5rem 0 0.5rem;">Goal</h3>
+                <p>Make two Android smartphones exchange information over a Bluetooth connection in order to control a connected home.</p>
+                <h3 style="margin: 1.5rem 0 0.5rem;">How it works</h3>
+                <ul style="text-align: left; padding-left: 1.5rem; margin-bottom: 1.5rem;"><li>A first screen lets the user choose a role: client (the remote control) or server (the hub).</li><li>Once the Bluetooth connection is established, the client lists the devices connected to the server's phone. Turning a device on or off sends a request over Bluetooth.</li><li>The server is a gateway between Bluetooth and a REST API (the smart home simulator). It forwards the action, then sends the updated state back to the client. It also shows a monitoring screen that refreshes periodically.</li></ul>
+                <h3 style="margin: 1.5rem 0 0.5rem;">Technical aspects</h3>
+                <ul style="text-align: left; padding-left: 1.5rem; margin-bottom: 1.5rem;"><li>Bluetooth RFCOMM sockets between two already paired phones: the server waits for a connection and the client connects using a shared UUID.</li><li>A dedicated thread reads and writes on the socket, and a Handler passes the received data to the main UI thread. The thread is shared between activities with a singleton.</li><li>Android components: Activities and Intents.</li></ul>
+                <h3 style="margin: 1.5rem 0 0.5rem;">Deliverables</h3>
+                <p>Commented code, a report of at most three pages describing the architecture and behaviour of the application, and a live demonstration.</p>
+            </div>
+            <div class="tech-tags" style="margin-bottom: 2rem;"><span>Java</span><span>Android Studio</span><span>Bluetooth</span><span>REST API</span><span>Multithreading</span></div>
+            <a href="projects.html" class="project_button" style="align-self: center;">Back to projects</a>
+        </div>
+
+        <a class="cornerbutton" href="#header">
+            <img src="Images_e_portfolio/fleche_haut.png">
+        </a>
+        <footer>
+            <div class="footer_content">
+                <p>&copy; <span id="current-year">2026</span> Tristan Moreau - Engineering Student</p>
+                <div class="footer_socials" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <a href="https://www.linkedin.com/in/tristan-moreau-a49438329/" target="_blank" class="testss">LinkedIn</a>
+                    <a href="https://github.com/Tristan0Moreau" target="_blank" class="testss">GitHub</a>
+                    <a href="contacts.html#contact_form" class="testss">Contact</a>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+    </body>
+</html>
